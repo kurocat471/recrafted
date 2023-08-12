@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "mc-recrafted",
+	"version": "${version}",
+	"name": "Minecraft: Recrafted",
+	"description": "---",
+	"authors": [
+		"kurocat471"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/mc-recrafted/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.kuro.recrafted.Recrafted"
+		],
+		"client": [
+          "net.kuro.recrafted.RecraftedClient"
+		],
+		"fabric-datagen": [
+			"net.kuro.recrafted.RecraftedDataGenerator"
+		]
+	},
+	"mixins": [
+		"mc-recrafted.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
