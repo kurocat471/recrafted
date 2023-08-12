@@ -2,6 +2,7 @@ package net.kuro.recrafted;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.kuro.recrafted.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +12,8 @@ public class Recrafted implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+
+		ModItems.registerModItems();
+
 	}
 }
