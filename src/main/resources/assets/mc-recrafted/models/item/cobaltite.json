@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mc-recrafted:item/cobalt_ingot"
+    "layer0": "mc-recrafted:item/cobaltite"
   }
 }

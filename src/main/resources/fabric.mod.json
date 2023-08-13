@@ -12,7 +12,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/mc-recrafted/icon.png",
+	"icon": "assets/mc-recrafted/textures/item/cobalt_ingot.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [

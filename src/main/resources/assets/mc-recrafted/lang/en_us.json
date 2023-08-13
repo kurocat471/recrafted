@@ -1,3 +1,10 @@
 {
-  "item.recrafted.cobalt_ingot": "Cobalt Ingot"
+  "item.mc-recrafted.cobalt_ingot": "Cobalt Ingot",
+  "item.mc-recrafted.cobaltite": "Cobaltite",
+
+  "block.mc-recrafted.cobalt_block": "Block of Cobalt",
+  "block.mc-recrafted.cobaltite_block": "Block of Cobaltite",
+
+  "itemgroup.metals_group": "Recrafted Metals",
+  "itemgroup.stones_group": "Recrafted Stones"
 }

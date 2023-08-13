@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "mc-recrafted:cobalt_ingot"
+    }
+  },
+  "result": {
+    "item": "mc-recrafted:cobalt_block"
+  }
+}
