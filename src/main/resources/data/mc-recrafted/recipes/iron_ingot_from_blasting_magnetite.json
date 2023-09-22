@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.7,
+  "group": "iron_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:magnetite"
+  },
+  "result": "mc-recrafted:iron_ingot"
+}

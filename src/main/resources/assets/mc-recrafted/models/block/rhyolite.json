@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mc-recrafted:block/rhyolite_top",
+    "side": "mc-recrafted:block/rhyolite"
+  }
+}

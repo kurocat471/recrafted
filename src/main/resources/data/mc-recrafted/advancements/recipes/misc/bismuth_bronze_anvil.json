@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bismuth_bronze_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-recrafted:bismuth_bronze_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_bismuth_bronze_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-recrafted:bismuth_bronze_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mc-recrafted:bismuth_bronze_anvil"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bismuth_bronze_block",
+      "has_bismuth_bronze_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mc-recrafted:bismuth_bronze_anvil"
+    ]
+  },
+  "sends_telemetry_event": false
+}

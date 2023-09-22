@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.9,
+  "group": "bismuth_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:bismuthinite"
+  },
+  "result": "mc-recrafted:bismuth_ingot"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.2,
+  "group": "silver_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:argentite"
+  },
+  "result": "mc-recrafted:silver_ingot"
+}

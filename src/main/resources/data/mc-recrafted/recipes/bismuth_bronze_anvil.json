@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "mc-recrafted:bismuth_bronze_block"
+    },
+    "i": {
+      "item": "mc-recrafted:bismuth_bronze_ingot"
+    }
+  },
+  "pattern": [
+    "III",
+    " i ",
+    "iii"
+  ],
+  "result": {
+    "item": "mc-recrafted:bismuth_bronze_anvil"
+  },
+  "show_notification": true
+}

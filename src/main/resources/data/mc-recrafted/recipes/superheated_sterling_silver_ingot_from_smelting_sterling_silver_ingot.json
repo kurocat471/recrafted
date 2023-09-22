@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.0,
+  "group": "superheated_sterling_silver_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:sterling_silver_ingot"
+  },
+  "result": "mc-recrafted:superheated_sterling_silver_ingot"
+}

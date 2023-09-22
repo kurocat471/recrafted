@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "black_bronze_ingot",
+  "ingredients": [
+    {
+      "item": "mc-recrafted:black_bronze_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mc-recrafted:black_bronze_ingot"
+  }
+}

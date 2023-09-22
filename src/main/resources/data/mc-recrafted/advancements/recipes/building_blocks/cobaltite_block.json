@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cobaltite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-recrafted:cobaltite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mc-recrafted:cobaltite_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cobaltite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mc-recrafted:cobaltite_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

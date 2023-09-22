@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.0,
+  "group": "superheated_cobalt_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:cobalt_ingot"
+  },
+  "result": "mc-recrafted:superheated_cobalt_ingot"
+}

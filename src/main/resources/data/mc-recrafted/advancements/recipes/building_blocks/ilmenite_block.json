@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ilmenite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-recrafted:ilmenite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mc-recrafted:ilmenite_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_ilmenite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mc-recrafted:ilmenite_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_native_gold": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-recrafted:native_gold"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mc-recrafted:native_gold_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_native_gold",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mc-recrafted:native_gold_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

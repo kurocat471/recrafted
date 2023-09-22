@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_tetrahedrite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-recrafted:tetrahedrite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mc-recrafted:copper_ingot_from_blasting_tetrahedrite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_tetrahedrite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mc-recrafted:copper_ingot_from_blasting_tetrahedrite"
+    ]
+  },
+  "sends_telemetry_event": false
+}

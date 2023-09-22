@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hematite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-recrafted:hematite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mc-recrafted:iron_ingot_from_smelting_hematite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_hematite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mc-recrafted:iron_ingot_from_smelting_hematite"
+    ]
+  },
+  "sends_telemetry_event": false
+}

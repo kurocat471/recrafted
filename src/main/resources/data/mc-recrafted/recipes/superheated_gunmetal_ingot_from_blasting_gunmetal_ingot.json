@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.0,
+  "group": "superheated_gunmetal_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:gunmetal_ingot"
+  },
+  "result": "mc-recrafted:superheated_gunmetal_ingot"
+}

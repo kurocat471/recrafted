@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.4,
+  "group": "iron_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:limonite"
+  },
+  "result": "mc-recrafted:iron_ingot"
+}

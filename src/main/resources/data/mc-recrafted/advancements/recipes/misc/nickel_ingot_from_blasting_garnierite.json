@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_garnierite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-recrafted:garnierite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mc-recrafted:nickel_ingot_from_blasting_garnierite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_garnierite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mc-recrafted:nickel_ingot_from_blasting_garnierite"
+    ]
+  },
+  "sends_telemetry_event": false
+}

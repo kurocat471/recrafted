@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.8,
+  "group": "nickel_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:serpentinite"
+  },
+  "result": "mc-recrafted:nickel_ingot"
+}

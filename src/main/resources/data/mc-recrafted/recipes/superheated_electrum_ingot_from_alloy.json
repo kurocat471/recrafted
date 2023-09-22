@@ -1,0 +1,15 @@
+{
+  "type": "mc-recrafted:anvil_shapeless",
+  "tier": 2,
+  "ingredients": [
+    {
+      "item": "mc-recrafted:superheated_gold_ingot"
+    },
+    {
+      "item": "mc-recrafted:superheated_silver_ingot"
+    }
+  ],
+  "result": {
+    "item": "mc-recrafted:superheated_electrum_ingot"
+  }
+}

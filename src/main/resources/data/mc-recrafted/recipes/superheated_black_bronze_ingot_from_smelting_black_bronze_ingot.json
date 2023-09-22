@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.0,
+  "group": "superheated_black_bronze_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:black_bronze_ingot"
+  },
+  "result": "mc-recrafted:superheated_black_bronze_ingot"
+}

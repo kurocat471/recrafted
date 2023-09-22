@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.0,
+  "group": "superheated_titanium_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:titanium_ingot"
+  },
+  "result": "mc-recrafted:superheated_titanium_ingot"
+}

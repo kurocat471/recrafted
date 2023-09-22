@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_argentite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-recrafted:argentite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mc-recrafted:silver_ingot_from_blasting_argentite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_argentite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mc-recrafted:silver_ingot_from_blasting_argentite"
+    ]
+  },
+  "sends_telemetry_event": false
+}

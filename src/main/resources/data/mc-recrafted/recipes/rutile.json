@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mc-recrafted:rutile_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mc-recrafted:rutile"
+  }
+}

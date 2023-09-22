@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.0,
+  "group": "superheated_lead_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:lead_ingot"
+  },
+  "result": "mc-recrafted:superheated_lead_ingot"
+}

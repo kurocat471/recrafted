@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "gunmetal_ingot",
+  "ingredients": [
+    {
+      "item": "mc-recrafted:gunmetal_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mc-recrafted:gunmetal_ingot"
+  }
+}

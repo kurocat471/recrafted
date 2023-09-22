@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.0,
+  "group": "superheated_bismuth_bronze_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:bismuth_bronze_ingot"
+  },
+  "result": "mc-recrafted:superheated_bismuth_bronze_ingot"
+}

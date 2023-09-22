@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.5,
+  "group": "aluminium_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:bauxite"
+  },
+  "result": "mc-recrafted:aluminium_ingot"
+}

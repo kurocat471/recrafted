@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rutile": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-recrafted:rutile"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mc-recrafted:titanium_ingot_from_smelting_rutile"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_rutile",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mc-recrafted:titanium_ingot_from_smelting_rutile"
+    ]
+  },
+  "sends_telemetry_event": false
+}

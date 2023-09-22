@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "mc-recrafted:iron_block"
+    },
+    "i": {
+      "item": "mc-recrafted:iron_ingot"
+    }
+  },
+  "pattern": [
+    "III",
+    " i ",
+    "iii"
+  ],
+  "result": {
+    "item": "mc-recrafted:iron_anvil"
+  },
+  "show_notification": true
+}

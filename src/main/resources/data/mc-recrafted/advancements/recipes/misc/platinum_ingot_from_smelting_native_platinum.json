@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_native_platinum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-recrafted:native_platinum"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mc-recrafted:platinum_ingot_from_smelting_native_platinum"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_native_platinum",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mc-recrafted:platinum_ingot_from_smelting_native_platinum"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,15 @@
+{
+  "type": "mc-recrafted:anvil_shapeless",
+  "tier": 3,
+  "ingredients": [
+    {
+      "item": "mc-recrafted:superheated_tin_ingot"
+    },
+    {
+      "item": "mc-recrafted:superheated_bismuth_ingot"
+    }
+  ],
+  "result": {
+    "item": "mc-recrafted:superheated_pewter_ingot"
+  }
+}

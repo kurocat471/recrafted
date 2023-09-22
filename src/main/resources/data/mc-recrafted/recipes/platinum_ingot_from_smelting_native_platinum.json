@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.9,
+  "group": "platinum_ingot",
+  "ingredient": {
+    "item": "mc-recrafted:native_platinum"
+  },
+  "result": "mc-recrafted:platinum_ingot"
+}
