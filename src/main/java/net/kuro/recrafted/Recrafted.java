@@ -3,6 +3,7 @@ package net.kuro.recrafted;
 import net.fabricmc.api.ModInitializer;
 
 import net.kuro.recrafted.block.ModBlocks;
+import net.kuro.recrafted.block.barrel.BarrelBehavior;
 import net.kuro.recrafted.block.cauldron.ModCauldronBehavior;
 import net.kuro.recrafted.block.entity.ModBlockEntities;
 import net.kuro.recrafted.item.ModItemGroup;
@@ -22,6 +23,7 @@ public class Recrafted implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModCauldronBehavior.registerBehavior();
+		BarrelBehavior.registerBehavior();
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandler();
 		ModRecipes.registerRecipes();

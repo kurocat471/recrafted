@@ -177,6 +177,7 @@ public class ModItemGroup {
                         entries.add(ModBlocks.STEEL_ANVIL);
 
                         entries.add(ModBlocks.SPRUCE_BARREL);
+                        entries.add(ModBlocks.SPRUCE_BARREL_WATER);
 
                     }).build());
 

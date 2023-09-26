@@ -3,11 +3,12 @@ package net.kuro.recrafted.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.kuro.recrafted.Recrafted;
+import net.kuro.recrafted.block.barrel.BarrelBehavior;
 import net.kuro.recrafted.block.custom.AnvilBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.CauldronBlock;
-import net.minecraft.block.MapColor;
+import net.kuro.recrafted.block.custom.BarrelBlock;
+import net.kuro.recrafted.block.custom.LeveledBarrelBlock;
+import net.minecraft.block.*;
+import net.minecraft.block.cauldron.CauldronBehavior;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
@@ -126,7 +127,9 @@ public class ModBlocks {
             new AnvilBlock(FabricBlockSettings.create().mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "steel", 4));
 
     public static final Block SPRUCE_BARREL = registerBlock("spruce_barrel",
-            new CauldronBlock(FabricBlockSettings.copyOf(Blocks.CAULDRON)));
+            new BarrelBlock(FabricBlockSettings.copyOf(Blocks.CAULDRON)));
+    public static final Block SPRUCE_BARREL_WATER = registerBlock("spruce_barrel_water",
+            new LeveledBarrelBlock(FabricBlockSettings.copyOf(Blocks.WATER_CAULDRON), LeveledCauldronBlock.RAIN_PREDICATE, BarrelBehavior.WATER_BARREL_BEHAVIOR));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
