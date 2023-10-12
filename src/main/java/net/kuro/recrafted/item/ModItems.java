@@ -2,6 +2,7 @@ package net.kuro.recrafted.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.kuro.recrafted.Recrafted;
+import net.kuro.recrafted.block.ModBlocks;
 import net.kuro.recrafted.item.custom.SuperheatedItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -220,6 +221,8 @@ public class ModItems {
             new SwordItem(ModToolMaterial.IRON, 4, -2.8f, new FabricItemSettings()));
     public static final Item STEEL_HAMMER = registerItem("steel_hammer",
             new SwordItem(ModToolMaterial.STEEL, 4, -2.8f, new FabricItemSettings()));
+
+    public static final Item SPRUCE_BARREL = Items.register(ModBlocks.SPRUCE_BARREL, ModBlocks.SPRUCE_WATER_BARREL);
 
 
     private static Item registerItem(String name, Item item) {

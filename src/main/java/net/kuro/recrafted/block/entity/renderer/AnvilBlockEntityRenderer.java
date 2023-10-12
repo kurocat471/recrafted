@@ -24,8 +24,7 @@ public class AnvilBlockEntityRenderer implements BlockEntityRenderer<AnvilBlockE
     }
 
     @Override
-    public void render(AnvilBlockEntity entity, float tickDelta, MatrixStack matrices,
-                       VertexConsumerProvider vertexConsumers, int light, int overlay) {
+    public void render(AnvilBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
         ItemStack itemStackOutput = entity.getRenderStackOutput();
         ItemStack itemStackInput1 = entity.getRenderStackInput1();
@@ -33,13 +32,13 @@ public class AnvilBlockEntityRenderer implements BlockEntityRenderer<AnvilBlockE
         MatrixStack defaultMatrices = matrices;
         matrices.push();
         if (entity.getCachedState().get(AnvilBlock.FACING) == Direction.NORTH) {
-            matrices.translate(0.18f, 0.51171875f, 0.5f);
+            matrices.translate(0.18f, 0.51175f, 0.5f);
         } else if (entity.getCachedState().get(AnvilBlock.FACING) == Direction.SOUTH) {
-            matrices.translate(0.82f, 0.51171875f, 0.5f);
+            matrices.translate(0.82f, 0.51175f, 0.5f);
         } else if (entity.getCachedState().get(AnvilBlock.FACING) == Direction.WEST) {
-            matrices.translate(0.5f, 0.51171875f, 0.82f);
+            matrices.translate(0.5f, 0.51175f, 0.82f);
         } else {
-            matrices.translate(0.5f, 0.51171875f, 0.18f);
+            matrices.translate(0.5f, 0.51175f, 0.18f);
         }
         matrices.scale(0.375f, 0.375f, 0.375f);
         matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(entity.getCachedState().get(AnvilBlock.FACING).asRotation() + 15));
@@ -52,13 +51,13 @@ public class AnvilBlockEntityRenderer implements BlockEntityRenderer<AnvilBlockE
             matrices = defaultMatrices;
             matrices.push();
             if (entity.getCachedState().get(AnvilBlock.FACING) == Direction.NORTH) {
-                matrices.translate(0.65f, 0.51171875f, 0.5f);
+                matrices.translate(0.65f, 0.51175f, 0.5f);
             } else if (entity.getCachedState().get(AnvilBlock.FACING) == Direction.SOUTH) {
-                matrices.translate(0.35f, 0.51171875f, 0.5f);
+                matrices.translate(0.35f, 0.51175f, 0.5f);
             } else if (entity.getCachedState().get(AnvilBlock.FACING) == Direction.WEST) {
-                matrices.translate(0.5f, 0.51171875f, 0.35f);
+                matrices.translate(0.5f, 0.51175f, 0.35f);
             } else {
-                matrices.translate(0.5f, 0.51171875f, 0.65f);
+                matrices.translate(0.5f, 0.51175f, 0.65f);
             }
             matrices.scale(0.375f, 0.375f, 0.375f);
             matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(entity.getCachedState().get(AnvilBlock.FACING).asRotation() - 40));
@@ -72,13 +71,13 @@ public class AnvilBlockEntityRenderer implements BlockEntityRenderer<AnvilBlockE
             matrices = defaultMatrices;
             matrices.push();
             if (entity.getCachedState().get(AnvilBlock.FACING) == Direction.NORTH) {
-                matrices.translate(0.55f, 0.53515625f, 0.5f);
+                matrices.translate(0.55f, 0.5355f, 0.5f);
             } else if (entity.getCachedState().get(AnvilBlock.FACING) == Direction.SOUTH) {
-                matrices.translate(0.45f, 0.53515625f, 0.5f);
+                matrices.translate(0.45f, 0.5355f, 0.5f);
             } else if (entity.getCachedState().get(AnvilBlock.FACING) == Direction.WEST) {
-                matrices.translate(0.5f, 0.53515625f, 0.45f);
+                matrices.translate(0.5f, 0.5355f, 0.45f);
             } else {
-                matrices.translate(0.5f, 0.53515625f, 0.55f);
+                matrices.translate(0.5f, 0.5355f, 0.55f);
             }
             matrices.scale(0.375f, 0.375f, 0.375f);
             matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(entity.getCachedState().get(AnvilBlock.FACING).asRotation() - 10));

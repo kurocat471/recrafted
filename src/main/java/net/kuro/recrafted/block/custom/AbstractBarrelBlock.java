@@ -1,5 +1,6 @@
 package net.kuro.recrafted.block.custom;
 
+import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.block.barrel.BarrelBehavior;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
@@ -56,7 +57,7 @@ public abstract class AbstractBarrelBlock extends Block {
     }
 
     protected boolean isEntityTouchingFluid(BlockState state, BlockPos pos, Entity entity) {
-        return entity.getY() < (double)pos.getY() + this.getFluidHeight(state) && entity.getBoundingBox().maxY > (double)pos.getY() + 0.25;
+        return entity.getY() < (double)pos.getY() + this.getFluidHeight(state) && entity.getBoundingBox().maxY > (double)pos.getY() + 0.25 && Math.abs(entity.getX() - ((double)pos.getX()+0.5)) < 0.0625 && Math.abs(entity.getZ() - ((double)pos.getZ()+0.5)) < 0.0625;
     }
 
     @Override

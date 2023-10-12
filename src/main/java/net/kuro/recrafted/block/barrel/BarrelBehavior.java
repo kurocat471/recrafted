@@ -3,6 +3,7 @@ package net.kuro.recrafted.block.barrel;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.block.ModBlocks;
+import net.kuro.recrafted.block.custom.BarrelBlock;
 import net.kuro.recrafted.block.custom.LeveledBarrelBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BannerBlockEntity;
@@ -42,7 +43,17 @@ public interface BarrelBehavior {
      *
      * @see #fillBarrel
      */
-    public static final BarrelBehavior FILL_WITH_WATER = (state, world, pos, player, hand, stack) -> BarrelBehavior.fillBarrel(world, pos, player, hand, stack, (BlockState) ModBlocks.SPRUCE_BARREL_WATER.getDefaultState().with(LeveledBarrelBlock.LEVEL, 3), SoundEvents.ITEM_BUCKET_EMPTY);
+    public static final BarrelBehavior FILL_WITH_WATER = (state, world, pos, player, hand, stack) -> {
+        if (state.getBlock().getClass() != LeveledBarrelBlock.class && state.getBlock().getClass() != BarrelBlock.class) {
+            return ActionResult.PASS;
+        }
+        if (state.getBlock().getClass() == LeveledBarrelBlock.class) {
+            BarrelBehavior.fillBarrel(world, pos, player, hand, stack, state.with(LeveledBarrelBlock.LEVEL, 3), SoundEvents.ITEM_BUCKET_EMPTY);
+        } else if (state.getBlock().getClass() == BarrelBlock.class) {
+            BarrelBehavior.fillBarrel(world, pos, player, hand, stack, ((BarrelBlock) state.getBlock()).filledBlock.getDefaultState().with(LeveledBarrelBlock.LEVEL, 3), SoundEvents.ITEM_BUCKET_EMPTY);
+        }
+        return ActionResult.success(world.isClient);
+    };
     /**
      * A behavior that cleans dyed shulker boxes.
      */
@@ -58,7 +69,8 @@ public interface BarrelBehavior {
             }
             player.setStackInHand(hand, itemStack);
             player.incrementStat(Stats.CLEAN_SHULKER_BOX);
-            LeveledBarrelBlock.decrementFluidLevel(state, world, pos);
+            Block emptyBlock = ((LeveledBarrelBlock) state.getBlock()).emptyBlock;
+            LeveledBarrelBlock.decrementFluidLevel(state, world, pos, emptyBlock);
         }
         return ActionResult.success(world.isClient);
     };
@@ -83,7 +95,8 @@ public interface BarrelBehavior {
                 player.dropItem(itemStack, false);
             }
             player.incrementStat(Stats.CLEAN_BANNER);
-            LeveledBarrelBlock.decrementFluidLevel(state, world, pos);
+            Block emptyBlock = ((LeveledBarrelBlock) state.getBlock()).emptyBlock;
+            LeveledBarrelBlock.decrementFluidLevel(state, world, pos, emptyBlock);
         }
         return ActionResult.success(world.isClient);
     };
@@ -102,7 +115,8 @@ public interface BarrelBehavior {
         if (!world.isClient) {
             dyeableItem.removeColor(stack);
             player.incrementStat(Stats.CLEAN_ARMOR);
-            LeveledBarrelBlock.decrementFluidLevel(state, world, pos);
+            Block emptyBlock = ((LeveledBarrelBlock) state.getBlock()).emptyBlock;
+            LeveledBarrelBlock.decrementFluidLevel(state, world, pos, emptyBlock);
         }
         return ActionResult.success(world.isClient);
     };
@@ -120,7 +134,6 @@ public interface BarrelBehavior {
         Object2ObjectOpenHashMap<Item, BarrelBehavior> map = new Object2ObjectOpenHashMap<>();
         map.defaultReturnValue((state, world, pos, player, hand, stack) -> ActionResult.PASS);
         return map;
-        //return Util.make(new Object2ObjectOpenHashMap(), map -> map.defaultReturnValue((state, world, pos, player, hand, stack) -> ActionResult.PASS));
     }
 
     /**
@@ -150,11 +163,12 @@ public interface BarrelBehavior {
                 return ActionResult.PASS;
             }
             if (!world.isClient) {
+                BlockState filledState = ((BarrelBlock) state.getBlock()).filledBlock.getDefaultState();
                 Item item = stack.getItem();
                 player.setStackInHand(hand, ItemUsage.exchangeStack(stack, player, new ItemStack(Items.GLASS_BOTTLE)));
                 player.incrementStat(Stats.USE_CAULDRON);
                 player.incrementStat(Stats.USED.getOrCreateStat(item));
-                world.setBlockState(pos, ModBlocks.SPRUCE_BARREL_WATER.getDefaultState());
+                world.setBlockState(pos, filledState);
                 world.playSound(null, pos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
                 world.emitGameEvent(null, GameEvent.FLUID_PLACE, pos);
             }
@@ -168,7 +182,8 @@ public interface BarrelBehavior {
                 player.setStackInHand(hand, ItemUsage.exchangeStack(stack, player, PotionUtil.setPotion(new ItemStack(Items.POTION), Potions.WATER)));
                 player.incrementStat(Stats.USE_CAULDRON);
                 player.incrementStat(Stats.USED.getOrCreateStat(item));
-                LeveledBarrelBlock.decrementFluidLevel(state, world, pos);
+                Block emptyBlock = ((LeveledBarrelBlock) state.getBlock()).emptyBlock;
+                LeveledBarrelBlock.decrementFluidLevel(state, world, pos, emptyBlock);
                 world.playSound(null, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0f, 1.0f);
                 world.emitGameEvent(null, GameEvent.FLUID_PICKUP, pos);
             }
@@ -258,7 +273,8 @@ public interface BarrelBehavior {
             player.setStackInHand(hand, ItemUsage.exchangeStack(stack, player, output));
             player.incrementStat(Stats.USE_CAULDRON);
             player.incrementStat(Stats.USED.getOrCreateStat(item));
-            world.setBlockState(pos, ModBlocks.SPRUCE_BARREL.getDefaultState());
+            BlockState emptyState = ((LeveledBarrelBlock) state.getBlock()).emptyBlock.getDefaultState();
+            world.setBlockState(pos, emptyState);
             world.playSound(null, pos, soundEvent, SoundCategory.BLOCKS, 1.0f, 1.0f);
             world.emitGameEvent(null, GameEvent.FLUID_PICKUP, pos);
         }

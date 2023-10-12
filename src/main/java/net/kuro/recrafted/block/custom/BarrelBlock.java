@@ -1,5 +1,6 @@
 package net.kuro.recrafted.block.custom;
 
+import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.block.ModBlocks;
 import net.kuro.recrafted.block.barrel.BarrelBehavior;
 import net.minecraft.block.*;
@@ -11,12 +12,16 @@ import net.minecraft.world.WorldEvents;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.event.GameEvent;
 
-public class BarrelBlock extends AbstractBarrelBlock {
-    private static final float FILL_WITH_RAIN_CHANCE = 0.05f;
-    private static final float FILL_WITH_SNOW_CHANCE = 0.1f;
+public class BarrelBlock
+        extends AbstractBarrelBlock {
 
-    public BarrelBlock(AbstractBlock.Settings settings) {
+    private static final float FILL_WITH_RAIN_CHANCE = 0.05f;
+
+    public Block filledBlock;
+
+    public BarrelBlock(AbstractBlock.Settings settings, Block filledBlock) {
         super(settings, BarrelBehavior.EMPTY_BARREL_BEHAVIOR);
+        this.filledBlock = filledBlock;
     }
 
     @Override
@@ -26,7 +31,7 @@ public class BarrelBlock extends AbstractBarrelBlock {
 
     protected static boolean canFillWithPrecipitation(World world, Biome.Precipitation precipitation) {
         if (precipitation == Biome.Precipitation.RAIN) {
-            return world.getRandom().nextFloat() < 0.05f;
+            return world.getRandom().nextFloat() < FILL_WITH_RAIN_CHANCE;
         }
         return false;
     }
@@ -37,7 +42,8 @@ public class BarrelBlock extends AbstractBarrelBlock {
             return;
         }
         if (precipitation == Biome.Precipitation.RAIN) {
-            world.setBlockState(pos, ModBlocks.SPRUCE_BARREL_WATER.getDefaultState());
+            BlockState filledState = this.filledBlock.getDefaultState();
+            world.setBlockState(pos, filledState);
             world.emitGameEvent(null, GameEvent.BLOCK_CHANGE, pos);
         }
     }
@@ -50,11 +56,15 @@ public class BarrelBlock extends AbstractBarrelBlock {
     @Override
     protected void fillFromDripstone(BlockState state, World world, BlockPos pos, Fluid fluid) {
         if (fluid == Fluids.WATER) {
-            BlockState blockState = ModBlocks.SPRUCE_BARREL_WATER.getDefaultState();
-            world.setBlockState(pos, blockState);
-            world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(blockState));
+            BlockState filledState = this.filledBlock.getDefaultState();
+            world.setBlockState(pos, filledState);
+            world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(filledState));
             world.syncWorldEvent(WorldEvents.POINTED_DRIPSTONE_DRIPS_WATER_INTO_CAULDRON, pos, 0);
         }
+    }
+
+    public void setFilledBlock(Block filledBlock) {
+        this.filledBlock = filledBlock;
     }
 }
 

@@ -3,6 +3,7 @@ package net.kuro.recrafted.item;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.block.ModBlocks;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -176,8 +177,7 @@ public class ModItemGroup {
                         entries.add(ModBlocks.IRON_ANVIL);
                         entries.add(ModBlocks.STEEL_ANVIL);
 
-                        entries.add(ModBlocks.SPRUCE_BARREL);
-                        entries.add(ModBlocks.SPRUCE_BARREL_WATER);
+                        entries.add(ModItems.SPRUCE_BARREL);
 
                     }).build());
 

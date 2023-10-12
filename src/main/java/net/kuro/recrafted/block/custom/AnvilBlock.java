@@ -203,7 +203,6 @@ public class AnvilBlock extends BlockWithEntity implements BlockEntityProvider, 
                     anvilBlockEntity.markDirty();
                 }
             } else {
-                Recrafted.LOGGER.info(String.valueOf(hand));
                 if (player.getMainHandStack().getItem() == ModItems.COPPER_HAMMER ||
                         player.getMainHandStack().getItem() == ModItems.BRONZE_HAMMER ||
                         player.getMainHandStack().getItem() == ModItems.BISMUTH_BRONZE_HAMMER ||

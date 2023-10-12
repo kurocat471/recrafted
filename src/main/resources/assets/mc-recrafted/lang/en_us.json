@@ -1,4 +1,6 @@
 {
+  "subtitle.potionEvaporates": "Potion evaporates",
+
   "item.mc-recrafted.copper_ingot": "Copper Ingot",
   "item.mc-recrafted.copper_nugget": "Copper Nugget",
   "item.mc-recrafted.native_copper": "Native Copper",
@@ -159,6 +161,8 @@
   "block.mc-recrafted.white_bronze_anvil": "White Bronze Anvil",
   "block.mc-recrafted.iron_anvil": "Iron Anvil",
   "block.mc-recrafted.steel_anvil": "Steel Anvil",
+
+  "block.mc-recrafted.spruce_barrel": "Spruce Barrel",
 
   "block.mc-recrafted.rhyolite": "Rhyolite",
 

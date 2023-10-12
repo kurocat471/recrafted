@@ -482,7 +482,6 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
         return Text.translatable(
                 "block.mc-recrafted." + material + "_anvil"
         );
-        //return Text.literal("Anvil");
     }
 
     @Nullable

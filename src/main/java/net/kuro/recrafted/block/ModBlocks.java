@@ -7,8 +7,9 @@ import net.kuro.recrafted.block.barrel.BarrelBehavior;
 import net.kuro.recrafted.block.custom.AnvilBlock;
 import net.kuro.recrafted.block.custom.BarrelBlock;
 import net.kuro.recrafted.block.custom.LeveledBarrelBlock;
+import net.kuro.recrafted.block.custom.PotionCauldronBlock;
+import net.kuro.recrafted.block.potioncauldron.PotionCauldronBehavior;
 import net.minecraft.block.*;
-import net.minecraft.block.cauldron.CauldronBehavior;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
@@ -126,13 +127,25 @@ public class ModBlocks {
     public static final Block STEEL_ANVIL = registerBlock("steel_anvil",
             new AnvilBlock(FabricBlockSettings.create().mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "steel", 4));
 
-    public static final Block SPRUCE_BARREL = registerBlock("spruce_barrel",
-            new BarrelBlock(FabricBlockSettings.copyOf(Blocks.CAULDRON)));
-    public static final Block SPRUCE_BARREL_WATER = registerBlock("spruce_barrel_water",
-            new LeveledBarrelBlock(FabricBlockSettings.copyOf(Blocks.WATER_CAULDRON), LeveledCauldronBlock.RAIN_PREDICATE, BarrelBehavior.WATER_BARREL_BEHAVIOR));
+    public static final Block SPRUCE_BARREL = registerBlockNoItem("spruce_barrel",
+            new BarrelBlock(FabricBlockSettings.copyOf(Blocks.CAULDRON), null));
+    public static final Block SPRUCE_WATER_BARREL = registerBlockNoItem("spruce_water_barrel",
+            new LeveledBarrelBlock(FabricBlockSettings.copyOf(Blocks.WATER_CAULDRON), ModBlocks.SPRUCE_BARREL, LeveledBarrelBlock.RAIN_PREDICATE, BarrelBehavior.WATER_BARREL_BEHAVIOR));
+
+    public static final Block POTION_CAULDRON = registerBlockNoItem("potion_cauldron",
+            new PotionCauldronBlock(FabricBlockSettings.copyOf(Blocks.CAULDRON), PotionCauldronBehavior.MAP));
+
+    public static void initializeBarrelProperties() {
+        Recrafted.LOGGER.info("Initializing Barrel Properties for " + Recrafted.MOD_ID);
+        ((BarrelBlock) SPRUCE_BARREL).setFilledBlock(SPRUCE_WATER_BARREL);
+    }
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, new Identifier(Recrafted.MOD_ID, name), block);
+    }
+
+    private static Block registerBlockNoItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(Recrafted.MOD_ID, name), block);
     }
 

@@ -1,5 +1,6 @@
 package net.kuro.recrafted.block.custom;
 
+import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.block.ModBlocks;
 import net.kuro.recrafted.block.barrel.BarrelBehavior;
 import net.minecraft.block.*;
@@ -27,13 +28,15 @@ import java.util.function.Predicate;
  * block state property which can take values between {@value #MIN_LEVEL} and
  * {@value #MAX_LEVEL} (inclusive).
  */
-public class LeveledBarrelBlock
-        extends AbstractBarrelBlock {
+public class LeveledBarrelBlock extends AbstractBarrelBlock {
     public static final int MIN_LEVEL = 1;
     public static final int MAX_LEVEL = 3;
     public static final IntProperty LEVEL = Properties.LEVEL_3;
-    private static final int BASE_FLUID_HEIGHT = 6;
-    private static final double FLUID_HEIGHT_PER_LEVEL = 3.0;
+    private static final int BASE_FLUID_HEIGHT = 7;
+    private static final double FLUID_HEIGHT_PER_LEVEL = 4.0;
+
+    public final Block emptyBlock;
+
     /**
      * A precipitation predicate that allows {@link Biome.Precipitation#RAIN}.
      */
@@ -49,8 +52,9 @@ public class LeveledBarrelBlock
      * @param behaviorMap the map containing cauldron behaviors for each item
      * @param precipitationPredicate a predicate that checks what type of precipitation can fill this cauldron
      */
-    public LeveledBarrelBlock(AbstractBlock.Settings settings, Predicate<Biome.Precipitation> precipitationPredicate, Map<Item, BarrelBehavior> behaviorMap) {
+    public LeveledBarrelBlock(AbstractBlock.Settings settings, Block emptyBlock, Predicate<Biome.Precipitation> precipitationPredicate, Map<Item, BarrelBehavior> behaviorMap) {
         super(settings, behaviorMap);
+        this.emptyBlock = emptyBlock;
         this.precipitationPredicate = precipitationPredicate;
         this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(LEVEL, 1));
     }
@@ -67,7 +71,7 @@ public class LeveledBarrelBlock
 
     @Override
     protected double getFluidHeight(BlockState state) {
-        return (6.0 + (double)state.get(LEVEL).intValue() * 3.0) / 16.0;
+        return (BASE_FLUID_HEIGHT + (double)state.get(LEVEL).intValue() * FLUID_HEIGHT_PER_LEVEL) / 16.0;
     }
 
     @Override
@@ -81,12 +85,13 @@ public class LeveledBarrelBlock
     }
 
     protected void onFireCollision(BlockState state, World world, BlockPos pos) {
-        LeveledBarrelBlock.decrementFluidLevel(state, world, pos);
+        LeveledBarrelBlock.decrementFluidLevel(state, world, pos, this.emptyBlock);
     }
 
-    public static void decrementFluidLevel(BlockState state, World world, BlockPos pos) {
+    public static void decrementFluidLevel(BlockState state, World world, BlockPos pos, Block emptyBlock) {
         int i = state.get(LEVEL) - 1;
-        BlockState blockState = i == 0 ? ModBlocks.SPRUCE_BARREL.getDefaultState() : (BlockState)state.with(LEVEL, i);
+        BlockState emptyState = emptyBlock.getDefaultState();
+        BlockState blockState = i == 0 ? emptyState : (BlockState)state.with(LEVEL, i);
         world.setBlockState(pos, blockState);
         world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(blockState));
     }

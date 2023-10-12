@@ -15,6 +15,11 @@ public class ModBlockEntities {
                     FabricBlockEntityTypeBuilder.create(AnvilBlockEntity::new,
                             ModBlocks.COPPER_ANVIL, ModBlocks.BRONZE_ANVIL, ModBlocks.BISMUTH_BRONZE_ANVIL, ModBlocks.BLACK_BRONZE_ANVIL, ModBlocks.WHITE_BRONZE_ANVIL, ModBlocks.IRON_ANVIL, ModBlocks.STEEL_ANVIL).build(null));
 
+    public static final BlockEntityType<PotionCauldronBlockEntity> POTION_CAULDRON_BE =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Recrafted.MOD_ID, "potion_cauldron_block_entity"),
+                    FabricBlockEntityTypeBuilder.create(PotionCauldronBlockEntity::new,
+                            ModBlocks.POTION_CAULDRON).build(null));
+
     public static void registerBlockEntities() {
         Recrafted.LOGGER.info("Registering Block Entities for " + Recrafted.MOD_ID);
     }
