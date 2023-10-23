@@ -3,7 +3,10 @@ package net.kuro.recrafted.block.custom;
 import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.block.ModBlocks;
 import net.kuro.recrafted.block.barrel.BarrelBehavior;
+import net.kuro.recrafted.block.entity.WaterBarrelBlockEntity;
+import net.kuro.recrafted.block.entity.WaterCauldronBlockEntity;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.Fluids;
@@ -16,6 +19,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldEvents;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.event.GameEvent;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
 import java.util.function.Predicate;
@@ -28,7 +32,7 @@ import java.util.function.Predicate;
  * block state property which can take values between {@value #MIN_LEVEL} and
  * {@value #MAX_LEVEL} (inclusive).
  */
-public class LeveledBarrelBlock extends AbstractBarrelBlock {
+public class LeveledBarrelBlock extends AbstractBarrelBlock implements BlockEntityProvider{
     public static final int MIN_LEVEL = 1;
     public static final int MAX_LEVEL = 3;
     public static final IntProperty LEVEL = Properties.LEVEL_3;
@@ -65,7 +69,7 @@ public class LeveledBarrelBlock extends AbstractBarrelBlock {
     }
 
     @Override
-    protected boolean canBeFilledByDripstone(Fluid fluid) {
+    public boolean canBeFilledByDripstone(Fluid fluid) {
         return fluid == Fluids.WATER && this.precipitationPredicate == RAIN_PREDICATE;
     }
 
@@ -125,6 +129,12 @@ public class LeveledBarrelBlock extends AbstractBarrelBlock {
         world.setBlockState(pos, blockState);
         world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(blockState));
         world.syncWorldEvent(WorldEvents.POINTED_DRIPSTONE_DRIPS_WATER_INTO_CAULDRON, pos, 0);
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new WaterBarrelBlockEntity(pos, state);
     }
 }
 

@@ -125,6 +125,11 @@ public class ModItems {
     public static final Item STEEL_INGOT = registerItem("steel_ingot",
             new Item(new FabricItemSettings()));
 
+    public static final Item ROUGH_OPAL = registerItem("rough_opal",
+            new Item(new FabricItemSettings()));
+    public static final Item OPAL = registerItem("opal",
+            new Item(new FabricItemSettings()));
+
     public static final Item SUPERHEATED_COPPER_INGOT = registerItem("superheated_copper_ingot",
             new SuperheatedItem(new FabricItemSettings().maxCount(1), 200, ModItems.COPPER_INGOT));
     public static final Item SUPERHEATED_TIN_INGOT = registerItem("superheated_tin_ingot",
@@ -223,6 +228,7 @@ public class ModItems {
             new SwordItem(ModToolMaterial.STEEL, 4, -2.8f, new FabricItemSettings()));
 
     public static final Item SPRUCE_BARREL = Items.register(ModBlocks.SPRUCE_BARREL, ModBlocks.SPRUCE_WATER_BARREL);
+    public static final Item BIRCH_BARREL = Items.register(ModBlocks.BIRCH_BARREL, ModBlocks.BIRCH_WATER_BARREL);
 
 
     private static Item registerItem(String name, Item item) {

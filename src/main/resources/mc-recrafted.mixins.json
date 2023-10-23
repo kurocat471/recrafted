@@ -3,11 +3,18 @@
   "package": "net.kuro.recrafted.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "AbstractCauldronBlockInvoker",
     "CauldronBehaviorMixin",
     "ExampleMixin",
+    "GrindstoneScreenHandlerMixin",
+    "GrindstoneScreenHandlerMixin$GrindstoneScreenHandlerSlot1Mixin",
+    "GrindstoneScreenHandlerMixin$GrindstoneScreenHandlerSlot2Mixin",
+    "LeveledCauldronBlockMixin",
+    "PointedDripstoneBlockMixin",
     "PotionMixin"
   ],
   "client": [
+    "BlockColorsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -103,6 +103,10 @@
   "item.mc-recrafted.steel_ingot": "Steel Ingot",
   "block.mc-recrafted.steel_block": "Block of Steel",
 
+  "item.mc-recrafted.rough_opal": "Rough Opal",
+  "item.mc-recrafted.opal": "Opal",
+  "block.mc-recrafted.opal_block": "Block of Opal",
+
   "item.mc-recrafted.superheated_copper_ingot": "Superheated Copper Ingot",
   "item.mc-recrafted.superheated_tin_ingot": "Superheated Tin Ingot",
   "item.mc-recrafted.superheated_zinc_ingot": "Superheated Zinc Ingot",
@@ -163,6 +167,7 @@
   "block.mc-recrafted.steel_anvil": "Steel Anvil",
 
   "block.mc-recrafted.spruce_barrel": "Spruce Barrel",
+  "block.mc-recrafted.birch_barrel": "Birch Barrel",
 
   "block.mc-recrafted.rhyolite": "Rhyolite",
 

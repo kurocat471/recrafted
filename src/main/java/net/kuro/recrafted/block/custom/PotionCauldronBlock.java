@@ -34,8 +34,6 @@ public class PotionCauldronBlock extends LeveledCauldronBlock implements BlockEn
 
     private final Map<Entity, Integer> affectedEntities = Maps.newHashMap();
 
-    private final int reapplicationDelay = 20;
-
     public static final String NAME = "potion_cauldron";
 
     public PotionCauldronBlock(Settings settings, Map<Item, CauldronBehavior> map)
@@ -109,7 +107,8 @@ public class PotionCauldronBlock extends LeveledCauldronBlock implements BlockEn
                 }
                 if (this.affectedEntities.containsKey(livingEntity) || !livingEntity.isAffectedBySplashPotions())
                     continue;
-                this.affectedEntities.put(livingEntity, (int) world.getTime() + this.reapplicationDelay);
+                int reapplicationDelay = 20;
+                this.affectedEntities.put(livingEntity, (int) world.getTime() + reapplicationDelay);
 
                 for (StatusEffectInstance statusEffectInstance2 : list) {
                     if (statusEffectInstance2.getEffectType().isInstant()) {

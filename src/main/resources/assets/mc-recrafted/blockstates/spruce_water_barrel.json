@@ -1,13 +1,7 @@
 {
   "variants": {
-    "level=1": {
-      "model": "mc-recrafted:block/spruce_barrel_level1"
-    },
-    "level=2": {
-      "model": "mc-recrafted:block/spruce_barrel_level2"
-    },
-    "level=3": {
-      "model": "mc-recrafted:block/spruce_barrel_full"
+    "": {
+      "model": "mc-recrafted:block/spruce_barrel"
     }
   }
 }

@@ -1,22 +1,16 @@
 package net.kuro.recrafted.screen;
 
-import net.kuro.recrafted.block.entity.AnvilBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
-import net.minecraft.screen.ArrayPropertyDelegate;
-import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
-import org.jetbrains.annotations.Nullable;
 
 public class AnvilScreenHandler extends ScreenHandler {
     private final Inventory inventory;
-    private final AnvilBlockEntity blockEntity;
 
     protected AnvilScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf) {
         this(syncId, inventory, inventory.player.getWorld().getBlockEntity(buf.readBlockPos()));
@@ -26,7 +20,6 @@ public class AnvilScreenHandler extends ScreenHandler {
         super(ModScreenHandlers.ANVIL_SCREEN_HANDLER, syncId);
         checkSize(((Inventory) blockEntity), 10);
         this.inventory = (Inventory)blockEntity;
-        this.blockEntity = ((AnvilBlockEntity) blockEntity);
 
         this.addSlot(new Slot(inventory, 0, 30, 17));
         this.addSlot(new Slot(inventory, 1, 48, 17));
@@ -47,7 +40,7 @@ public class AnvilScreenHandler extends ScreenHandler {
     public ItemStack quickMove(PlayerEntity player, int invSlot) {
         ItemStack newStack = ItemStack.EMPTY;
         Slot slot = this.slots.get(invSlot);
-        if (slot != null && slot.hasStack()) {
+        if (slot.hasStack()) {
             ItemStack originalStack = slot.getStack();
             newStack = originalStack.copy();
             if (invSlot < this.inventory.size()) {

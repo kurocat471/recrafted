@@ -4,12 +4,12 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.block.barrel.BarrelBehavior;
+import net.kuro.recrafted.block.custom.*;
 import net.kuro.recrafted.block.custom.AnvilBlock;
 import net.kuro.recrafted.block.custom.BarrelBlock;
-import net.kuro.recrafted.block.custom.LeveledBarrelBlock;
-import net.kuro.recrafted.block.custom.PotionCauldronBlock;
 import net.kuro.recrafted.block.potioncauldron.PotionCauldronBehavior;
 import net.minecraft.block.*;
+import net.minecraft.block.cauldron.CauldronBehavior;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
@@ -112,25 +112,32 @@ public class ModBlocks {
     public static final Block STEEL_BLOCK = registerBlock("steel_block",
             new Block(FabricBlockSettings.create().mapColor(MapColor.DEEPSLATE_GRAY).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.NETHERITE)));
 
+    public static final Block OPAL_BLOCK = registerBlock("opal_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)));
+
     public static final Block COPPER_ANVIL = registerBlock("copper_anvil",
-            new AnvilBlock(FabricBlockSettings.create().mapColor(MapColor.ORANGE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
+            new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
     public static final Block BRONZE_ANVIL = registerBlock("bronze_anvil",
-            new AnvilBlock(FabricBlockSettings.create().mapColor(MapColor.SPRUCE_BROWN).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "bronze", 2));
+            new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.SPRUCE_BROWN).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "bronze", 2));
     public static final Block BISMUTH_BRONZE_ANVIL = registerBlock("bismuth_bronze_anvil",
-            new AnvilBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_GREEN).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "bismuth_bronze", 2));
+            new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.TERRACOTTA_GREEN).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "bismuth_bronze", 2));
     public static final Block BLACK_BRONZE_ANVIL = registerBlock("black_bronze_anvil",
-            new AnvilBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_BLUE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "black_bronze", 2));
+            new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.TERRACOTTA_BLUE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "black_bronze", 2));
     public static final Block WHITE_BRONZE_ANVIL = registerBlock("white_bronze_anvil",
-            new AnvilBlock(FabricBlockSettings.create().mapColor(MapColor.RAW_IRON_PINK).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "white_bronze", 2));
+            new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.RAW_IRON_PINK).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "white_bronze", 2));
     public static final Block IRON_ANVIL = registerBlock("iron_anvil",
-            new AnvilBlock(FabricBlockSettings.create().mapColor(MapColor.IRON_GRAY).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "iron", 3));
+            new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.IRON_GRAY).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "iron", 3));
     public static final Block STEEL_ANVIL = registerBlock("steel_anvil",
-            new AnvilBlock(FabricBlockSettings.create().mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "steel", 4));
+            new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "steel", 4));
 
     public static final Block SPRUCE_BARREL = registerBlockNoItem("spruce_barrel",
-            new BarrelBlock(FabricBlockSettings.copyOf(Blocks.CAULDRON), null));
+            new BarrelBlock(FabricBlockSettings.create().mapColor(MapColor.SPRUCE_BROWN).instrument(Instrument.BASS).strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD).burnable(), null));
     public static final Block SPRUCE_WATER_BARREL = registerBlockNoItem("spruce_water_barrel",
-            new LeveledBarrelBlock(FabricBlockSettings.copyOf(Blocks.WATER_CAULDRON), ModBlocks.SPRUCE_BARREL, LeveledBarrelBlock.RAIN_PREDICATE, BarrelBehavior.WATER_BARREL_BEHAVIOR));
+            new LeveledBarrelBlock(FabricBlockSettings.create().mapColor(MapColor.SPRUCE_BROWN).instrument(Instrument.BASS).strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD), ModBlocks.SPRUCE_BARREL, LeveledBarrelBlock.RAIN_PREDICATE, BarrelBehavior.WATER_BARREL_BEHAVIOR));
+    public static final Block BIRCH_BARREL = registerBlockNoItem("birch_barrel",
+            new BarrelBlock(FabricBlockSettings.create().mapColor(MapColor.PALE_YELLOW).instrument(Instrument.BASS).strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD).burnable(), null));
+    public static final Block BIRCH_WATER_BARREL = registerBlockNoItem("birch_water_barrel",
+            new LeveledBarrelBlock(FabricBlockSettings.create().mapColor(MapColor.PALE_YELLOW).instrument(Instrument.BASS).strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD), ModBlocks.BIRCH_BARREL, LeveledBarrelBlock.RAIN_PREDICATE, BarrelBehavior.WATER_BARREL_BEHAVIOR));
 
     public static final Block POTION_CAULDRON = registerBlockNoItem("potion_cauldron",
             new PotionCauldronBlock(FabricBlockSettings.copyOf(Blocks.CAULDRON), PotionCauldronBehavior.MAP));
@@ -138,6 +145,7 @@ public class ModBlocks {
     public static void initializeBarrelProperties() {
         Recrafted.LOGGER.info("Initializing Barrel Properties for " + Recrafted.MOD_ID);
         ((BarrelBlock) SPRUCE_BARREL).setFilledBlock(SPRUCE_WATER_BARREL);
+        ((BarrelBlock) BIRCH_BARREL).setFilledBlock(BIRCH_WATER_BARREL);
     }
 
     private static Block registerBlock(String name, Block block) {

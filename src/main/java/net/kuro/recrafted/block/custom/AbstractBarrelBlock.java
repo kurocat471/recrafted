@@ -3,6 +3,7 @@ package net.kuro.recrafted.block.custom;
 import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.block.barrel.BarrelBehavior;
 import net.minecraft.block.*;
+import net.minecraft.block.cauldron.CauldronBehavior;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
@@ -16,11 +17,13 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 
 import java.util.Map;
 
@@ -51,6 +54,16 @@ public abstract class AbstractBarrelBlock extends Block {
         super(settings);
         this.behaviorMap = behaviorMap;
     }
+
+    //protected int getFillDelay() {
+    //    return 2;
+    //}
+
+    //@Override
+    //public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+    //    world.scheduleBlockTick(pos, this, this.getFillDelay());
+    //    super.randomTick(state, world, pos, random);
+    //}
 
     protected double getFluidHeight(BlockState state) {
         return 0.0;
@@ -114,7 +127,7 @@ public abstract class AbstractBarrelBlock extends Block {
      *
      * @param fluid the fluid to check
      */
-    protected boolean canBeFilledByDripstone(Fluid fluid) {
+    public boolean canBeFilledByDripstone(Fluid fluid) {
         return false;
     }
 

@@ -143,6 +143,10 @@ public class ModItemGroup {
                         entries.add(ModItems.SUPERHEATED_STEEL_INGOT);
                         entries.add(ModBlocks.STEEL_BLOCK);
 
+                        entries.add(ModItems.ROUGH_OPAL);
+                        entries.add(ModItems.OPAL);
+                        entries.add(ModBlocks.OPAL_BLOCK);
+
                         entries.add(ModItems.SUPERHEATED_COPPER_PICKAXE_HEAD);
                         entries.add(ModItems.SUPERHEATED_COPPER_AXE_HEAD);
                         entries.add(ModItems.SUPERHEATED_COPPER_SHOVEL_HEAD);
@@ -178,6 +182,7 @@ public class ModItemGroup {
                         entries.add(ModBlocks.STEEL_ANVIL);
 
                         entries.add(ModItems.SPRUCE_BARREL);
+                        entries.add(ModItems.BIRCH_BARREL);
 
                     }).build());
 

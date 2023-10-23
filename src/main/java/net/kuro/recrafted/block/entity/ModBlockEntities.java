@@ -3,6 +3,7 @@ package net.kuro.recrafted.block.entity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.block.ModBlocks;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -19,6 +20,16 @@ public class ModBlockEntities {
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Recrafted.MOD_ID, "potion_cauldron_block_entity"),
                     FabricBlockEntityTypeBuilder.create(PotionCauldronBlockEntity::new,
                             ModBlocks.POTION_CAULDRON).build(null));
+
+    public static final BlockEntityType<WaterCauldronBlockEntity> WATER_CAULDRON_BE =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Recrafted.MOD_ID, "water_cauldron_block_entity"),
+                    FabricBlockEntityTypeBuilder.create(WaterCauldronBlockEntity::new,
+                            Blocks.WATER_CAULDRON).build(null));
+
+    public static final BlockEntityType<WaterBarrelBlockEntity> WATER_BARREL_BE =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Recrafted.MOD_ID, "water_barrel_block_entity"),
+                    FabricBlockEntityTypeBuilder.create(WaterBarrelBlockEntity::new,
+                            ModBlocks.SPRUCE_WATER_BARREL, ModBlocks.BIRCH_WATER_BARREL).build(null));
 
     public static void registerBlockEntities() {
         Recrafted.LOGGER.info("Registering Block Entities for " + Recrafted.MOD_ID);

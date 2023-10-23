@@ -89,5 +89,7 @@
   "item.minecraft.tipped_arrow.effect.long_strength": "Long Arrow of Strength",
   "item.minecraft.tipped_arrow.effect.strong_strength": "Strong Arrow of Strength",
   "item.minecraft.tipped_arrow.effect.long_weakness": "Long Arrow of Weakness",
-  "item.minecraft.tipped_arrow.effect.long_slow_falling": "Long Arrow of Slow Falling"
+  "item.minecraft.tipped_arrow.effect.long_slow_falling": "Long Arrow of Slow Falling",
+
+  "container.grindstone_title": "Grindstone"
 }

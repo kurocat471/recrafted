@@ -12,8 +12,7 @@ import net.minecraft.world.WorldEvents;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.event.GameEvent;
 
-public class BarrelBlock
-        extends AbstractBarrelBlock {
+public class BarrelBlock extends AbstractBarrelBlock {
 
     private static final float FILL_WITH_RAIN_CHANCE = 0.05f;
 
@@ -49,7 +48,7 @@ public class BarrelBlock
     }
 
     @Override
-    protected boolean canBeFilledByDripstone(Fluid fluid) {
+    public boolean canBeFilledByDripstone(Fluid fluid) {
         return true;
     }
 

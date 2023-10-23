@@ -35,17 +35,17 @@ public class SuperheatedItem extends Item {
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         NbtCompound itemTag = stack.getNbt();
         if (itemTag != null) {
-            if (itemTag.contains("age")) {
-                int age = itemTag.getInt("age");
-                if (age >= (maxAge / 6) * 5) {
+            if (itemTag.contains("expirationTime")) {
+                int coolingTime = (int) (itemTag.getInt("expirationTime") - world.getTime());
+                if (coolingTime >= (maxAge / 6) * 5) {
                     tooltip.add(Text.translatable("tooltip.mc-recrafted.cooling_0"));
-                } else if (age >= (maxAge / 6) * 4) {
+                } else if (coolingTime >= (maxAge / 6) * 4) {
                     tooltip.add(Text.translatable("tooltip.mc-recrafted.cooling_1"));
-                } else if (age >= (maxAge / 6) * 3) {
+                } else if (coolingTime >= (maxAge / 6) * 3) {
                     tooltip.add(Text.translatable("tooltip.mc-recrafted.cooling_2"));
-                } else if (age >= (maxAge / 6) * 2) {
+                } else if (coolingTime >= (maxAge / 6) * 2) {
                     tooltip.add(Text.translatable("tooltip.mc-recrafted.cooling_3"));
-                } else if (age >= maxAge / 6) {
+                } else if (coolingTime >= maxAge / 6) {
                     tooltip.add(Text.translatable("tooltip.mc-recrafted.cooling_4"));
                 } else {
                     tooltip.add(Text.translatable("tooltip.mc-recrafted.cooling_5"));
@@ -59,42 +59,39 @@ public class SuperheatedItem extends Item {
 
         NbtCompound itemTag = stack.getOrCreateNbt();
 
-        if (!itemTag.contains("age")) {
-            itemTag.putInt("age", maxAge);
+        if (!itemTag.contains("expirationTime")) {
+            itemTag.putInt("expirationTime", (int) (world.getTime() + maxAge));
         } else {
-            int age = itemTag.getInt("age");
-            if (age > 0) {
-                age--;
-                itemTag.putInt("age", age);
-            } else if (replacementItem != null) {
-                ItemStack replacementStack = new ItemStack(replacementItem);
-                if ((entity instanceof PlayerEntity)) {
-                    PlayerEntity player = (PlayerEntity) entity;
-                    Random random = world.random;
-                    if (replacementStack.toString().equals(String.valueOf(new ItemStack(Items.AIR)))) {
+            int age = itemTag.getInt("expirationTime");
+            if (world.getTime() >= age) {
+                if (replacementItem != null) {
+                    ItemStack replacementStack = new ItemStack(replacementItem);
+                    if ((entity instanceof PlayerEntity player)) {
+                        Random random = world.random;
+                        if (replacementStack.toString().equals(String.valueOf(new ItemStack(Items.AIR)))) {
+                            world.playSoundFromEntity(
+                                    null,
+                                    player,
+                                    SoundEvents.ENTITY_ITEM_BREAK,
+                                    SoundCategory.BLOCKS,
+                                    0.65f,
+                                    0.8f + random.nextFloat() * 0.4f
+                            );
+                        }
                         world.playSoundFromEntity(
                                 null,
                                 player,
-                                SoundEvents.ENTITY_ITEM_BREAK,
+                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
                                 SoundCategory.BLOCKS,
-                                0.65f,
-                                0.8f + random.nextFloat() * 0.4f
+                                0.35f,
+                                2.6f + (random.nextFloat() - random.nextFloat()) * 0.8f
                         );
+                        Inventory inventory = player.getInventory();
+                        inventory.setStack(slot, replacementStack);
+                    } else {
+                        entity.dropStack(replacementStack);
+                        stack.decrement(1);
                     }
-                    world.playSoundFromEntity(
-                            null,
-                            player,
-                            SoundEvents.BLOCK_LAVA_EXTINGUISH,
-                            SoundCategory.BLOCKS,
-                            0.35f,
-                            2.6f + (random.nextFloat() - random.nextFloat()) * 0.8f
-                    );
-
-                    Inventory inventory = player.getInventory();
-                    inventory.setStack(slot, replacementStack);
-                } else {
-                    entity.dropStack(replacementStack);
-                    stack.decrement(1);
                 }
             }
         }
