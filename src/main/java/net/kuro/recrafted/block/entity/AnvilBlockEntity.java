@@ -20,6 +20,7 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.listener.ClientPlayPacketListener;
@@ -42,7 +43,9 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.text.html.Option;
+import java.util.HashSet;
 import java.util.Optional;
+import java.util.Set;
 
 public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(10, ItemStack.EMPTY);
@@ -69,372 +72,27 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
         return this.getStack(OUTPUT_SLOT);
     }
 
-    public ItemStack getRenderStackInput1() {
-        if(this.getStack(INPUT_SLOT_1).isEmpty()) {
-            if(this.getStack(INPUT_SLOT_2).isEmpty()) {
-                if(this.getStack(INPUT_SLOT_3).isEmpty()) {
-                    if(this.getStack(INPUT_SLOT_4).isEmpty()) {
-                        if(this.getStack(INPUT_SLOT_5).isEmpty()) {
-                            if(this.getStack(INPUT_SLOT_6).isEmpty()) {
-                                if(this.getStack(INPUT_SLOT_7).isEmpty()) {
-                                    if(this.getStack(INPUT_SLOT_8).isEmpty()) {
-                                        if(this.getStack(INPUT_SLOT_9).isEmpty()) {
-                                            return null;
-                                        } else {
-                                            return this.getStack(INPUT_SLOT_9);
-                                        }
-                                    } else {
-                                        return this.getStack(INPUT_SLOT_8);
-                                    }
-                                } else {
-                                    return this.getStack(INPUT_SLOT_7);
-                                }
-                            } else {
-                                return this.getStack(INPUT_SLOT_6);
-                            }
-                        } else {
-                            return this.getStack(INPUT_SLOT_5);
-                        }
-                    } else {
-                        return this.getStack(INPUT_SLOT_4);
-                    }
-                } else {
-                    return this.getStack(INPUT_SLOT_3);
+    public static DefaultedList<Item> getRenderItems(DefaultedList<ItemStack> list) {
+        DefaultedList<Item> result = DefaultedList.ofSize(2, Items.AIR);
+        for (int i = 0; i < 9; i++) {
+            Item item = list.get(i).getItem();
+            if (item != null && !result.contains(item)) {
+                if (result.get(0) == Items.AIR) {
+                    result.set(0, item);
+                } else if (result.get(1) == Items.AIR) {
+                    result.set(1, item);
                 }
-            } else {
-                return this.getStack(INPUT_SLOT_2);
             }
-        } else {
-            return this.getStack(INPUT_SLOT_1);
         }
+        return result;
+    }
+
+    public ItemStack getRenderStackInput1() {
+        return getRenderItems(inventory).get(0).getDefaultStack();
     }
 
     public ItemStack getRenderStackInput2() {
-        if(this.getStack(INPUT_SLOT_1).isEmpty()) {
-            if(this.getStack(INPUT_SLOT_2).isEmpty()) {
-                if(this.getStack(INPUT_SLOT_3).isEmpty()) {
-                    if(this.getStack(INPUT_SLOT_4).isEmpty()) {
-                        if(this.getStack(INPUT_SLOT_5).isEmpty()) {
-                            if(this.getStack(INPUT_SLOT_6).isEmpty()) {
-                                if(this.getStack(INPUT_SLOT_7).isEmpty()) {
-                                    if(this.getStack(INPUT_SLOT_8).isEmpty()) {
-                                        if(this.getStack(INPUT_SLOT_9).isEmpty()) {
-                                            return null;
-                                        } else {
-                                            return null;
-                                        }
-                                    } else {
-                                        if(this.getStack(INPUT_SLOT_9).isEmpty()) {
-                                            return null;
-                                        } else {
-                                            if (this.getStack(INPUT_SLOT_8).getItem() != this.getStack(INPUT_SLOT_9).getItem()) {
-                                                return this.getStack(INPUT_SLOT_9);
-                                            } else {
-                                                return null;
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    if(this.getStack(INPUT_SLOT_8).isEmpty()) {
-                                        if(this.getStack(INPUT_SLOT_9).isEmpty()) {
-                                            return null;
-                                        } else {
-                                            if (this.getStack(INPUT_SLOT_7).getItem() != this.getStack(INPUT_SLOT_9).getItem()) {
-                                                return this.getStack(INPUT_SLOT_9);
-                                            } else {
-                                                return null;
-                                            }
-                                        }
-                                    } else {
-                                        if (this.getStack(INPUT_SLOT_7).getItem() != this.getStack(INPUT_SLOT_8).getItem()) {
-                                            return this.getStack(INPUT_SLOT_8);
-                                        } else {
-                                            return null;
-                                        }
-                                    }
-                                }
-                            } else {
-                                if (this.getStack(INPUT_SLOT_7).isEmpty()) {
-                                    if (this.getStack(INPUT_SLOT_8).isEmpty()) {
-                                        if (this.getStack(INPUT_SLOT_9).isEmpty()) {
-                                            return null;
-                                        } else {
-                                            if (this.getStack(INPUT_SLOT_6).getItem() != this.getStack(INPUT_SLOT_9).getItem()) {
-                                                return this.getStack(INPUT_SLOT_9);
-                                            } else {
-                                                return null;
-                                            }
-                                        }
-                                    } else {
-                                        if (this.getStack(INPUT_SLOT_6).getItem() != this.getStack(INPUT_SLOT_8).getItem()) {
-                                            return this.getStack(INPUT_SLOT_8);
-                                        } else {
-                                            return null;
-                                        }
-                                    }
-                                } else {
-                                    if (this.getStack(INPUT_SLOT_6).getItem() != this.getStack(INPUT_SLOT_7).getItem()) {
-                                        return this.getStack(INPUT_SLOT_7);
-                                    } else {
-                                        return null;
-                                    }
-                                }
-                            }
-                        } else {
-                            if (this.getStack(INPUT_SLOT_6).isEmpty()) {
-                                if (this.getStack(INPUT_SLOT_7).isEmpty()) {
-                                    if (this.getStack(INPUT_SLOT_8).isEmpty()) {
-                                        if (this.getStack(INPUT_SLOT_9).isEmpty()) {
-                                            return null;
-                                        } else {
-                                            if (this.getStack(INPUT_SLOT_5).getItem() != this.getStack(INPUT_SLOT_9).getItem()) {
-                                                return this.getStack(INPUT_SLOT_9);
-                                            } else {
-                                                return null;
-                                            }
-                                        }
-                                    } else {
-                                        if (this.getStack(INPUT_SLOT_5).getItem() != this.getStack(INPUT_SLOT_8).getItem()) {
-                                            return this.getStack(INPUT_SLOT_8);
-                                        } else {
-                                            return null;
-                                        }
-                                    }
-                                } else {
-                                    if (this.getStack(INPUT_SLOT_5).getItem() != this.getStack(INPUT_SLOT_7).getItem()) {
-                                        return this.getStack(INPUT_SLOT_7);
-                                    } else {
-                                        return null;
-                                    }
-                                }
-                            } else {
-                                if (this.getStack(INPUT_SLOT_5).getItem() != this.getStack(INPUT_SLOT_6).getItem()) {
-                                    return this.getStack(INPUT_SLOT_6);
-                                } else {
-                                    return null;
-                                }
-                            }
-                        }
-                    } else {
-                        if (this.getStack(INPUT_SLOT_5).isEmpty()) {
-                            if (this.getStack(INPUT_SLOT_6).isEmpty()) {
-                                if (this.getStack(INPUT_SLOT_7).isEmpty()) {
-                                    if (this.getStack(INPUT_SLOT_8).isEmpty()) {
-                                        if (this.getStack(INPUT_SLOT_9).isEmpty()) {
-                                            return null;
-                                        } else {
-                                            if (this.getStack(INPUT_SLOT_4).getItem() != this.getStack(INPUT_SLOT_9).getItem()) {
-                                                return this.getStack(INPUT_SLOT_9);
-                                            } else {
-                                                return null;
-                                            }
-                                        }
-                                    } else {
-                                        if (this.getStack(INPUT_SLOT_4).getItem() != this.getStack(INPUT_SLOT_8).getItem()) {
-                                            return this.getStack(INPUT_SLOT_8);
-                                        } else {
-                                            return null;
-                                        }
-                                    }
-                                } else {
-                                    if (this.getStack(INPUT_SLOT_4).getItem() != this.getStack(INPUT_SLOT_7).getItem()) {
-                                        return this.getStack(INPUT_SLOT_7);
-                                    } else {
-                                        return null;
-                                    }
-                                }
-                            } else {
-                                if (this.getStack(INPUT_SLOT_4).getItem() != this.getStack(INPUT_SLOT_6).getItem()) {
-                                    return this.getStack(INPUT_SLOT_6);
-                                } else {
-                                    return null;
-                                }
-                            }
-                        } else {
-                            if (this.getStack(INPUT_SLOT_4).getItem() != this.getStack(INPUT_SLOT_5).getItem()) {
-                                return this.getStack(INPUT_SLOT_5);
-                            } else {
-                                return null;
-                            }
-                        }
-                    }
-                } else {
-                    if (this.getStack(INPUT_SLOT_4).isEmpty()) {
-                        if (this.getStack(INPUT_SLOT_5).isEmpty()) {
-                            if (this.getStack(INPUT_SLOT_6).isEmpty()) {
-                                if (this.getStack(INPUT_SLOT_7).isEmpty()) {
-                                    if (this.getStack(INPUT_SLOT_8).isEmpty()) {
-                                        if (this.getStack(INPUT_SLOT_9).isEmpty()) {
-                                            return null;
-                                        } else {
-                                            if (this.getStack(INPUT_SLOT_3).getItem() != this.getStack(INPUT_SLOT_9).getItem()) {
-                                                return this.getStack(INPUT_SLOT_9);
-                                            } else {
-                                                return null;
-                                            }
-                                        }
-                                    } else {
-                                        if (this.getStack(INPUT_SLOT_3).getItem() != this.getStack(INPUT_SLOT_8).getItem()) {
-                                            return this.getStack(INPUT_SLOT_8);
-                                        } else {
-                                            return null;
-                                        }
-                                    }
-                                } else {
-                                    if (this.getStack(INPUT_SLOT_3).getItem() != this.getStack(INPUT_SLOT_7).getItem()) {
-                                        return this.getStack(INPUT_SLOT_7);
-                                    } else {
-                                        return null;
-                                    }
-                                }
-                            } else {
-                                if (this.getStack(INPUT_SLOT_3).getItem() != this.getStack(INPUT_SLOT_6).getItem()) {
-                                    return this.getStack(INPUT_SLOT_6);
-                                } else {
-                                    return null;
-                                }
-                            }
-                        } else {
-                            if (this.getStack(INPUT_SLOT_3).getItem() != this.getStack(INPUT_SLOT_5).getItem()) {
-                                return this.getStack(INPUT_SLOT_5);
-                            } else {
-                                return null;
-                            }
-                        }
-                    } else {
-                        if (this.getStack(INPUT_SLOT_3).getItem() != this.getStack(INPUT_SLOT_4).getItem()) {
-                            return this.getStack(INPUT_SLOT_4);
-                        } else {
-                            return null;
-                        }
-                    }
-                }
-            } else {
-                if (this.getStack(INPUT_SLOT_3).isEmpty()) {
-                    if (this.getStack(INPUT_SLOT_4).isEmpty()) {
-                        if (this.getStack(INPUT_SLOT_5).isEmpty()) {
-                            if (this.getStack(INPUT_SLOT_6).isEmpty()) {
-                                if (this.getStack(INPUT_SLOT_7).isEmpty()) {
-                                    if (this.getStack(INPUT_SLOT_8).isEmpty()) {
-                                        if (this.getStack(INPUT_SLOT_9).isEmpty()) {
-                                            return null;
-                                        } else {
-                                            if (this.getStack(INPUT_SLOT_2).getItem() != this.getStack(INPUT_SLOT_9).getItem()) {
-                                                return this.getStack(INPUT_SLOT_9);
-                                            } else {
-                                                return null;
-                                            }
-                                        }
-                                    } else {
-                                        if (this.getStack(INPUT_SLOT_2).getItem() != this.getStack(INPUT_SLOT_8).getItem()) {
-                                            return this.getStack(INPUT_SLOT_8);
-                                        } else {
-                                            return null;
-                                        }
-                                    }
-                                } else {
-                                    if (this.getStack(INPUT_SLOT_2).getItem() != this.getStack(INPUT_SLOT_7).getItem()) {
-                                        return this.getStack(INPUT_SLOT_7);
-                                    } else {
-                                        return null;
-                                    }
-                                }
-                            } else {
-                                if (this.getStack(INPUT_SLOT_2).getItem() != this.getStack(INPUT_SLOT_6).getItem()) {
-                                    return this.getStack(INPUT_SLOT_6);
-                                } else {
-                                    return null;
-                                }
-                            }
-                        } else {
-                            if (this.getStack(INPUT_SLOT_2).getItem() != this.getStack(INPUT_SLOT_5).getItem()) {
-                                return this.getStack(INPUT_SLOT_5);
-                            } else {
-                                return null;
-                            }
-                        }
-                    } else {
-                        if (this.getStack(INPUT_SLOT_2).getItem() != this.getStack(INPUT_SLOT_4).getItem()) {
-                            return this.getStack(INPUT_SLOT_4);
-                        } else {
-                            return null;
-                        }
-                    }
-                } else {
-                    if (this.getStack(INPUT_SLOT_2).getItem() != this.getStack(INPUT_SLOT_3).getItem()) {
-                        return this.getStack(INPUT_SLOT_3);
-                    } else {
-                        return null;
-                    }
-                }
-            }
-        } else {
-            if (this.getStack(INPUT_SLOT_2).isEmpty()) {
-                if (this.getStack(INPUT_SLOT_3).isEmpty()) {
-                    if (this.getStack(INPUT_SLOT_4).isEmpty()) {
-                        if (this.getStack(INPUT_SLOT_5).isEmpty()) {
-                            if (this.getStack(INPUT_SLOT_6).isEmpty()) {
-                                if (this.getStack(INPUT_SLOT_7).isEmpty()) {
-                                    if (this.getStack(INPUT_SLOT_8).isEmpty()) {
-                                        if (this.getStack(INPUT_SLOT_9).isEmpty()) {
-                                            return null;
-                                        } else {
-                                            if (this.getStack(INPUT_SLOT_1).getItem() != this.getStack(INPUT_SLOT_9).getItem()) {
-                                                return this.getStack(INPUT_SLOT_9);
-                                            } else {
-                                                return null;
-                                            }
-                                        }
-                                    } else {
-                                        if (this.getStack(INPUT_SLOT_1).getItem() != this.getStack(INPUT_SLOT_8).getItem()) {
-                                            return this.getStack(INPUT_SLOT_8);
-                                        } else {
-                                            return null;
-                                        }
-                                    }
-                                } else {
-                                    if (this.getStack(INPUT_SLOT_1).getItem() != this.getStack(INPUT_SLOT_7).getItem()) {
-                                        return this.getStack(INPUT_SLOT_7);
-                                    } else {
-                                        return null;
-                                    }
-                                }
-                            } else {
-                                if (this.getStack(INPUT_SLOT_1).getItem() != this.getStack(INPUT_SLOT_6).getItem()) {
-                                    return this.getStack(INPUT_SLOT_6);
-                                } else {
-                                    return null;
-                                }
-                            }
-                        } else {
-                            if (this.getStack(INPUT_SLOT_1).getItem() != this.getStack(INPUT_SLOT_5).getItem()) {
-                                return this.getStack(INPUT_SLOT_5);
-                            } else {
-                                return null;
-                            }
-                        }
-                    } else {
-                        if (this.getStack(INPUT_SLOT_1).getItem() != this.getStack(INPUT_SLOT_4).getItem()) {
-                            return this.getStack(INPUT_SLOT_4);
-                        } else {
-                            return null;
-                        }
-                    }
-                } else {
-                    if (this.getStack(INPUT_SLOT_1).getItem() != this.getStack(INPUT_SLOT_3).getItem()) {
-                        return this.getStack(INPUT_SLOT_3);
-                    } else {
-                        return null;
-                    }
-                }
-            } else {
-                if (this.getStack(INPUT_SLOT_1).getItem() != this.getStack(INPUT_SLOT_2).getItem()) {
-                    return this.getStack(INPUT_SLOT_2);
-                } else {
-                    return null;
-                }
-            }
-        }
+        return getRenderItems(inventory).get(1).getDefaultStack();
     }
 
     @Override
