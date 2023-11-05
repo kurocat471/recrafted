@@ -18,7 +18,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(CauldronBehavior.class)
 public interface CauldronBehaviorMixin {
-    // method_32222 is the lambda of CauldronInteraction.EMPTY.put(Items.POTION, <lambda>)
     @Inject(method = "method_32222", at = @At("HEAD"), cancellable = true)
     private static void handleEmptyCauldronAndPotionInteraction(BlockState blockState, World level, BlockPos blockPos, PlayerEntity player, Hand interactionHand, ItemStack itemStack, CallbackInfoReturnable<ActionResult> cir)
     {

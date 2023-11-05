@@ -6,9 +6,7 @@ import net.minecraft.client.color.block.BlockColorProvider;
 import net.minecraft.client.color.block.BlockColors;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
-import org.spongepowered.asm.mixin.injection.Slice;
 
 import java.util.Arrays;
 
@@ -22,12 +20,10 @@ public class BlockColorsMixin {
             )
     )
     private static void redirectRegisterColorProvider(BlockColors blockColors, BlockColorProvider provider, Block[] blocks) {
-        // Create a new array of blocks without Blocks.WATER_CAULDRON
         Block[] newBlocks = Arrays.stream(blocks)
                 .filter(block -> block != Blocks.WATER_CAULDRON)
                 .toArray(Block[]::new);
 
-        // Call the original method with the modified array
         blockColors.registerColorProvider(provider, newBlocks);
     }
 }

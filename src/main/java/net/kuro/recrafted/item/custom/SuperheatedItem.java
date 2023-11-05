@@ -1,8 +1,6 @@
 package net.kuro.recrafted.item.custom;
 
-import net.kuro.recrafted.Recrafted;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
@@ -11,7 +9,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.random.Random;
@@ -36,6 +33,7 @@ public class SuperheatedItem extends Item {
         NbtCompound itemTag = stack.getNbt();
         if (itemTag != null) {
             if (itemTag.contains("expirationTime")) {
+                assert world != null;
                 int coolingTime = (int) (itemTag.getInt("expirationTime") - world.getTime());
                 if (coolingTime >= (maxAge / 6) * 5) {
                     tooltip.add(Text.translatable("tooltip.mc-recrafted.cooling_0"));

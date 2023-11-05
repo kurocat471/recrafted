@@ -19,6 +19,7 @@ public class ItemStackSyncS2CPacket {
         }
         BlockPos position = buf.readBlockPos();
 
+        assert client.world != null;
         if(client.world.getBlockEntity(position) instanceof AnvilBlockEntity blockEntity) {
             blockEntity.setInventory(list);
         }
