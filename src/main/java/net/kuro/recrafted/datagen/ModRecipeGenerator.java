@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.kuro.recrafted.block.ModBlocks;
 import net.kuro.recrafted.item.ModItems;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -20,7 +21,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
        /* offerSmelting(exporter, List.of(ModItems.TIN_INGOT), RecipeCategory.MISC,
                 ModItems.SUPERHEATED_TIN_INGOT, 0.0f, 200, "superheated_tin_ingot");
         offerBlasting(exporter, List.of(ModItems.TIN_INGOT), RecipeCategory.MISC,

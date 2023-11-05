@@ -27,6 +27,7 @@ import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -170,10 +171,10 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
     }
 
     public void craftItem(PlayerEntity player) {
-        Optional<AnvilRecipe> recipe = getCurrentRecipe();
-        Optional<AnvilRecipeShapeless> recipeShapeless = getCurrentRecipeShapeless();
+        Optional<RecipeEntry<AnvilRecipe>> recipe = getCurrentRecipe();
+        Optional<RecipeEntry<AnvilRecipeShapeless>> recipeShapeless = getCurrentRecipeShapeless();
         if (recipe.isPresent()) {
-            if (tier >= recipe.get().getTier()) {
+            if (tier >= recipe.get().value().getTier()) {
                 this.removeStack(INPUT_SLOT_1, 1);
                 this.removeStack(INPUT_SLOT_2, 1);
                 this.removeStack(INPUT_SLOT_3, 1);
@@ -202,7 +203,7 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
                         0.14, 0.05, 0.14,
                         0.15);
 
-                ItemStack output = recipe.get().getOutput(null);
+                ItemStack output = recipe.get().value().getResult(null);
                 player.getMainHandStack().damage(1, player, playerx -> playerx.sendToolBreakStatus(Hand.MAIN_HAND));
                 this.setStack(OUTPUT_SLOT, new ItemStack(output.getItem(),
                         this.getStack(OUTPUT_SLOT).getCount() + output.getCount()));
@@ -219,7 +220,7 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
                 );
             }
         } else if (recipeShapeless.isPresent()) {
-            if (tier >= recipeShapeless.get().getTier()) {
+            if (tier >= recipeShapeless.get().value().getTier()) {
                 this.removeStack(INPUT_SLOT_1, 1);
                 this.removeStack(INPUT_SLOT_2, 1);
                 this.removeStack(INPUT_SLOT_3, 1);
@@ -248,7 +249,7 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
                         0.14, 0.05, 0.14,
                         0.15);
 
-                ItemStack output = recipeShapeless.get().getOutput(null);
+                ItemStack output = recipeShapeless.get().value().getResult(null);
 
                 player.getMainHandStack().damage(1, player, playerx -> playerx.sendToolBreakStatus(Hand.MAIN_HAND));
                 this.setStack(OUTPUT_SLOT, new ItemStack(output.getItem(),
@@ -294,23 +295,23 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
     }
 
     public boolean hasRecipe() {
-        Optional<AnvilRecipe> recipe = getCurrentRecipe();
-        Optional<AnvilRecipeShapeless> recipeShapeless = getCurrentRecipeShapeless();
+        Optional<RecipeEntry<AnvilRecipe>> recipe = getCurrentRecipe();
+        Optional<RecipeEntry<AnvilRecipeShapeless>> recipeShapeless = getCurrentRecipeShapeless();
 
         if (recipe.isEmpty() && recipeShapeless.isEmpty()) {
             return false;
         } else if (recipeShapeless.isEmpty()) {
-            ItemStack output = recipe.get().getOutput(null);
+            ItemStack output = recipe.get().value().getResult(null);
 
             return canInsertAmountIntoOutputSlot(output.getCount())
                     && canInsertItemIntoOutputSlot(output);
         } else if (recipe.isEmpty()) {
-            ItemStack output = recipeShapeless.get().getOutput(null);
+            ItemStack output = recipeShapeless.get().value().getResult(null);
 
             return canInsertAmountIntoOutputSlot(output.getCount())
                     && canInsertItemIntoOutputSlot(output);
         }
-        ItemStack output = recipe.get().getOutput(null);
+        ItemStack output = recipe.get().value().getResult(null);
 
         return canInsertAmountIntoOutputSlot(output.getCount())
                 && canInsertItemIntoOutputSlot(output);
@@ -324,7 +325,7 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
         return this.getStack(OUTPUT_SLOT).getMaxCount() >= this.getStack(OUTPUT_SLOT).getCount() + count;
     }
 
-    private Optional<AnvilRecipe> getCurrentRecipe() {
+    private Optional<RecipeEntry<AnvilRecipe>> getCurrentRecipe() {
         SimpleInventory inventory = new SimpleInventory(this.size());
         for(int i = 0; i < this.size(); i++) {
             inventory.setStack(i, this.getStack(i));
@@ -333,7 +334,7 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
         return this.getWorld().getRecipeManager().getFirstMatch(AnvilRecipe.Type.INSTANCE, inventory, this.getWorld());
     }
 
-    private Optional<AnvilRecipeShapeless> getCurrentRecipeShapeless() {
+    private Optional<RecipeEntry<AnvilRecipeShapeless>> getCurrentRecipeShapeless() {
         SimpleInventory inventory = new SimpleInventory(this.size());
         for(int i = 0; i < this.size(); i++) {
             inventory.setStack(i, this.getStack(i));
