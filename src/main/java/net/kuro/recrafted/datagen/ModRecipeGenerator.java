@@ -112,6 +112,10 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 ModItems.SUPERHEATED_STEEL_INGOT, 0.0f, 100, "superheated_steel_ingot");
 
 
+        //IMPORTANT: TO MAKE THIS WORK
+        //.offerTo(exporter); instead of .offerTo(exporter, new Identifier(...));
+
+        */
         /*ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_AXE)
                 .input(ModItems.COPPER_AXE_HEAD)
                 .input(Items.STICK)

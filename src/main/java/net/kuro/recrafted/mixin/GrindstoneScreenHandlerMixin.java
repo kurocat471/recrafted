@@ -11,10 +11,7 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
 import org.jetbrains.annotations.Nullable;
-import org.spongepowered.asm.mixin.Final;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
@@ -25,7 +22,6 @@ public abstract class GrindstoneScreenHandlerMixin extends ScreenHandler {
     protected GrindstoneScreenHandlerMixin(@Nullable ScreenHandlerType<?> type, int syncId) {
         super(type, syncId);
     }
-
 
     /**
      * @author kurocat471
@@ -116,6 +112,16 @@ public abstract class GrindstoneScreenHandlerMixin extends ScreenHandler {
         @Inject(method = "canInsert", at = @At("RETURN"), cancellable = true)
         private void canInsert(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
             cir.setReturnValue(cir.getReturnValue() || stack.isOf(ModItems.ROUGH_OPAL));
+        }
+    }
+
+    @Mixin(targets = "net.minecraft.screen.GrindstoneScreenHandler$4")
+    public static class GrindstoneExperienceMixin {
+        @Inject(method = "getExperience(Lnet/minecraft/item/ItemStack;)I", at = @At("RETURN"), cancellable = true)
+        private void setExperience(ItemStack stack, CallbackInfoReturnable<Integer> cir) {
+            if (stack.isOf(ModItems.ROUGH_OPAL)) {
+                cir.setReturnValue(stack.getCount());
+            }
         }
     }
 }

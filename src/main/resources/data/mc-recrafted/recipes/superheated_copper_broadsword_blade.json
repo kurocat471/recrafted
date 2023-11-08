@@ -1,0 +1,18 @@
+{
+  "type": "mc-recrafted:anvil",
+  "tier": 1,
+  "key": {
+    "#": {
+      "item": "mc-recrafted:superheated_copper_ingot"
+    }
+  },
+  "pattern": [
+    " # ",
+    " # ",
+    "   "
+  ],
+  "result": {
+    "item": "mc-recrafted:superheated_copper_broadsword_blade",
+    "count": 1
+  }
+}

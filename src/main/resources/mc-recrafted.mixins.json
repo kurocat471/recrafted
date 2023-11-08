@@ -7,6 +7,7 @@
     "CauldronBehaviorMixin",
     "ExampleMixin",
     "GrindstoneScreenHandlerMixin",
+    "GrindstoneScreenHandlerMixin$GrindstoneExperienceMixin",
     "GrindstoneScreenHandlerMixin$GrindstoneScreenHandlerSlot1Mixin",
     "GrindstoneScreenHandlerMixin$GrindstoneScreenHandlerSlot2Mixin",
     "LeveledCauldronBlockMixin",
