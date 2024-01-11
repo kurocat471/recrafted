@@ -236,6 +236,6 @@ public class ModItems {
     }
 
     public static void registerModItems() {
-        Recrafted.LOGGER.info("Registering Mod Items for" + Recrafted.MOD_ID);
+        Recrafted.LOGGER.info("Registering Mod Items for " + Recrafted.MOD_ID);
     }
 }

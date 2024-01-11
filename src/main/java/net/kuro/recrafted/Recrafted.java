@@ -14,6 +14,8 @@ import net.kuro.recrafted.networking.ServerNetworking;
 import net.kuro.recrafted.recipe.ModRecipes;
 import net.kuro.recrafted.screen.ModScreenHandlers;
 import net.kuro.recrafted.sound.ModSoundEvents;
+import net.minecraft.MinecraftVersion;
+import net.minecraft.SharedConstants;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +28,8 @@ public class Recrafted implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		Recrafted.LOGGER.info(String.valueOf(SharedConstants.getGameVersion()));
+		Recrafted.LOGGER.info(MinecraftVersion.CURRENT.getName());
 		ModItemGroup.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
