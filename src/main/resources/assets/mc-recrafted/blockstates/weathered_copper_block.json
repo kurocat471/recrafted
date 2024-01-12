@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mc-recrafted:block/weathered_copper_block"
+    }
+  }
+}
