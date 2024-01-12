@@ -1,6 +1,6 @@
 package net.kuro.recrafted.mixin;
 
-import net.kuro.recrafted.item.ModItems;
+import net.kuro.recrafted.structure.item.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.Item;

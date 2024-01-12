@@ -1,6 +1,6 @@
 package net.kuro.recrafted.mixin;
 
-import net.kuro.recrafted.block.custom.AbstractBarrelBlock;
+import net.kuro.recrafted.structure.block.custom.barrel.AbstractBarrelBlock;
 import net.minecraft.block.AbstractCauldronBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.PointedDripstoneBlock;

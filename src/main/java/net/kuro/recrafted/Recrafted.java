@@ -2,20 +2,19 @@ package net.kuro.recrafted;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.kuro.recrafted.block.ModBlocks;
-import net.kuro.recrafted.block.barrel.BarrelBehavior;
-import net.kuro.recrafted.block.barrel.ModBarrelBehavior;
-import net.kuro.recrafted.block.cauldron.ModCauldronBehavior;
-import net.kuro.recrafted.block.entity.ModBlockEntities;
-import net.kuro.recrafted.block.potioncauldron.PotionCauldronBehavior;
-import net.kuro.recrafted.item.ModItemGroup;
-import net.kuro.recrafted.item.ModItems;
+import net.kuro.recrafted.structure.block.ModBlocks;
+import net.kuro.recrafted.structure.block.custom.barrel.BarrelBehavior;
+import net.kuro.recrafted.structure.block.custom.barrel.ModBarrelBehavior;
+import net.kuro.recrafted.structure.block.custom.cauldron.ModCauldronBehavior;
+import net.kuro.recrafted.structure.block.entity.ModBlockEntities;
+import net.kuro.recrafted.structure.block.custom.potioncauldron.PotionCauldronBehavior;
+import net.kuro.recrafted.structure.item.ModItemGroups;
+import net.kuro.recrafted.structure.item.ModItems;
 import net.kuro.recrafted.networking.ServerNetworking;
-import net.kuro.recrafted.recipe.ModRecipes;
-import net.kuro.recrafted.screen.ModScreenHandlers;
+import net.kuro.recrafted.structure.recipe.ModRecipes;
+import net.kuro.recrafted.structure.screen.ModScreenHandlers;
 import net.kuro.recrafted.sound.ModSoundEvents;
-import net.minecraft.MinecraftVersion;
-import net.minecraft.SharedConstants;
+import net.kuro.recrafted.util.ModRegistries;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,9 +27,7 @@ public class Recrafted implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		Recrafted.LOGGER.info(String.valueOf(SharedConstants.getGameVersion()));
-		Recrafted.LOGGER.info(MinecraftVersion.CURRENT.getName());
-		ModItemGroup.registerItemGroups();
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModCauldronBehavior.registerBehavior();
@@ -43,5 +40,6 @@ public class Recrafted implements ModInitializer {
 		ServerNetworking.registerEvents();
 		PotionCauldronBehavior.bootstrap();
 		ModSoundEvents.registerModSoundEvents();
+		ModRegistries.registerModRegistries();
 	}
 }

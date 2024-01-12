@@ -5,7 +5,6 @@
   "mixins": [
     "AbstractCauldronBlockInvoker",
     "CauldronBehaviorMixin",
-    "ExampleMixin",
     "GrindstoneScreenHandlerMixin",
     "GrindstoneScreenHandlerMixin$GrindstoneExperienceMixin",
     "GrindstoneScreenHandlerMixin$GrindstoneScreenHandlerSlot1Mixin",

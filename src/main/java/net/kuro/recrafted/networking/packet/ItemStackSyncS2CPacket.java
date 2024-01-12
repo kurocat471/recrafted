@@ -1,7 +1,7 @@
 package net.kuro.recrafted.networking.packet;
 
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
-import net.kuro.recrafted.block.entity.AnvilBlockEntity;
+import net.kuro.recrafted.structure.block.entity.custom.AnvilBlockEntity;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.item.ItemStack;

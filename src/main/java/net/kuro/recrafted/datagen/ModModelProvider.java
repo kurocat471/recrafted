@@ -2,11 +2,9 @@ package net.kuro.recrafted.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.kuro.recrafted.block.ModBlocks;
-import net.kuro.recrafted.item.ModItems;
+import net.kuro.recrafted.structure.block.ModBlocks;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {

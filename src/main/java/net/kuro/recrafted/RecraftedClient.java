@@ -1,15 +1,15 @@
 package net.kuro.recrafted;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.kuro.recrafted.block.entity.ModBlockEntities;
-import net.kuro.recrafted.block.entity.renderer.AnvilBlockEntityRenderer;
-import net.kuro.recrafted.block.entity.renderer.PotionCauldronBlockEntityRenderer;
-import net.kuro.recrafted.block.entity.renderer.WaterBarrelBlockEntityRenderer;
-import net.kuro.recrafted.block.entity.renderer.WaterCauldronBlockEntityRenderer;
+import net.kuro.recrafted.structure.block.entity.ModBlockEntities;
+import net.kuro.recrafted.structure.block.entity.renderer.AnvilBlockEntityRenderer;
+import net.kuro.recrafted.structure.block.entity.renderer.PotionCauldronBlockEntityRenderer;
+import net.kuro.recrafted.structure.block.entity.renderer.WaterBarrelBlockEntityRenderer;
+import net.kuro.recrafted.structure.block.entity.renderer.WaterCauldronBlockEntityRenderer;
 import net.kuro.recrafted.networking.ClientNetworking;
 import net.kuro.recrafted.networking.ModMessages;
-import net.kuro.recrafted.screen.AnvilScreen;
-import net.kuro.recrafted.screen.ModScreenHandlers;
+import net.kuro.recrafted.structure.screen.AnvilScreen;
+import net.kuro.recrafted.structure.screen.ModScreenHandlers;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 

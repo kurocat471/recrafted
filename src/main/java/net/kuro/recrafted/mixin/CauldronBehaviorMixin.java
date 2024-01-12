@@ -1,6 +1,6 @@
 package net.kuro.recrafted.mixin;
 
-import net.kuro.recrafted.block.potioncauldron.PotionCauldronBehavior;
+import net.kuro.recrafted.structure.block.custom.potioncauldron.PotionCauldronBehavior;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.cauldron.CauldronBehavior;
 import net.minecraft.entity.player.PlayerEntity;

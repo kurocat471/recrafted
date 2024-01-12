@@ -1,6 +1,6 @@
 package net.kuro.recrafted.mixin;
 
-import net.kuro.recrafted.block.entity.WaterCauldronBlockEntity;
+import net.kuro.recrafted.structure.block.entity.custom.WaterCauldronBlockEntity;
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeveledCauldronBlock;

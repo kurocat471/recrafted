@@ -6,7 +6,7 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.event.client.player.ClientPickBlockGatherCallback;
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
 import net.kuro.recrafted.Recrafted;
-import net.kuro.recrafted.block.custom.PotionCauldronBlock;
+import net.kuro.recrafted.structure.block.custom.potioncauldron.PotionCauldronBlock;
 import net.kuro.recrafted.networking.packet.ParticlePacket;
 import net.kuro.recrafted.util.ParticleUtils;
 import net.minecraft.client.MinecraftClient;
