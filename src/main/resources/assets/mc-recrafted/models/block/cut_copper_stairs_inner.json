@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "mc-recrafted:block/cut_copper",
+    "side": "mc-recrafted:block/cut_copper",
+    "top": "mc-recrafted:block/cut_copper"
+  }
+}

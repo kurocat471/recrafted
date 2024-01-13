@@ -1,0 +1,6 @@
+{
+  "parent": "mc-recrafted:block/waxed_cut_copper",
+  "textures": {
+    "all": "mc-recrafted:block/waxed_cut_copper"
+  }
+}

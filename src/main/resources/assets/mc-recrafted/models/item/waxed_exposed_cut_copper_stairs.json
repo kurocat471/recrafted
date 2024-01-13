@@ -1,0 +1,10 @@
+{
+  "parent": "mc-recrafted:item/waxed_stairs",
+  "textures": {
+    "side1": "mc-recrafted:block/waxed_exposed_cut_copper_stair_left",
+    "side2": "mc-recrafted:block/waxed_exposed_cut_copper_stair_right",
+    "inner": "mc-recrafted:block/waxed_exposed_cut_copper_double_vertical",
+    "double1": "mc-recrafted:block/waxed_exposed_cut_copper_double_horizontal",
+    "top": "mc-recrafted:block/waxed_exposed_cut_copper"
+  }
+}

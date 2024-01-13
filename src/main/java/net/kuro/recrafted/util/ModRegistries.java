@@ -35,5 +35,32 @@ public class ModRegistries {
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_CHISELED_COPPER, ModBlocks.WAXED_EXPOSED_CHISELED_COPPER);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_CHISELED_COPPER, ModBlocks.WAXED_WEATHERED_CHISELED_COPPER);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_CHISELED_COPPER, ModBlocks.WAXED_OXIDIZED_CHISELED_COPPER);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.CUT_COPPER, ModBlocks.EXPOSED_CUT_COPPER);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_CUT_COPPER, ModBlocks.WEATHERED_CUT_COPPER);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_CUT_COPPER, ModBlocks.OXIDIZED_CUT_COPPER);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.CUT_COPPER, ModBlocks.WAXED_CUT_COPPER);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_CUT_COPPER, ModBlocks.WAXED_EXPOSED_CUT_COPPER);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_CUT_COPPER, ModBlocks.WAXED_WEATHERED_CUT_COPPER);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_CUT_COPPER, ModBlocks.WAXED_OXIDIZED_CUT_COPPER);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.CUT_COPPER_STAIRS, ModBlocks.EXPOSED_CUT_COPPER_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_CUT_COPPER_STAIRS, ModBlocks.WEATHERED_CUT_COPPER_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_CUT_COPPER_STAIRS, ModBlocks.OXIDIZED_CUT_COPPER_STAIRS);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.CUT_COPPER_STAIRS, ModBlocks.WAXED_CUT_COPPER_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_CUT_COPPER_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_CUT_COPPER_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.CUT_COPPER_SLAB, ModBlocks.EXPOSED_CUT_COPPER_SLAB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_CUT_COPPER_SLAB, ModBlocks.WEATHERED_CUT_COPPER_SLAB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_CUT_COPPER_SLAB, ModBlocks.OXIDIZED_CUT_COPPER_SLAB);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.CUT_COPPER_SLAB, ModBlocks.WAXED_CUT_COPPER_SLAB);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_CUT_COPPER_SLAB);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_CUT_COPPER_SLAB);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_CUT_COPPER_SLAB);
     }
 }

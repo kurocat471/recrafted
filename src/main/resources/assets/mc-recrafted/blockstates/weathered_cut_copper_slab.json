@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mc-recrafted:block/weathered_cut_copper_slab"
+    },
+    "type=double": {
+      "model": "mc-recrafted:block/weathered_cut_copper"
+    },
+    "type=top": {
+      "model": "mc-recrafted:block/weathered_cut_copper_slab_top"
+    }
+  }
+}

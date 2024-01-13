@@ -80,6 +80,60 @@ public class ModBlocks {
     public static final Block WAXED_OXIDIZED_CHISELED_COPPER = registerBlock("waxed_oxidized_chiseled_copper",
             new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
 
+    public static final Block CUT_COPPER = registerBlock("cut_copper",
+            new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block EXPOSED_CUT_COPPER = registerBlock("exposed_cut_copper",
+            new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WEATHERED_CUT_COPPER = registerBlock("weathered_cut_copper",
+            new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block OXIDIZED_CUT_COPPER = registerBlock("oxidized_cut_copper",
+            new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+
+    public static final Block WAXED_CUT_COPPER = registerBlock("waxed_cut_copper",
+            new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WAXED_EXPOSED_CUT_COPPER = registerBlock("waxed_exposed_cut_copper",
+            new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WAXED_WEATHERED_CUT_COPPER = registerBlock("waxed_weathered_cut_copper",
+            new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WAXED_OXIDIZED_CUT_COPPER = registerBlock("waxed_oxidized_cut_copper",
+            new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+
+    public static final Block CUT_COPPER_STAIRS = registerBlock("cut_copper_stairs",
+            new OxidizableStairsBlock(Oxidizable.OxidationLevel.UNAFFECTED, ModBlocks.CUT_COPPER.getDefaultState(), FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block EXPOSED_CUT_COPPER_STAIRS = registerBlock("exposed_cut_copper_stairs",
+            new OxidizableStairsBlock(Oxidizable.OxidationLevel.EXPOSED, ModBlocks.EXPOSED_CUT_COPPER.getDefaultState(), FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WEATHERED_CUT_COPPER_STAIRS = registerBlock("weathered_cut_copper_stairs",
+            new OxidizableStairsBlock(Oxidizable.OxidationLevel.WEATHERED, ModBlocks.WEATHERED_CUT_COPPER.getDefaultState(), FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block OXIDIZED_CUT_COPPER_STAIRS = registerBlock("oxidized_cut_copper_stairs",
+            new OxidizableStairsBlock(Oxidizable.OxidationLevel.OXIDIZED, ModBlocks.OXIDIZED_CUT_COPPER.getDefaultState(), FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+
+    public static final Block WAXED_CUT_COPPER_STAIRS = registerBlock("waxed_cut_copper_stairs",
+            new StairsBlock(ModBlocks.WAXED_CUT_COPPER.getDefaultState(), FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WAXED_EXPOSED_CUT_COPPER_STAIRS = registerBlock("waxed_exposed_cut_copper_stairs",
+            new StairsBlock(ModBlocks.WAXED_EXPOSED_CUT_COPPER.getDefaultState(), FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WAXED_WEATHERED_CUT_COPPER_STAIRS = registerBlock("waxed_weathered_cut_copper_stairs",
+            new StairsBlock(ModBlocks.WAXED_WEATHERED_CUT_COPPER.getDefaultState(), FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WAXED_OXIDIZED_CUT_COPPER_STAIRS = registerBlock("waxed_oxidized_cut_copper_stairs",
+            new StairsBlock(ModBlocks.WAXED_OXIDIZED_CUT_COPPER.getDefaultState(), FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+
+    public static final Block CUT_COPPER_SLAB = registerBlock("cut_copper_slab",
+            new OxidizableSlabBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block EXPOSED_CUT_COPPER_SLAB = registerBlock("exposed_cut_copper_slab",
+            new OxidizableSlabBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WEATHERED_CUT_COPPER_SLAB = registerBlock("weathered_cut_copper_slab",
+            new OxidizableSlabBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block OXIDIZED_CUT_COPPER_SLAB = registerBlock("oxidized_cut_copper_slab",
+            new OxidizableSlabBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+
+    public static final Block WAXED_CUT_COPPER_SLAB = registerBlock("waxed_cut_copper_slab",
+            new SlabBlock(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WAXED_EXPOSED_CUT_COPPER_SLAB = registerBlock("waxed_exposed_cut_copper_slab",
+            new SlabBlock(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WAXED_WEATHERED_CUT_COPPER_SLAB = registerBlock("waxed_weathered_cut_copper_slab",
+            new SlabBlock(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WAXED_OXIDIZED_CUT_COPPER_SLAB = registerBlock("waxed_oxidized_cut_copper_slab",
+            new SlabBlock(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+
     public static final Block NATIVE_COPPER_BLOCK = registerBlock("native_copper_block",
             new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.BASALT)));
     public static final Block MALACHITE_BLOCK = registerBlock("malachite_block",
