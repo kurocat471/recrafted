@@ -1,5 +1,5 @@
 {
-  "parent": "mc-recrafted:block/waxed_oxidized_chiseled_copper",
+  "parent": "mc-recrafted:block/oxidized_chiseled_copper",
   "textures": {
     "all": "mc-recrafted:block/waxed_oxidized_chiseled_copper"
   }

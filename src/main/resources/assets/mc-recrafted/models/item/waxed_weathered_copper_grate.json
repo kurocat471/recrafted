@@ -1,5 +1,5 @@
 {
-  "parent": "mc-recrafted:block/waxed_weathered_copper_grate",
+  "parent": "mc-recrafted:block/weathered_copper_grate",
   "textures": {
     "all": "mc-recrafted:block/waxed_weathered_copper_grate"
   }

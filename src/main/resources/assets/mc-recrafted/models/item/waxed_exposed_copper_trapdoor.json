@@ -1,0 +1,7 @@
+{
+  "parent": "mc-recrafted:item/waxed_trapdoor",
+  "textures": {
+    "texture": "mc-recrafted:block/waxed_exposed_copper_trapdoor",
+    "side": "mc-recrafted:block/waxed_exposed_copper_trapdoor_side"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "mc-recrafted:block/waxed_weathered_copper_block"
+      "model": "mc-recrafted:block/weathered_copper_block"
     }
   }
 }

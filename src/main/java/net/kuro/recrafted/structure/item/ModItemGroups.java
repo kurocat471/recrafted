@@ -82,6 +82,33 @@ public class ModItemGroups {
                             entries.add(ModBlocks.WAXED_WEATHERED_CUT_COPPER_SLAB);
                             entries.add(ModBlocks.WAXED_OXIDIZED_CUT_COPPER_SLAB);
 
+                            entries.add(ModBlocks.COPPER_DOOR);
+                            entries.add(ModBlocks.EXPOSED_COPPER_DOOR);
+                            entries.add(ModBlocks.WEATHERED_COPPER_DOOR);
+                            entries.add(ModBlocks.OXIDIZED_COPPER_DOOR);
+                            entries.add(ModBlocks.WAXED_COPPER_DOOR);
+                            entries.add(ModBlocks.WAXED_EXPOSED_COPPER_DOOR);
+                            entries.add(ModBlocks.WAXED_WEATHERED_COPPER_DOOR);
+                            entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_DOOR);
+
+                            entries.add(ModBlocks.COPPER_TRAPDOOR);
+                            entries.add(ModBlocks.EXPOSED_COPPER_TRAPDOOR);
+                            entries.add(ModBlocks.WEATHERED_COPPER_TRAPDOOR);
+                            entries.add(ModBlocks.OXIDIZED_COPPER_TRAPDOOR);
+                            entries.add(ModBlocks.WAXED_COPPER_TRAPDOOR);
+                            entries.add(ModBlocks.WAXED_EXPOSED_COPPER_TRAPDOOR);
+                            entries.add(ModBlocks.WAXED_WEATHERED_COPPER_TRAPDOOR);
+                            entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_TRAPDOOR);
+
+                            entries.add(ModBlocks.COPPER_BULB);
+                            entries.add(ModBlocks.EXPOSED_COPPER_BULB);
+                            entries.add(ModBlocks.WEATHERED_COPPER_BULB);
+                            entries.add(ModBlocks.OXIDIZED_COPPER_BULB);
+                            entries.add(ModBlocks.WAXED_COPPER_BULB);
+                            entries.add(ModBlocks.WAXED_EXPOSED_COPPER_BULB);
+                            entries.add(ModBlocks.WAXED_WEATHERED_COPPER_BULB);
+                            entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_BULB);
+
                             entries.add(ModBlocks.NATIVE_COPPER_BLOCK);
                             entries.add(ModBlocks.MALACHITE_BLOCK);
                             entries.add(ModBlocks.TETRAHEDRITE_BLOCK);

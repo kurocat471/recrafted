@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "mc-recrafted:block/waxed_copper_grate"
+      "model": "mc-recrafted:block/copper_grate"
     }
   }
 }

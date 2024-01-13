@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "mc-recrafted:block/waxed_exposed_chiseled_copper"
+      "model": "mc-recrafted:block/exposed_chiseled_copper"
     }
   }
 }

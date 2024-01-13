@@ -14,7 +14,23 @@ public class BlockRenderLayerRegistries {
                 ModBlocks.WAXED_COPPER_GRATE,
                 ModBlocks.WAXED_EXPOSED_COPPER_GRATE,
                 ModBlocks.WAXED_WEATHERED_COPPER_GRATE,
-                ModBlocks.WAXED_OXIDIZED_COPPER_GRATE
+                ModBlocks.WAXED_OXIDIZED_COPPER_GRATE,
+                ModBlocks.COPPER_DOOR,
+                ModBlocks.EXPOSED_COPPER_DOOR,
+                ModBlocks.WEATHERED_COPPER_DOOR,
+                ModBlocks.OXIDIZED_COPPER_DOOR,
+                ModBlocks.WAXED_COPPER_DOOR,
+                ModBlocks.WAXED_EXPOSED_COPPER_DOOR,
+                ModBlocks.WAXED_WEATHERED_COPPER_DOOR,
+                ModBlocks.WAXED_OXIDIZED_COPPER_DOOR,
+                ModBlocks.COPPER_TRAPDOOR,
+                ModBlocks.EXPOSED_COPPER_TRAPDOOR,
+                ModBlocks.WEATHERED_COPPER_TRAPDOOR,
+                ModBlocks.OXIDIZED_COPPER_TRAPDOOR,
+                ModBlocks.WAXED_COPPER_TRAPDOOR,
+                ModBlocks.WAXED_EXPOSED_COPPER_TRAPDOOR,
+                ModBlocks.WAXED_WEATHERED_COPPER_TRAPDOOR,
+                ModBlocks.WAXED_OXIDIZED_COPPER_TRAPDOOR
         );
     }
 }

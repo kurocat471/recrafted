@@ -1,0 +1,6 @@
+{
+  "parent": "mc-recrafted:item/exposed_copper_bulb",
+  "textures": {
+    "all": "mc-recrafted:block/waxed_exposed_copper_bulb"
+  }
+}

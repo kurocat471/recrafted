@@ -1,5 +1,5 @@
 {
-  "parent": "mc-recrafted:block/waxed_oxidized_cut_copper_slab",
+  "parent": "mc-recrafted:block/oxidized_cut_copper_slab",
   "textures": {
     "bottom": "mc-recrafted:block/waxed_oxidized_cut_copper",
     "top": "mc-recrafted:block/waxed_oxidized_cut_copper",

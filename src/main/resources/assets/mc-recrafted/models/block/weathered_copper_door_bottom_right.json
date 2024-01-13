@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "textures": {
+    "bottom": "mc-recrafted:block/weathered_copper_door_bottom",
+    "top": "mc-recrafted:block/weathered_copper_door_top"
+  }
+}

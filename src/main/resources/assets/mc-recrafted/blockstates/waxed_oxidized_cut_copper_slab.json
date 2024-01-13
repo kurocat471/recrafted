@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "mc-recrafted:block/waxed_oxidized_cut_copper_slab"
+      "model": "mc-recrafted:block/oxidized_cut_copper_slab"
     },
     "type=double": {
-      "model": "mc-recrafted:block/waxed_oxidized_cut_copper"
+      "model": "mc-recrafted:block/oxidized_cut_copper"
     },
     "type=top": {
-      "model": "mc-recrafted:block/waxed_oxidized_cut_copper_slab_top"
+      "model": "mc-recrafted:block/oxidized_cut_copper_slab_top"
     }
   }
 }

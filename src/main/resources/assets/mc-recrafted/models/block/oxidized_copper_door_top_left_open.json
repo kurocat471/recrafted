@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "mc-recrafted:block/oxidized_copper_door_bottom",
+    "top": "mc-recrafted:block/oxidized_copper_door_top"
+  }
+}

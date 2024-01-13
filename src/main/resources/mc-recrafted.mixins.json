@@ -6,6 +6,7 @@
     "AbstractCauldronBlockInvoker",
     "AxeItemMixin",
     "CauldronBehaviorMixin",
+    "DoorBlockMixin",
     "GrindstoneScreenHandlerMixin",
     "GrindstoneScreenHandlerMixin$GrindstoneExperienceMixin",
     "GrindstoneScreenHandlerMixin$GrindstoneScreenHandlerSlot1Mixin",
