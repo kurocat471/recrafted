@@ -11,6 +11,7 @@
   "item.mc-recrafted.malachite": "Malachite",
   "item.mc-recrafted.tetrahedrite": "Tetrahedrite",
   "item.mc-recrafted.patina": "Patina",
+
   "block.mc-recrafted.copper_block": "Block of Copper",
   "block.mc-recrafted.exposed_copper_block": "Exposed Block of Copper",
   "block.mc-recrafted.weathered_copper_block": "Weathered Block of Copper",
@@ -19,9 +20,20 @@
   "block.mc-recrafted.waxed_exposed_copper_block": "Waxed Exposed Block of Copper",
   "block.mc-recrafted.waxed_weathered_copper_block": "Waxed Weathered Block of Copper",
   "block.mc-recrafted.waxed_oxidized_copper_block": "Waxed Oxidized Block of Copper",
+
+  "block.mc-recrafted.copper_grate": "Copper Grate",
+  "block.mc-recrafted.exposed_copper_grate": "Exposed Copper Grate",
+  "block.mc-recrafted.weathered_copper_grate": "Weathered Copper Grate",
+  "block.mc-recrafted.oxidized_copper_grate": "Oxidized Copper Grate",
+  "block.mc-recrafted.waxed_copper_grate": "Waxed Copper Grate",
+  "block.mc-recrafted.waxed_exposed_copper_grate": "Waxed Exposed Copper Grate",
+  "block.mc-recrafted.waxed_weathered_copper_grate": "Waxed Weathered Copper Grate",
+  "block.mc-recrafted.waxed_oxidized_copper_grate": "Waxed Oxidized Copper Grate",
+
   "block.mc-recrafted.native_copper_block": "Block of Native Copper",
   "block.mc-recrafted.malachite_block": "Block of Malachite",
   "block.mc-recrafted.tetrahedrite_block": "Block of Tetrahedrite",
+
   "item.mc-recrafted.tin_ingot": "Tin Ingot",
   "item.mc-recrafted.tin_nugget": "Tin Nugget",
   "item.mc-recrafted.cassiterite": "Cassiterite",

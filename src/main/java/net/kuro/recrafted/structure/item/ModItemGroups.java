@@ -19,6 +19,7 @@ public class ModItemGroups {
                 FabricItemGroup.builder().displayName(Text.translatable("itemgroup.recrafted_group"))
                         .icon(() -> new ItemStack(ModItems.COBALT_INGOT)).entries((displayContext, entries) -> {
                             entries.add(ModBlocks.RHYOLITE);
+
                             entries.add(ModItems.COPPER_INGOT);
                             entries.add(ModItems.SUPERHEATED_COPPER_INGOT);
                             entries.add(ModItems.COPPER_NUGGET);
@@ -26,6 +27,7 @@ public class ModItemGroups {
                             entries.add(ModItems.MALACHITE);
                             entries.add(ModItems.TETRAHEDRITE);
                             entries.add(ModItems.PATINA);
+
                             entries.add(ModBlocks.COPPER_BLOCK);
                             entries.add(ModBlocks.EXPOSED_COPPER_BLOCK);
                             entries.add(ModBlocks.WEATHERED_COPPER_BLOCK);
@@ -34,9 +36,20 @@ public class ModItemGroups {
                             entries.add(ModBlocks.WAXED_EXPOSED_COPPER_BLOCK);
                             entries.add(ModBlocks.WAXED_WEATHERED_COPPER_BLOCK);
                             entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_BLOCK);
+
+                            entries.add(ModBlocks.COPPER_GRATE);
+                            entries.add(ModBlocks.EXPOSED_COPPER_GRATE);
+                            entries.add(ModBlocks.WEATHERED_COPPER_GRATE);
+                            entries.add(ModBlocks.OXIDIZED_COPPER_GRATE);
+                            entries.add(ModBlocks.WAXED_COPPER_GRATE);
+                            entries.add(ModBlocks.WAXED_EXPOSED_COPPER_GRATE);
+                            entries.add(ModBlocks.WAXED_WEATHERED_COPPER_GRATE);
+                            entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_GRATE);
+
                             entries.add(ModBlocks.NATIVE_COPPER_BLOCK);
                             entries.add(ModBlocks.MALACHITE_BLOCK);
                             entries.add(ModBlocks.TETRAHEDRITE_BLOCK);
+
                             entries.add(ModItems.TIN_INGOT);
                             entries.add(ModItems.SUPERHEATED_TIN_INGOT);
                             entries.add(ModItems.TIN_NUGGET);

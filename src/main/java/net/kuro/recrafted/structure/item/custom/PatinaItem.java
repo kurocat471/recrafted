@@ -21,6 +21,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldEvents;
 import net.minecraft.world.event.GameEvent;
 
+import java.util.Optional;
+
 public class PatinaItem extends Item {
 
     public PatinaItem(Settings settings) {
@@ -37,16 +39,18 @@ public class PatinaItem extends Item {
         ItemStack stack = context.getStack();
         Hand hand = context.getHand();
         BlockPos pos = context.getBlockPos();
-        if (block instanceof Oxidizable && Oxidizable.getIncreasedOxidationBlock(block).isPresent()) {
-            Block nextOxidizeBlock = Oxidizable.getIncreasedOxidationBlock(block).get();
+        Optional<BlockState> nextOxidizedState = Oxidizable.getIncreasedOxidationBlock(block).map(bloc -> bloc.getStateWithProperties(state));
+
+        if (block instanceof Oxidizable && nextOxidizedState.isPresent()) {
+
             world.playSound(player, pos, ModSoundEvents.PATINA_CRUMBLES, SoundCategory.BLOCKS, 1.0f, 1.0f);
             world.syncWorldEvent(player, WorldEvents.BLOCK_SCRAPED, pos, 0);
 
             if (player instanceof ServerPlayerEntity) {
                 Criteria.ITEM_USED_ON_BLOCK.trigger((ServerPlayerEntity)player, pos, stack);
             }
-            world.setBlockState(pos, nextOxidizeBlock.getDefaultState(), Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
-            world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(player, nextOxidizeBlock.getDefaultState()));
+            world.setBlockState(pos, nextOxidizedState.get(), Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
+            world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(player, nextOxidizedState.get()));
             if (player != null) {
                 stack.decrement(1);
             }

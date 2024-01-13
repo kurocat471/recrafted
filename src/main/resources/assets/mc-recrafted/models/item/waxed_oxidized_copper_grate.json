@@ -1,0 +1,6 @@
+{
+  "parent": "mc-recrafted:block/waxed_oxidized_copper_grate",
+  "textures": {
+    "all": "mc-recrafted:block/waxed_oxidized_copper_grate"
+  }
+}

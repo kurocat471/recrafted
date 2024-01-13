@@ -10,6 +10,7 @@ import net.kuro.recrafted.networking.ClientNetworking;
 import net.kuro.recrafted.networking.ModMessages;
 import net.kuro.recrafted.structure.screen.AnvilScreen;
 import net.kuro.recrafted.structure.screen.ModScreenHandlers;
+import net.kuro.recrafted.util.BlockRenderLayerRegistries;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
@@ -22,7 +23,7 @@ public class RecraftedClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(ModBlockEntities.POTION_CAULDRON_BE, PotionCauldronBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(ModBlockEntities.WATER_CAULDRON_BE, WaterCauldronBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(ModBlockEntities.WATER_BARREL_BE, WaterBarrelBlockEntityRenderer::new);
-
+        BlockRenderLayerRegistries.registerBlockRenderLayers();
         ClientNetworking.registerEvents();
     }
 }

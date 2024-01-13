@@ -17,5 +17,14 @@ public class ModRegistries {
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_BLOCK, ModBlocks.WAXED_EXPOSED_COPPER_BLOCK);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_BLOCK, ModBlocks.WAXED_WEATHERED_COPPER_BLOCK);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_BLOCK, ModBlocks.WAXED_OXIDIZED_COPPER_BLOCK);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_GRATE, ModBlocks.EXPOSED_COPPER_GRATE);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_GRATE, ModBlocks.WEATHERED_COPPER_GRATE);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_COPPER_GRATE, ModBlocks.OXIDIZED_COPPER_GRATE);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.COPPER_GRATE, ModBlocks.WAXED_COPPER_GRATE);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_GRATE, ModBlocks.WAXED_EXPOSED_COPPER_GRATE);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_GRATE, ModBlocks.WAXED_WEATHERED_COPPER_GRATE);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_GRATE, ModBlocks.WAXED_OXIDIZED_COPPER_GRATE);
     }
 }
