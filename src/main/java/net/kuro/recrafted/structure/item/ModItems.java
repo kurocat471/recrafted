@@ -3,6 +3,7 @@ package net.kuro.recrafted.structure.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.structure.block.ModBlocks;
+import net.kuro.recrafted.structure.item.custom.PatinaItem;
 import net.kuro.recrafted.structure.item.custom.SuperheatedItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -20,6 +21,10 @@ public class ModItems {
             new Item(new FabricItemSettings()));
     public static final Item TETRAHEDRITE = registerItem("tetrahedrite",
             new Item(new FabricItemSettings()));
+    public static final Item PATINA = registerItem("patina",
+            new PatinaItem(new FabricItemSettings()));
+
+
     public static final Item TIN_INGOT = registerItem("tin_ingot",
             new Item(new FabricItemSettings()));
     public static final Item TIN_NUGGET = registerItem("tin_nugget",

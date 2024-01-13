@@ -11,6 +11,9 @@ public class ModSoundEvents {
     private static final Identifier POTION_EVAPORATES_ID = new Identifier(Recrafted.MOD_ID, "potion_evaporates");
     public static final SoundEvent POTION_EVAPORATES = registerSoundEvent(POTION_EVAPORATES_ID, SoundEvent.of(POTION_EVAPORATES_ID));
 
+    private static final Identifier PATINA_CRUMBLES_ID = new Identifier(Recrafted.MOD_ID, "patina_crumbles");
+    public static final SoundEvent PATINA_CRUMBLES = registerSoundEvent(PATINA_CRUMBLES_ID, SoundEvent.of(PATINA_CRUMBLES_ID));
+
     private static SoundEvent registerSoundEvent(Identifier id, SoundEvent soundEvent) {
         return Registry.register(Registries.SOUND_EVENT, id, soundEvent);
     }

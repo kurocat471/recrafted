@@ -25,6 +25,7 @@ public class ModItemGroups {
                             entries.add(ModItems.NATIVE_COPPER);
                             entries.add(ModItems.MALACHITE);
                             entries.add(ModItems.TETRAHEDRITE);
+                            entries.add(ModItems.PATINA);
                             entries.add(ModBlocks.COPPER_BLOCK);
                             entries.add(ModBlocks.EXPOSED_COPPER_BLOCK);
                             entries.add(ModBlocks.WEATHERED_COPPER_BLOCK);

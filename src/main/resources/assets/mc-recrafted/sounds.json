@@ -4,5 +4,27 @@
       "random/fizz"
     ],
     "subtitle": "subtitle.potionEvaporates"
+  },
+
+  "patina_crumbles": {
+    "sounds": [
+      {
+        "name": "block/suspicious_sand/break5",
+        "pitch": 0.9
+      },
+      {
+        "name": "block/suspicious_sand/break5",
+        "pitch": 1.1
+      },
+      {
+        "name": "block/suspicious_sand/break5",
+        "pitch": 1.5
+      },
+      {
+        "name": "block/suspicious_sand/break5",
+        "pitch": 1.3
+      }
+    ],
+    "subtitle": "subtitle.patinaCrumbles"
   }
 }

@@ -1,11 +1,13 @@
 {
   "subtitle.potionEvaporates": "Potion evaporates",
+  "subtitle.patinaCrumbles": "Patina crumbles",
 
   "item.mc-recrafted.copper_ingot": "Copper Ingot",
   "item.mc-recrafted.copper_nugget": "Copper Nugget",
   "item.mc-recrafted.native_copper": "Native Copper",
   "item.mc-recrafted.malachite": "Malachite",
   "item.mc-recrafted.tetrahedrite": "Tetrahedrite",
+  "item.mc-recrafted.patina": "Patina",
   "block.mc-recrafted.copper_block": "Block of Copper",
   "block.mc-recrafted.exposed_copper_block": "Exposed Block of Copper",
   "block.mc-recrafted.weathered_copper_block": "Weathered Block of Copper",
