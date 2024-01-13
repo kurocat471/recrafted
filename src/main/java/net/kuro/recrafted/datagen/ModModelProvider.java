@@ -13,14 +13,14 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.EXPOSED_COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WEATHERED_COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OXIDIZED_COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WAXED_COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WAXED_EXPOSED_COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WAXED_WEATHERED_COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WAXED_OXIDIZED_COPPER_GRATE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_COPPER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.EXPOSED_CHISELED_COPPER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WEATHERED_CHISELED_COPPER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OXIDIZED_CHISELED_COPPER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WAXED_CHISELED_COPPER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WAXED_EXPOSED_CHISELED_COPPER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WAXED_WEATHERED_CHISELED_COPPER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WAXED_OXIDIZED_CHISELED_COPPER);
     }
 
     @Override

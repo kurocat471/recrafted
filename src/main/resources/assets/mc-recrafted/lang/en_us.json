@@ -30,6 +30,15 @@
   "block.mc-recrafted.waxed_weathered_copper_grate": "Waxed Weathered Copper Grate",
   "block.mc-recrafted.waxed_oxidized_copper_grate": "Waxed Oxidized Copper Grate",
 
+  "block.mc-recrafted.chiseled_copper": "Chiseled Copper",
+  "block.mc-recrafted.exposed_chiseled_copper": "Exposed Chiseled Copper",
+  "block.mc-recrafted.weathered_chiseled_copper": "Weathered Chiseled Copper",
+  "block.mc-recrafted.oxidized_chiseled_copper": "Oxidized Chiseled Copper",
+  "block.mc-recrafted.waxed_chiseled_copper": "Waxed Chiseled Copper",
+  "block.mc-recrafted.waxed_exposed_chiseled_copper": "Waxed Exposed Chiseled Copper",
+  "block.mc-recrafted.waxed_weathered_chiseled_copper": "Waxed Weathered Chiseled Copper",
+  "block.mc-recrafted.waxed_oxidized_chiseled_copper": "Waxed Oxidized Chiseled Copper",
+
   "block.mc-recrafted.native_copper_block": "Block of Native Copper",
   "block.mc-recrafted.malachite_block": "Block of Malachite",
   "block.mc-recrafted.tetrahedrite_block": "Block of Tetrahedrite",

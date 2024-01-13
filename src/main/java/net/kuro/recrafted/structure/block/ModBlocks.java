@@ -62,6 +62,23 @@ public class ModBlocks {
     public static final Block WAXED_OXIDIZED_COPPER_GRATE = registerBlock("waxed_oxidized_copper_grate",
             new GrateBlock(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque().solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never).nonOpaque()));
 
+    public static final Block CHISELED_COPPER = registerBlock("chiseled_copper",
+            new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block EXPOSED_CHISELED_COPPER = registerBlock("exposed_chiseled_copper",
+            new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WEATHERED_CHISELED_COPPER = registerBlock("weathered_chiseled_copper",
+            new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block OXIDIZED_CHISELED_COPPER = registerBlock("oxidized_chiseled_copper",
+            new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+
+    public static final Block WAXED_CHISELED_COPPER = registerBlock("waxed_chiseled_copper",
+            new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WAXED_EXPOSED_CHISELED_COPPER = registerBlock("waxed_exposed_chiseled_copper",
+            new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WAXED_WEATHERED_CHISELED_COPPER = registerBlock("waxed_weathered_chiseled_copper",
+            new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
+    public static final Block WAXED_OXIDIZED_CHISELED_COPPER = registerBlock("waxed_oxidized_chiseled_copper",
+            new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
 
     public static final Block NATIVE_COPPER_BLOCK = registerBlock("native_copper_block",
             new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.BASALT)));

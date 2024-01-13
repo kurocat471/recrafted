@@ -1,0 +1,6 @@
+{
+  "parent": "mc-recrafted:block/waxed_weathered_chiseled_copper",
+  "textures": {
+    "all": "mc-recrafted:block/waxed_weathered_chiseled_copper"
+  }
+}

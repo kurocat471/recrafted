@@ -46,6 +46,15 @@ public class ModItemGroups {
                             entries.add(ModBlocks.WAXED_WEATHERED_COPPER_GRATE);
                             entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_GRATE);
 
+                            entries.add(ModBlocks.CHISELED_COPPER);
+                            entries.add(ModBlocks.EXPOSED_CHISELED_COPPER);
+                            entries.add(ModBlocks.WEATHERED_CHISELED_COPPER);
+                            entries.add(ModBlocks.OXIDIZED_CHISELED_COPPER);
+                            entries.add(ModBlocks.WAXED_CHISELED_COPPER);
+                            entries.add(ModBlocks.WAXED_EXPOSED_CHISELED_COPPER);
+                            entries.add(ModBlocks.WAXED_WEATHERED_CHISELED_COPPER);
+                            entries.add(ModBlocks.WAXED_OXIDIZED_CHISELED_COPPER);
+
                             entries.add(ModBlocks.NATIVE_COPPER_BLOCK);
                             entries.add(ModBlocks.MALACHITE_BLOCK);
                             entries.add(ModBlocks.TETRAHEDRITE_BLOCK);
