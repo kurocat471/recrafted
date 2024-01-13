@@ -1,6 +1,7 @@
 package net.kuro.recrafted.structure.block.custom.barrel;
 
 import net.kuro.recrafted.Recrafted;
+import net.kuro.recrafted.sound.ModSoundEvents;
 import net.kuro.recrafted.structure.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
@@ -26,7 +27,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                     world.playSound(
                             null,
                             pos,
-                            SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                            ModSoundEvents.ITEM_COOLS,
                             SoundCategory.BLOCKS,
                             0.5f,
                             2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -49,7 +50,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -72,7 +73,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -95,7 +96,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -118,7 +119,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -141,7 +142,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -164,7 +165,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -187,7 +188,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -210,7 +211,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -233,7 +234,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -256,7 +257,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -279,7 +280,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -302,7 +303,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -325,7 +326,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -348,7 +349,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -371,7 +372,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -394,7 +395,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -417,7 +418,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -440,7 +441,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -463,7 +464,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -486,7 +487,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -509,7 +510,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -532,7 +533,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -555,7 +556,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                         world.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.5f,
                                 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -578,7 +579,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                     world.playSound(
                             null,
                             pos,
-                            SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                            ModSoundEvents.ITEM_COOLS,
                             SoundCategory.BLOCKS,
                             0.5f,
                             2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -601,7 +602,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                     world.playSound(
                             null,
                             pos,
-                            SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                            ModSoundEvents.ITEM_COOLS,
                             SoundCategory.BLOCKS,
                             0.5f,
                             2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -624,7 +625,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                     world.playSound(
                             null,
                             pos,
-                            SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                            ModSoundEvents.ITEM_COOLS,
                             SoundCategory.BLOCKS,
                             0.5f,
                             2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -647,7 +648,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                     world.playSound(
                             null,
                             pos,
-                            SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                            ModSoundEvents.ITEM_COOLS,
                             SoundCategory.BLOCKS,
                             0.5f,
                             2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f
@@ -670,7 +671,7 @@ public interface ModBarrelBehavior extends BarrelBehavior {
                     world.playSound(
                             null,
                             pos,
-                            SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                            ModSoundEvents.ITEM_COOLS,
                             SoundCategory.BLOCKS,
                             0.5f,
                             2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f

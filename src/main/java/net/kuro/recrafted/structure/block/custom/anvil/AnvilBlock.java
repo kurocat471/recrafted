@@ -1,5 +1,6 @@
 package net.kuro.recrafted.structure.block.custom.anvil;
 
+import net.kuro.recrafted.sound.ModSoundEvents;
 import net.kuro.recrafted.structure.block.entity.custom.AnvilBlockEntity;
 import net.kuro.recrafted.structure.block.entity.ModBlockEntities;
 import net.kuro.recrafted.structure.item.ModItems;
@@ -223,7 +224,7 @@ public class AnvilBlock extends BlockWithEntity implements BlockEntityProvider, 
                         serverWorld.playSound(
                                 null,
                                 pos,
-                                SoundEvents.BLOCK_ANVIL_PLACE,
+                                ModSoundEvents.HAMMER_CLANGS,
                                 SoundCategory.BLOCKS,
                                 0.3f,
                                 0.8f

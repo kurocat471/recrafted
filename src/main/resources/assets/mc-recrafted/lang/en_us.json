@@ -1,6 +1,9 @@
 {
   "subtitle.potionEvaporates": "Potion evaporates",
   "subtitle.patinaCrumbles": "Patina crumbles",
+  "subtitle.itemCools": "Item cools",
+  "subtitle.hammerClangs": "Hammer clangs",
+  "subtitle.hammerWorks": "Hammer works",
 
   "item.mc-recrafted.copper_ingot": "Copper Ingot",
   "item.mc-recrafted.copper_nugget": "Copper Nugget",

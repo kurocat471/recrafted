@@ -26,5 +26,26 @@
       }
     ],
     "subtitle": "subtitle.patinaCrumbles"
+  },
+
+  "item_cools": {
+    "sounds": [
+      "random/fizz"
+    ],
+    "subtitle": "subtitle.itemCools"
+  },
+
+  "hammer_clangs": {
+    "sounds": [
+      "random/anvil_land"
+    ],
+    "subtitle": "subtitle.hammerClangs"
+  },
+
+  "hammer_works": {
+    "sounds": [
+      "random/anvil_land"
+    ],
+    "subtitle": "subtitle.hammerWorks"
   }
 }

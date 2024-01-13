@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
+import net.kuro.recrafted.sound.ModSoundEvents;
 import net.kuro.recrafted.structure.block.custom.anvil.AnvilBlock;
 import net.kuro.recrafted.networking.ModMessages;
 import net.kuro.recrafted.structure.block.entity.ModBlockEntities;
@@ -184,7 +185,7 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
                 ((ServerWorld) world).playSound(
                         null,
                         pos,
-                        SoundEvents.BLOCK_ANVIL_LAND,
+                        ModSoundEvents.HAMMER_WORKS,
                         SoundCategory.BLOCKS,
                         0.3f,
                         world.random.nextFloat() * 0.1f + 0.9f
@@ -207,7 +208,7 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
                 ((ServerWorld) world).playSound(
                         null,
                         pos,
-                        SoundEvents.BLOCK_ANVIL_PLACE,
+                        ModSoundEvents.HAMMER_CLANGS,
                         SoundCategory.BLOCKS,
                         0.3f,
                         0.8f
@@ -230,7 +231,7 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
                 ((ServerWorld) world).playSound(
                         null,
                         pos,
-                        SoundEvents.BLOCK_ANVIL_LAND,
+                        ModSoundEvents.HAMMER_WORKS,
                         SoundCategory.BLOCKS,
                         0.3f,
                         world.random.nextFloat() * 0.1f + 0.9f
@@ -254,7 +255,7 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
                 ((ServerWorld) world).playSound(
                         null,
                         pos,
-                        SoundEvents.BLOCK_ANVIL_PLACE,
+                        ModSoundEvents.HAMMER_CLANGS,
                         SoundCategory.BLOCKS,
                         0.3f,
                         0.8f
@@ -266,7 +267,7 @@ public class AnvilBlockEntity extends BlockEntity implements ExtendedScreenHandl
             ((ServerWorld) world).playSound(
                     null,
                     pos,
-                    SoundEvents.BLOCK_ANVIL_PLACE,
+                    ModSoundEvents.HAMMER_CLANGS,
                     SoundCategory.BLOCKS,
                     0.3f,
                     0.8f

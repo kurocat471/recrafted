@@ -1,5 +1,6 @@
 package net.kuro.recrafted.structure.item.custom;
 
+import net.kuro.recrafted.sound.ModSoundEvents;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -79,7 +80,7 @@ public class SuperheatedItem extends Item {
                         world.playSoundFromEntity(
                                 null,
                                 player,
-                                SoundEvents.BLOCK_LAVA_EXTINGUISH,
+                                ModSoundEvents.ITEM_COOLS,
                                 SoundCategory.BLOCKS,
                                 0.35f,
                                 2.6f + (random.nextFloat() - random.nextFloat()) * 0.8f
