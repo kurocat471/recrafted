@@ -1,9 +1,18 @@
 package net.kuro.recrafted.util;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
+import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.structure.block.ModBlocks;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+
+import java.util.Set;
 
 public class ModRegistries {
+
     public static void registerModRegistries() {
         registerOxidizables();
     }
@@ -89,5 +98,14 @@ public class ModRegistries {
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_BULB, ModBlocks.WAXED_EXPOSED_COPPER_BULB);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_BULB, ModBlocks.WAXED_WEATHERED_COPPER_BULB);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_BULB, ModBlocks.WAXED_OXIDIZED_COPPER_BULB);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_LIGHTNING_ROD, ModBlocks.EXPOSED_COPPER_LIGHTNING_ROD);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_LIGHTNING_ROD, ModBlocks.WEATHERED_COPPER_LIGHTNING_ROD);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_COPPER_LIGHTNING_ROD, ModBlocks.OXIDIZED_COPPER_LIGHTNING_ROD);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.COPPER_LIGHTNING_ROD, ModBlocks.WAXED_COPPER_LIGHTNING_ROD);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_LIGHTNING_ROD, ModBlocks.WAXED_EXPOSED_COPPER_LIGHTNING_ROD);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_LIGHTNING_ROD, ModBlocks.WAXED_WEATHERED_COPPER_LIGHTNING_ROD);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_LIGHTNING_ROD, ModBlocks.WAXED_OXIDIZED_COPPER_LIGHTNING_ROD);
     }
 }

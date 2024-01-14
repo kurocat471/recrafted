@@ -1,0 +1,7 @@
+{
+  "parent": "mc-recrafted:item/waxed_lightning_rod",
+  "textures": {
+    "texture": "mc-recrafted:block/waxed_copper_lightning_rod",
+    "down": "mc-recrafted:block/waxed_copper_lightning_rod_bottom"
+  }
+}

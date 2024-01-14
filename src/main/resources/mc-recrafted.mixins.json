@@ -12,7 +12,9 @@
     "GrindstoneScreenHandlerMixin$GrindstoneScreenHandlerSlot1Mixin",
     "GrindstoneScreenHandlerMixin$GrindstoneScreenHandlerSlot2Mixin",
     "LeveledCauldronBlockMixin",
+    "LightningEntityMixin",
     "PointedDripstoneBlockMixin",
+    "PointOfInterestTypesMixin",
     "PotionMixin"
   ],
   "client": [

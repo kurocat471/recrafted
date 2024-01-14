@@ -1,5 +1,7 @@
 package net.kuro.recrafted.structure.block;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.kuro.recrafted.Recrafted;
@@ -11,10 +13,7 @@ import net.kuro.recrafted.structure.block.custom.barrel.BarrelBlock;
 import net.kuro.recrafted.structure.block.custom.barrel.LeveledBarrelBlock;
 import net.kuro.recrafted.structure.block.custom.bulb.BulbBlock;
 import net.kuro.recrafted.structure.block.custom.grate.GrateBlock;
-import net.kuro.recrafted.structure.block.custom.oxidizable.OxidizableBulbBlock;
-import net.kuro.recrafted.structure.block.custom.oxidizable.OxidizableDoorBlock;
-import net.kuro.recrafted.structure.block.custom.oxidizable.OxidizableGrateBlock;
-import net.kuro.recrafted.structure.block.custom.oxidizable.OxidizableTrapdoorBlock;
+import net.kuro.recrafted.structure.block.custom.oxidizable.*;
 import net.kuro.recrafted.structure.block.custom.potioncauldron.PotionCauldronBehavior;
 import net.kuro.recrafted.structure.block.custom.potioncauldron.PotionCauldronBlock;
 import net.minecraft.block.*;
@@ -29,9 +28,13 @@ import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
+import java.util.Set;
+
 import static net.minecraft.block.Blocks.createLightLevelFromLitBlockState;
 
 public class ModBlocks {
+    public static final Set<BlockState> LIGHTNING_RODS;
+
     public static final Block RHYOLITE = registerBlock("rhyolite",
             new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
 
@@ -52,7 +55,6 @@ public class ModBlocks {
             new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
     public static final Block WAXED_OXIDIZED_COPPER_BLOCK = registerBlock("waxed_oxidized_copper_block",
             new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER)));
-
 
     public static final Block COPPER_GRATE = registerBlock("copper_grate",
             new OxidizableGrateBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(ModBlockSoundGroup.COPPER_GRATE).nonOpaque().solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never).allowsSpawning(Blocks::never).nonOpaque()));
@@ -180,7 +182,7 @@ public class ModBlocks {
     public static final Block WAXED_OXIDIZED_COPPER_TRAPDOOR = registerBlock("waxed_oxidized_copper_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque(), ModBlockSetType.COPPER));
 
-public static final Block COPPER_BULB = registerBlock("copper_bulb",
+    public static final Block COPPER_BULB = registerBlock("copper_bulb",
             new OxidizableBulbBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(ModBlockSoundGroup.COPPER_BULB).solidBlock(Blocks::never).luminance(createLightLevelFromLitBlockState(15))));
     public static final Block EXPOSED_COPPER_BULB = registerBlock("exposed_copper_bulb",
             new OxidizableBulbBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(ModBlockSoundGroup.COPPER_BULB).solidBlock(Blocks::never).luminance(createLightLevelFromLitBlockState(12))));
@@ -198,6 +200,32 @@ public static final Block COPPER_BULB = registerBlock("copper_bulb",
     public static final Block WAXED_OXIDIZED_COPPER_BULB = registerBlock("waxed_oxidized_copper_bulb",
             new BulbBlock(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(ModBlockSoundGroup.COPPER_BULB).solidBlock(Blocks::never).luminance(createLightLevelFromLitBlockState(4))));
 
+    public static final LightningRodBlock COPPER_LIGHTNING_ROD;
+    public static final LightningRodBlock EXPOSED_COPPER_LIGHTNING_ROD;
+    public static final LightningRodBlock WEATHERED_COPPER_LIGHTNING_ROD;
+    public static final LightningRodBlock OXIDIZED_COPPER_LIGHTNING_ROD;
+    public static final LightningRodBlock WAXED_COPPER_LIGHTNING_ROD;
+    public static final LightningRodBlock WAXED_EXPOSED_COPPER_LIGHTNING_ROD;
+    public static final LightningRodBlock WAXED_WEATHERED_COPPER_LIGHTNING_ROD;
+    public static final LightningRodBlock WAXED_OXIDIZED_COPPER_LIGHTNING_ROD;
+
+    //public static Block COPPER_LIGHTNING_ROD = registerBlock("copper_lightning_rod",
+    //        new OxidizableLightningRodBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque()));
+    //public static Block EXPOSED_COPPER_LIGHTNING_ROD = registerBlock("exposed_copper_lightning_rod",
+    //        new OxidizableLightningRodBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque()));
+    //public static Block WEATHERED_COPPER_LIGHTNING_ROD = registerBlock("weathered_copper_lightning_rod",
+    //        new OxidizableLightningRodBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque()));
+    //public static Block OXIDIZED_COPPER_LIGHTNING_ROD = registerBlock("oxidized_copper_lightning_rod",
+    //        new OxidizableLightningRodBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque()));
+//
+    //public static Block WAXED_COPPER_LIGHTNING_ROD = registerBlock("waxed_copper_lightning_rod",
+    //        new LightningRodBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque()));
+    //public static Block WAXED_EXPOSED_COPPER_LIGHTNING_ROD = registerBlock("waxed_exposed_copper_lightning_rod",
+    //        new LightningRodBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque()));
+    //public static Block WAXED_WEATHERED_COPPER_LIGHTNING_ROD = registerBlock("waxed_weathered_copper_lightning_rod",
+    //        new LightningRodBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque()));
+    //public static Block WAXED_OXIDIZED_COPPER_LIGHTNING_ROD = registerBlock("waxed_oxidized_copper_lightning_rod",
+    //        new LightningRodBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque()));
 
 
 
@@ -207,6 +235,9 @@ public static final Block COPPER_BULB = registerBlock("copper_bulb",
             new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.BASALT)));
     public static final Block TETRAHEDRITE_BLOCK = registerBlock("tetrahedrite_block",
             new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.BASALT)));
+
+
+
     public static final Block TIN_BLOCK = registerBlock("tin_block",
             new Block(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_WHITE).instrument(Instrument.BELL).requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.METAL)));
     public static final Block CASSITERITE_BLOCK = registerBlock("cassiterite_block",
@@ -338,7 +369,46 @@ public static final Block COPPER_BULB = registerBlock("copper_bulb",
                 new BlockItem(block, new FabricItemSettings()));
     }
 
+    private static void registerLightningRodBlocks() {
+        registerBlock("copper_lightning_rod", COPPER_LIGHTNING_ROD);
+        registerBlock("exposed_copper_lightning_rod", EXPOSED_COPPER_LIGHTNING_ROD);
+        registerBlock("weathered_copper_lightning_rod", WEATHERED_COPPER_LIGHTNING_ROD);
+        registerBlock("oxidized_copper_lightning_rod", OXIDIZED_COPPER_LIGHTNING_ROD);
+        registerBlock("waxed_copper_lightning_rod", WAXED_COPPER_LIGHTNING_ROD);
+        registerBlock("waxed_exposed_copper_lightning_rod", WAXED_EXPOSED_COPPER_LIGHTNING_ROD);
+        registerBlock("waxed_weathered_copper_lightning_rod", WAXED_WEATHERED_COPPER_LIGHTNING_ROD);
+        registerBlock("waxed_oxidized_copper_lightning_rod", WAXED_OXIDIZED_COPPER_LIGHTNING_ROD);
+    }
+
     public static void registerModBlocks() {
         Recrafted.LOGGER.info("Registering Mod Blocks for " + Recrafted.MOD_ID);
+
+        registerLightningRodBlocks();
+    }
+
+    static {
+
+        COPPER_LIGHTNING_ROD = new OxidizableLightningRodBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque());
+        EXPOSED_COPPER_LIGHTNING_ROD = new OxidizableLightningRodBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque());
+        WEATHERED_COPPER_LIGHTNING_ROD = new OxidizableLightningRodBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque());
+        OXIDIZED_COPPER_LIGHTNING_ROD = new OxidizableLightningRodBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque());
+
+        WAXED_COPPER_LIGHTNING_ROD = new LightningRodBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque());
+        WAXED_EXPOSED_COPPER_LIGHTNING_ROD = new LightningRodBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque());
+        WAXED_WEATHERED_COPPER_LIGHTNING_ROD = new LightningRodBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque());
+        WAXED_OXIDIZED_COPPER_LIGHTNING_ROD = new LightningRodBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque());
+
+        LIGHTNING_RODS = ImmutableList.of(
+                Blocks.LIGHTNING_ROD,
+                COPPER_LIGHTNING_ROD,
+                EXPOSED_COPPER_LIGHTNING_ROD,
+                WEATHERED_COPPER_LIGHTNING_ROD,
+                OXIDIZED_COPPER_LIGHTNING_ROD,
+                WAXED_COPPER_LIGHTNING_ROD,
+                WAXED_EXPOSED_COPPER_LIGHTNING_ROD,
+                WAXED_WEATHERED_COPPER_LIGHTNING_ROD,
+                WAXED_OXIDIZED_COPPER_LIGHTNING_ROD
+        ).stream().flatMap(block -> block.getStateManager().getStates().stream()).collect(ImmutableSet.toImmutableSet());
+
     }
 }

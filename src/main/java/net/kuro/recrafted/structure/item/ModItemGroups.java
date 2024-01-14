@@ -1,14 +1,22 @@
 package net.kuro.recrafted.structure.item;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.structure.block.ModBlocks;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.poi.PointOfInterestTypes;
+
+import java.util.Set;
 
 public class ModItemGroups {
     public static final ItemGroup RECRAFTED_GROUP;
@@ -108,6 +116,15 @@ public class ModItemGroups {
                             entries.add(ModBlocks.WAXED_EXPOSED_COPPER_BULB);
                             entries.add(ModBlocks.WAXED_WEATHERED_COPPER_BULB);
                             entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_BULB);
+
+                            //entries.add(ModBlocks.COPPER_LIGHTNING_ROD);
+                            //entries.add(ModBlocks.EXPOSED_COPPER_LIGHTNING_ROD);
+                            //entries.add(ModBlocks.WEATHERED_COPPER_LIGHTNING_ROD);
+                            //entries.add(ModBlocks.OXIDIZED_COPPER_LIGHTNING_ROD);
+                            //entries.add(ModBlocks.WAXED_COPPER_LIGHTNING_ROD);
+                            //entries.add(ModBlocks.WAXED_EXPOSED_COPPER_LIGHTNING_ROD);
+                            //entries.add(ModBlocks.WAXED_WEATHERED_COPPER_LIGHTNING_ROD);
+                            //entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_LIGHTNING_ROD);
 
                             entries.add(ModBlocks.NATIVE_COPPER_BLOCK);
                             entries.add(ModBlocks.MALACHITE_BLOCK);
@@ -271,10 +288,10 @@ public class ModItemGroups {
                             entries.add(ModItems.BIRCH_BARREL);
 
                         }).build());
+
     }
 
-
     public static void registerItemGroups() {
-
+        Recrafted.LOGGER.info("Registering Item Groups for " + Recrafted.MOD_ID);
     }
 }
