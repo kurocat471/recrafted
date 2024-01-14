@@ -72,6 +72,14 @@
     "mc-recrafted:waxed_copper_bulb",
     "mc-recrafted:waxed_exposed_copper_bulb",
     "mc-recrafted:waxed_weathered_copper_bulb",
-    "mc-recrafted:waxed_oxidized_copper_bulb"
+    "mc-recrafted:waxed_oxidized_copper_bulb",
+    "mc-recrafted:copper_lightning_rod",
+    "mc-recrafted:exposed_copper_lightning_rod",
+    "mc-recrafted:weathered_copper_lightning_rod",
+    "mc-recrafted:oxidized_copper_lightning_rod",
+    "mc-recrafted:waxed_copper_lightning_rod",
+    "mc-recrafted:waxed_exposed_copper_lightning_rod",
+    "mc-recrafted:waxed_weathered_copper_lightning_rod",
+    "mc-recrafted:waxed_oxidized_copper_lightning_rod"
   ]
 }

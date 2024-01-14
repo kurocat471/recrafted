@@ -91,19 +91,23 @@ public abstract class GrindstoneScreenHandlerMixin extends ScreenHandler {
 
     @Redirect(method = "updateResult", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;isOf(Lnet/minecraft/item/Item;)Z", ordinal = 0))
     private boolean redirectIsEnchantedBook1(ItemStack instance, Item item) {
-        return instance.isOf(Items.ENCHANTED_BOOK) || instance.isOf(ModItems.ROUGH_OPAL);
+        return instance.isOf(Items.ENCHANTED_BOOK) ||
+                instance.isOf(ModItems.ROUGH_OPAL);
     }
 
     @Redirect(method = "updateResult", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;isOf(Lnet/minecraft/item/Item;)Z", ordinal = 1))
     private boolean redirectIsEnchantedBook2(ItemStack instance, Item item) {
-        return instance.isOf(Items.ENCHANTED_BOOK) || instance.isOf(ModItems.ROUGH_OPAL);
+        return instance.isOf(Items.ENCHANTED_BOOK) ||
+                instance.isOf(ModItems.ROUGH_OPAL);
     }
 
     @Mixin(targets = "net.minecraft.screen.GrindstoneScreenHandler$2")
     public static class GrindstoneScreenHandlerSlot1Mixin {
         @Inject(method = "canInsert", at = @At("RETURN"), cancellable = true)
         private void canInsert(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-            cir.setReturnValue(cir.getReturnValue() || stack.isOf(ModItems.ROUGH_OPAL));
+            if (stack.isOf(ModItems.ROUGH_OPAL)) {
+                cir.setReturnValue(true);
+            }
         }
     }
 
@@ -111,7 +115,9 @@ public abstract class GrindstoneScreenHandlerMixin extends ScreenHandler {
     public static class GrindstoneScreenHandlerSlot2Mixin {
         @Inject(method = "canInsert", at = @At("RETURN"), cancellable = true)
         private void canInsert(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-            cir.setReturnValue(cir.getReturnValue() || stack.isOf(ModItems.ROUGH_OPAL));
+            if (stack.isOf(ModItems.ROUGH_OPAL)) {
+                cir.setReturnValue(true);
+            }
         }
     }
 

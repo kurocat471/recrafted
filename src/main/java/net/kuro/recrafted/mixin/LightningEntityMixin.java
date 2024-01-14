@@ -33,14 +33,14 @@ public abstract class LightningEntityMixin {
     public void powerLightningRod(CallbackInfo ci) {
         BlockPos blockPos = this.getAffectedBlockPos();
         BlockState blockState = ((LightningEntity)((Object)this)).getWorld().getBlockState(blockPos);
-        if (blockState.isOf(ModBlocks.COPPER_LIGHTNING_ROD) ||
-                blockState.isOf(ModBlocks.EXPOSED_COPPER_LIGHTNING_ROD) ||
-                blockState.isOf(ModBlocks.WEATHERED_COPPER_LIGHTNING_ROD) ||
-                blockState.isOf(ModBlocks.OXIDIZED_COPPER_LIGHTNING_ROD) ||
-                blockState.isOf(ModBlocks.WAXED_COPPER_LIGHTNING_ROD) ||
-                blockState.isOf(ModBlocks.WAXED_EXPOSED_COPPER_LIGHTNING_ROD) ||
-                blockState.isOf(ModBlocks.WAXED_WEATHERED_COPPER_LIGHTNING_ROD) ||
-                blockState.isOf(ModBlocks.WAXED_OXIDIZED_COPPER_LIGHTNING_ROD)) {
+        if (blockState.isOf(Recrafted.COPPER_LIGHTNING_ROD) ||
+                blockState.isOf(Recrafted.EXPOSED_COPPER_LIGHTNING_ROD) ||
+                blockState.isOf(Recrafted.WEATHERED_COPPER_LIGHTNING_ROD) ||
+                blockState.isOf(Recrafted.OXIDIZED_COPPER_LIGHTNING_ROD) ||
+                blockState.isOf(Recrafted.WAXED_COPPER_LIGHTNING_ROD) ||
+                blockState.isOf(Recrafted.WAXED_EXPOSED_COPPER_LIGHTNING_ROD) ||
+                blockState.isOf(Recrafted.WAXED_WEATHERED_COPPER_LIGHTNING_ROD) ||
+                blockState.isOf(Recrafted.WAXED_OXIDIZED_COPPER_LIGHTNING_ROD)) {
             ((LightningRodBlock)blockState.getBlock()).setPowered(blockState, ((LightningEntity)((Object)this)).getWorld(), blockPos);
         }
 
