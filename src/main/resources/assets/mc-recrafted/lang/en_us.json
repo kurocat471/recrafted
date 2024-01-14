@@ -5,6 +5,13 @@
   "subtitle.hammerClangs": "Hammer clangs",
   "subtitle.hammerWorks": "Hammer works",
 
+
+  "subtitles.block.copper_bulb.turn_off": "Copper Bulb turns off",
+  "subtitles.block.copper_bulb.turn_on": "Copper Bulb turns on",
+  "subtitles.block.copper_trapdoor.close": "Trapdoor closes",
+  "subtitles.block.copper_trapdoor.open": "Trapdoor opens",
+
+
   "item.mc-recrafted.copper_ingot": "Copper Ingot",
   "item.mc-recrafted.copper_nugget": "Copper Nugget",
   "item.mc-recrafted.native_copper": "Native Copper",

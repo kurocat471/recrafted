@@ -1,9 +1,12 @@
 package net.kuro.recrafted.structure.block.custom.bulb;
 
+import net.kuro.recrafted.sound.ModSoundEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -40,7 +43,7 @@ public class BulbBlock extends Block {
             BlockState blockState = state;
             if (!(Boolean)state.get(POWERED)) {
                 blockState = (BlockState)state.cycle(LIT);
-                //world.playSound((PlayerEntity)null, pos, (Boolean)blockState.get(LIT) ? SoundEvents.BLOCK_COPPER_BULB_TURN_ON : SoundEvents.BLOCK_COPPER_BULB_TURN_OFF, SoundCategory.BLOCKS);
+                world.playSound((PlayerEntity)null, pos, (Boolean)blockState.get(LIT) ? ModSoundEvents.BLOCK_COPPER_BULB_TURN_ON : ModSoundEvents.BLOCK_COPPER_BULB_TURN_OFF, SoundCategory.BLOCKS);
             }
 
             world.setBlockState(pos, (BlockState)blockState.with(POWERED, bl), 3);
