@@ -11,11 +11,10 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "mc-recrafted:cobalt_block"
+          "name": "mc-recrafted:oxidized_copper_bulb"
         }
       ],
       "rolls": 1.0
     }
-  ],
-  "random_sequence": "mc-recrafted:blocks/cobalt_block"
+  ]
 }
