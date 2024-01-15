@@ -80,6 +80,17 @@
     "mc-recrafted:waxed_copper_lightning_rod",
     "mc-recrafted:waxed_exposed_copper_lightning_rod",
     "mc-recrafted:waxed_weathered_copper_lightning_rod",
-    "mc-recrafted:waxed_oxidized_copper_lightning_rod"
+    "mc-recrafted:waxed_oxidized_copper_lightning_rod",
+    "mc-recrafted:copper_anvil",
+    "mc-recrafted:exposed_copper_anvil",
+    "mc-recrafted:weathered_copper_anvil",
+    "mc-recrafted:oxidized_copper_anvil",
+    "mc-recrafted:waxed_copper_anvil",
+    "mc-recrafted:waxed_exposed_copper_anvil",
+    "mc-recrafted:waxed_weathered_copper_anvil",
+    "mc-recrafted:waxed_oxidized_copper_anvil",
+    "mc-recrafted:native_copper_block",
+    "mc-recrafted:malachite_block",
+    "mc-recrafted:tetrahedrite_block"
   ]
 }

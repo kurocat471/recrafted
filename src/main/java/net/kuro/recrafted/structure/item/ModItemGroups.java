@@ -135,6 +135,8 @@ public class ModItemGroups {
                             entries.add(ModBlocks.WAXED_WEATHERED_COPPER_ANVIL);
                             entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_ANVIL);
 
+                            entries.add(ModBlocks.PATINA_BLOCK);
+
                             entries.add(ModBlocks.NATIVE_COPPER_BLOCK);
                             entries.add(ModBlocks.MALACHITE_BLOCK);
                             entries.add(ModBlocks.TETRAHEDRITE_BLOCK);

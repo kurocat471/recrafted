@@ -12,13 +12,6 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(Recrafted.COPPER_LIGHTNING_ROD);
-        addDrop(Recrafted.EXPOSED_COPPER_LIGHTNING_ROD);
-        addDrop(Recrafted.WEATHERED_COPPER_LIGHTNING_ROD);
-        addDrop(Recrafted.OXIDIZED_COPPER_LIGHTNING_ROD);
-        addDrop(Recrafted.WAXED_COPPER_LIGHTNING_ROD);
-        addDrop(Recrafted.WAXED_EXPOSED_COPPER_LIGHTNING_ROD);
-        addDrop(Recrafted.WAXED_WEATHERED_COPPER_LIGHTNING_ROD);
-        addDrop(Recrafted.WAXED_OXIDIZED_COPPER_LIGHTNING_ROD);
+        //addDrop(ModBlocks.PATINA_BLOCK);
     }
 }

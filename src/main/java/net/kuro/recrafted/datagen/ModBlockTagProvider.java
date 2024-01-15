@@ -16,27 +16,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-            .add(
-                Recrafted.COPPER_LIGHTNING_ROD,
-                Recrafted.EXPOSED_COPPER_LIGHTNING_ROD,
-                Recrafted.WEATHERED_COPPER_LIGHTNING_ROD,
-                Recrafted.OXIDIZED_COPPER_LIGHTNING_ROD,
-                Recrafted.WAXED_COPPER_LIGHTNING_ROD,
-                Recrafted.WAXED_EXPOSED_COPPER_LIGHTNING_ROD,
-                Recrafted.WAXED_WEATHERED_COPPER_LIGHTNING_ROD,
-                Recrafted.WAXED_OXIDIZED_COPPER_LIGHTNING_ROD
-            );
-        getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
-            .add(
-                Recrafted.COPPER_LIGHTNING_ROD,
-                Recrafted.EXPOSED_COPPER_LIGHTNING_ROD,
-                Recrafted.WEATHERED_COPPER_LIGHTNING_ROD,
-                Recrafted.OXIDIZED_COPPER_LIGHTNING_ROD,
-                Recrafted.WAXED_COPPER_LIGHTNING_ROD,
-                Recrafted.WAXED_EXPOSED_COPPER_LIGHTNING_ROD,
-                Recrafted.WAXED_WEATHERED_COPPER_LIGHTNING_ROD,
-                Recrafted.WAXED_OXIDIZED_COPPER_LIGHTNING_ROD
-            );
+        //getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+        //    .add();
+        //getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
+        //    .add();
+        //getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
+        //    .add(            );
     }
 }
