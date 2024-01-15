@@ -109,6 +109,15 @@
   "block.mc-recrafted.waxed_weathered_copper_lightning_rod": "Waxed Weathered Copper Lightning Rod",
   "block.mc-recrafted.waxed_oxidized_copper_lightning_rod": "Waxed Oxidized Copper Lightning Rod",
 
+  "block.mc-recrafted.copper_anvil": "Copper Anvil",
+  "block.mc-recrafted.exposed_copper_anvil": "Exposed Copper Anvil",
+  "block.mc-recrafted.weathered_copper_anvil": "Weathered Copper Anvil",
+  "block.mc-recrafted.oxidized_copper_anvil": "Oxidized Copper Anvil",
+  "block.mc-recrafted.waxed_copper_anvil": "Waxed Copper Anvil",
+  "block.mc-recrafted.waxed_exposed_copper_anvil": "Waxed Exposed Copper Anvil",
+  "block.mc-recrafted.waxed_weathered_copper_anvil": "Waxed Weathered Copper Anvil",
+  "block.mc-recrafted.waxed_oxidized_copper_anvil": "Waxed Oxidized Copper Anvil",
+
   "block.mc-recrafted.native_copper_block": "Block of Native Copper",
   "block.mc-recrafted.malachite_block": "Block of Malachite",
   "block.mc-recrafted.tetrahedrite_block": "Block of Tetrahedrite",
@@ -261,7 +270,6 @@
   "item.mc-recrafted.iron_hammer": "Iron Hammer",
   "item.mc-recrafted.steel_hammer": "Steel Hammer",
 
-  "block.mc-recrafted.copper_anvil": "Copper Anvil",
   "block.mc-recrafted.bronze_anvil": "Bronze Anvil",
   "block.mc-recrafted.bismuth_bronze_anvil": "Bismuth Bronze Anvil",
   "block.mc-recrafted.black_bronze_anvil": "Black Bronze Anvil",

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "mc-recrafted:block/oxidized_copper_anvil",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "mc-recrafted:block/oxidized_copper_anvil"
+    },
+    "facing=south": {
+      "model": "mc-recrafted:block/oxidized_copper_anvil",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mc-recrafted:block/oxidized_copper_anvil",
+      "y": 270
+    }
+  }
+}

@@ -196,6 +196,21 @@ public class ModBlocks {
 
 
     public static final Block COPPER_ANVIL = registerBlock("copper_anvil",
+            new OxidizableAnvilBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
+    public static final Block EXPOSED_COPPER_ANVIL = registerBlock("exposed_copper_anvil",
+            new OxidizableAnvilBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
+    public static final Block WEATHERED_COPPER_ANVIL = registerBlock("weathered_copper_anvil",
+            new OxidizableAnvilBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
+    public static final Block OXIDIZED_COPPER_ANVIL = registerBlock("oxidized_copper_anvil",
+            new OxidizableAnvilBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
+
+    public static final Block WAXED_COPPER_ANVIL = registerBlock("waxed_copper_anvil",
+            new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
+    public static final Block WAXED_EXPOSED_COPPER_ANVIL = registerBlock("waxed_exposed_copper_anvil",
+            new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
+    public static final Block WAXED_WEATHERED_COPPER_ANVIL = registerBlock("waxed_weathered_copper_anvil",
+            new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
+    public static final Block WAXED_OXIDIZED_COPPER_ANVIL = registerBlock("waxed_oxidized_copper_anvil",
             new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
 
 

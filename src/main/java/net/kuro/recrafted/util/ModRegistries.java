@@ -107,5 +107,14 @@ public class ModRegistries {
         OxidizableBlocksRegistry.registerWaxableBlockPair(Recrafted.EXPOSED_COPPER_LIGHTNING_ROD, Recrafted.WAXED_EXPOSED_COPPER_LIGHTNING_ROD);
         OxidizableBlocksRegistry.registerWaxableBlockPair(Recrafted.WEATHERED_COPPER_LIGHTNING_ROD, Recrafted.WAXED_WEATHERED_COPPER_LIGHTNING_ROD);
         OxidizableBlocksRegistry.registerWaxableBlockPair(Recrafted.OXIDIZED_COPPER_LIGHTNING_ROD, Recrafted.WAXED_OXIDIZED_COPPER_LIGHTNING_ROD);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_ANVIL, ModBlocks.EXPOSED_COPPER_ANVIL);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_ANVIL, ModBlocks.WEATHERED_COPPER_ANVIL);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_COPPER_ANVIL, ModBlocks.OXIDIZED_COPPER_ANVIL);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.COPPER_ANVIL, ModBlocks.WAXED_COPPER_ANVIL);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_ANVIL, ModBlocks.WAXED_EXPOSED_COPPER_ANVIL);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_ANVIL, ModBlocks.WAXED_WEATHERED_COPPER_ANVIL);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_ANVIL, ModBlocks.WAXED_OXIDIZED_COPPER_ANVIL);
     }
 }

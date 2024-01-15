@@ -1,0 +1,6 @@
+{
+  "parent": "mc-recrafted:block/copper_anvil",
+  "textures": {
+    "1": "mc-recrafted:block/anvil/waxed_copper_anvil"
+  }
+}

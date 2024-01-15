@@ -126,6 +126,15 @@ public class ModItemGroups {
                             entries.add(Recrafted.WAXED_WEATHERED_COPPER_LIGHTNING_ROD);
                             entries.add(Recrafted.WAXED_OXIDIZED_COPPER_LIGHTNING_ROD);
 
+                            entries.add(ModBlocks.COPPER_ANVIL);
+                            entries.add(ModBlocks.EXPOSED_COPPER_ANVIL);
+                            entries.add(ModBlocks.WEATHERED_COPPER_ANVIL);
+                            entries.add(ModBlocks.OXIDIZED_COPPER_ANVIL);
+                            entries.add(ModBlocks.WAXED_COPPER_ANVIL);
+                            entries.add(ModBlocks.WAXED_EXPOSED_COPPER_ANVIL);
+                            entries.add(ModBlocks.WAXED_WEATHERED_COPPER_ANVIL);
+                            entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_ANVIL);
+
                             entries.add(ModBlocks.NATIVE_COPPER_BLOCK);
                             entries.add(ModBlocks.MALACHITE_BLOCK);
                             entries.add(ModBlocks.TETRAHEDRITE_BLOCK);
@@ -276,7 +285,6 @@ public class ModItemGroups {
                             entries.add(ModItems.IRON_HAMMER);
                             entries.add(ModItems.STEEL_HAMMER);
 
-                            entries.add(ModBlocks.COPPER_ANVIL);
                             entries.add(ModBlocks.BRONZE_ANVIL);
                             entries.add(ModBlocks.BISMUTH_BRONZE_ANVIL);
                             entries.add(ModBlocks.BLACK_BRONZE_ANVIL);
