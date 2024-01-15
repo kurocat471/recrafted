@@ -14,9 +14,12 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(DoorBlock.class)
-public class DoorBlockMixin extends Block {
+public abstract class DoorBlockMixin extends Block {
+    @Shadow protected abstract void playOpenCloseSound(@Nullable Entity entity, World world, BlockPos pos, boolean open);
+
     private static final BooleanProperty OPEN = Properties.OPEN;
     private static final BooleanProperty POWERED = Properties.POWERED;
     private static final EnumProperty<DoubleBlockHalf> HALF = Properties.DOUBLE_BLOCK_HALF;
@@ -42,14 +45,14 @@ public class DoorBlockMixin extends Block {
         boolean bl = world.isReceivingRedstonePower(pos) || world.isReceivingRedstonePower(pos.offset(state.get(HALF) == DoubleBlockHalf.LOWER ? Direction.UP : Direction.DOWN));
         if (!this.getDefaultState().isOf(sourceBlock) && bl != (Boolean)state.get(POWERED)) {
             if (bl != (Boolean)state.get(OPEN)) {
-                this.playOpenCloseSound((Entity)null, world, pos, bl);
+                playOpenCloseSound((Entity)null, world, pos, bl);
                 world.emitGameEvent((Entity)null, bl ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, pos);
             }
             world.setBlockState(pos, (BlockState)((BlockState)state.with(POWERED, bl)).with(OPEN, bl), 2);
         }
     }
 
-    private void playOpenCloseSound(@Nullable Entity entity, World world, BlockPos pos, boolean open) {
-        world.playSound(entity, pos, open ? this.blockSetType.doorOpen() : this.blockSetType.doorClose(), SoundCategory.BLOCKS, 1.0F, world.getRandom().nextFloat() * 0.1F + 0.9F);
-    }
+    //private void playOpenCloseSound(@Nullable Entity entity, World world, BlockPos pos, boolean open) {
+    //    world.playSound(entity, pos, open ? this.blockSetType.doorOpen() : this.blockSetType.doorClose(), SoundCategory.BLOCKS, 1.0F, world.getRandom().nextFloat() * 0.1F + 0.9F);
+    //}
 }

@@ -1,7 +1,5 @@
 package net.kuro.recrafted.structure.block;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.kuro.recrafted.Recrafted;
@@ -23,12 +21,8 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.resource.featuretoggle.FeatureFlag;
-import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-
-import java.util.Set;
 
 import static net.minecraft.block.Blocks.createLightLevelFromLitBlockState;
 
@@ -200,6 +194,13 @@ public class ModBlocks {
 
 
 
+
+    public static final Block COPPER_ANVIL = registerBlock("copper_anvil",
+            new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
+
+
+
+
     public static final Block NATIVE_COPPER_BLOCK = registerBlock("native_copper_block",
             new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.BASALT)));
     public static final Block MALACHITE_BLOCK = registerBlock("malachite_block",
@@ -292,10 +293,6 @@ public class ModBlocks {
 
     public static final Block OPAL_BLOCK = registerBlock("opal_block",
             new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)));
-
-    public static final Block COPPER_ANVIL = registerBlock("copper_anvil",
-            new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
-
 
     public static final Block BRONZE_ANVIL = registerBlock("bronze_anvil",
             new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.SPRUCE_BROWN).nonOpaque().requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.ANVIL).pistonBehavior(PistonBehavior.BLOCK), "bronze", 2));
