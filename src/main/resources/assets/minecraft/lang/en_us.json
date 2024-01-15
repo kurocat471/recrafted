@@ -91,5 +91,7 @@
   "item.minecraft.tipped_arrow.effect.long_weakness": "Long Arrow of Weakness",
   "item.minecraft.tipped_arrow.effect.long_slow_falling": "Long Arrow of Slow Falling",
 
+  "subtitles.block.pointed_dripstone.drip_water_into_cauldron": "Water drips into container",
+
   "container.grindstone_title": "Grindstone"
 }
