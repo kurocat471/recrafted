@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "mc-recrafted:block/patina_lantern"
+    },
+    "hanging=true": {
+      "model": "mc-recrafted:block/patina_lantern_hanging"
+    }
+  }
+}

@@ -16,6 +16,7 @@ import net.kuro.recrafted.structure.block.custom.potioncauldron.PotionCauldronBe
 import net.kuro.recrafted.structure.item.ModItemGroups;
 import net.kuro.recrafted.structure.item.ModItems;
 import net.kuro.recrafted.networking.ServerNetworking;
+import net.kuro.recrafted.structure.particle.ModParticleTypes;
 import net.kuro.recrafted.structure.recipe.ModRecipes;
 import net.kuro.recrafted.structure.screen.ModScreenHandlers;
 import net.kuro.recrafted.sound.ModSoundEvents;
@@ -68,6 +69,7 @@ public class Recrafted implements ModInitializer {
 		ModSoundEvents.registerModSoundEvents();
 		ModRegistries.registerModRegistries();
 		registerLightningRodBlocks();
+		ModParticleTypes.registerParticleTypes();
 	}
 
 	private static void registerLightningRodBlocks() {

@@ -5,10 +5,12 @@ import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.structure.block.ModBlocks;
 import net.kuro.recrafted.structure.item.custom.PatinaItem;
 import net.kuro.recrafted.structure.item.custom.SuperheatedItem;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
 public class ModItems {
     public static final Item COPPER_INGOT = registerItem("copper_ingot",
@@ -234,6 +236,8 @@ public class ModItems {
 
     public static final Item SPRUCE_BARREL = Items.register(ModBlocks.SPRUCE_BARREL, ModBlocks.SPRUCE_WATER_BARREL);
     public static final Item BIRCH_BARREL = Items.register(ModBlocks.BIRCH_BARREL, ModBlocks.BIRCH_WATER_BARREL);
+
+    public static final Item PATINA_TORCH = Items.register(new VerticallyAttachableBlockItem(ModBlocks.PATINA_TORCH, ModBlocks.PATINA_WALL_TORCH, new Item.Settings(), Direction.DOWN));
 
 
     private static Item registerItem(String name, Item item) {

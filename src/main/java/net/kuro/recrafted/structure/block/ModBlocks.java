@@ -12,14 +12,17 @@ import net.kuro.recrafted.structure.block.custom.barrel.LeveledBarrelBlock;
 import net.kuro.recrafted.structure.block.custom.bulb.BulbBlock;
 import net.kuro.recrafted.structure.block.custom.grate.GrateBlock;
 import net.kuro.recrafted.structure.block.custom.oxidizable.*;
+import net.kuro.recrafted.structure.block.custom.patinafire.PatinaFireBlock;
 import net.kuro.recrafted.structure.block.custom.potioncauldron.PotionCauldronBehavior;
 import net.kuro.recrafted.structure.block.custom.potioncauldron.PotionCauldronBlock;
 import net.kuro.recrafted.structure.block.custom.resistor.ResistorBlock;
+import net.kuro.recrafted.structure.particle.ModParticleTypes;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -237,6 +240,16 @@ public class ModBlocks {
     public static final Block PATINA_BLOCK = registerBlock("patina_block",
             new SandBlock(6273934, FabricBlockSettings.create().mapColor(MapColor.TEAL).instrument(Instrument.SNARE).strength(0.5f).sounds(BlockSoundGroup.SAND)));
 
+    public static final Block PATINA_FIRE = registerBlockNoItem("patina_fire",
+            new PatinaFireBlock(FabricBlockSettings.create().mapColor(MapColor.TEAL).replaceable().noCollision().breakInstantly().luminance(state -> 13).sounds(BlockSoundGroup.WOOL).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block PATINA_TORCH = registerBlockNoItem("patina_torch",
+            new TorchBlock(FabricBlockSettings.create().noCollision().breakInstantly().luminance(state -> 13).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ModParticleTypes.PATINA_FIRE_FLAME));
+    public static final Block PATINA_WALL_TORCH = registerBlockNoItem("patina_wall_torch",
+            new WallTorchBlock(FabricBlockSettings.create().noCollision().breakInstantly().luminance(state -> 13).sounds(BlockSoundGroup.WOOD).dropsLike(PATINA_TORCH).pistonBehavior(PistonBehavior.DESTROY), ModParticleTypes.PATINA_FIRE_FLAME));
+    public static final Block PATINA_LANTERN = registerBlock("patina_lantern",
+            new LanternBlock(FabricBlockSettings.create().mapColor(MapColor.IRON_GRAY).solid().requiresTool().strength(3.5f).sounds(BlockSoundGroup.LANTERN).luminance(state -> 13).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block PATINA_CAMPFIRE = registerBlock("patina_campfire",
+            new CampfireBlock(false, 1, FabricBlockSettings.create().mapColor(MapColor.SPRUCE_BROWN).instrument(Instrument.BASS).strength(2.0f).sounds(BlockSoundGroup.WOOD).luminance(Blocks.createLightLevelFromLitBlockState(13)).nonOpaque().burnable()));
 
     public static final Block NATIVE_COPPER_BLOCK = registerBlock("native_copper_block",
             new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.BASALT)));

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "mc-recrafted:block/patina_wall_torch"
+    },
+    "facing=north": {
+      "model": "mc-recrafted:block/patina_wall_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "mc-recrafted:block/patina_wall_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "mc-recrafted:block/patina_wall_torch",
+      "y": 180
+    }
+  }
+}

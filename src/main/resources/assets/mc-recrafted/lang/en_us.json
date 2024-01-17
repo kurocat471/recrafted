@@ -129,6 +129,10 @@
 
   "block.mc-recrafted.patina_block": "Block of Patina",
 
+  "block.mc-recrafted.patina_torch": "Patina Torch",
+  "block.mc-recrafted.patina_lantern": "Patina Lantern",
+  "block.mc-recrafted.patina_campfire": "Patina Campfire",
+
   "block.mc-recrafted.native_copper_block": "Block of Native Copper",
   "block.mc-recrafted.malachite_block": "Block of Malachite",
   "block.mc-recrafted.tetrahedrite_block": "Block of Tetrahedrite",

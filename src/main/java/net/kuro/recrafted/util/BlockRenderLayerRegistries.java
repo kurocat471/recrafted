@@ -38,7 +38,12 @@ public class BlockRenderLayerRegistries {
                 ModBlocks.WAXED_RESISTOR,
                 ModBlocks.WAXED_EXPOSED_RESISTOR,
                 ModBlocks.WAXED_WEATHERED_RESISTOR,
-                ModBlocks.WAXED_OXIDIZED_RESISTOR
+                ModBlocks.WAXED_OXIDIZED_RESISTOR,
+                ModBlocks.PATINA_FIRE,
+                ModBlocks.PATINA_TORCH,
+                ModBlocks.PATINA_WALL_TORCH,
+                ModBlocks.PATINA_CAMPFIRE,
+                ModBlocks.PATINA_LANTERN
         );
     }
 }

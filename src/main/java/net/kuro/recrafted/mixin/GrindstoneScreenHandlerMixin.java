@@ -27,7 +27,7 @@ public abstract class GrindstoneScreenHandlerMixin extends ScreenHandler {
      * @author kurocat471
      * @reason allow quickMove with stackable items
      */
-    @Overwrite
+    @Override
     public ItemStack quickMove(PlayerEntity player, int slot) {
         ItemStack itemStack = ItemStack.EMPTY;
         Slot slot2 = this.slots.get(slot);

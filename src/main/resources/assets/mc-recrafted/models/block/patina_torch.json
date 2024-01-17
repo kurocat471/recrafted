@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_torch",
+  "textures": {
+    "torch": "mc-recrafted:block/patina_torch"
+  }
+}

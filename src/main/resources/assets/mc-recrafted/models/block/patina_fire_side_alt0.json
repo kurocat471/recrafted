@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fire_side_alt",
+  "textures": {
+    "fire": "mc-recrafted:block/patina_fire_0"
+  }
+}

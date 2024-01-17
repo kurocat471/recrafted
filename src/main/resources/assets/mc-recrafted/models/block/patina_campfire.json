@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_campfire",
+  "textures": {
+    "fire": "mc-recrafted:block/patina_campfire_fire",
+    "lit_log": "mc-recrafted:block/patina_campfire_log_lit"
+  }
+}
