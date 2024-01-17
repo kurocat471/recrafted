@@ -14,6 +14,7 @@ import net.kuro.recrafted.structure.block.custom.grate.GrateBlock;
 import net.kuro.recrafted.structure.block.custom.oxidizable.*;
 import net.kuro.recrafted.structure.block.custom.potioncauldron.PotionCauldronBehavior;
 import net.kuro.recrafted.structure.block.custom.potioncauldron.PotionCauldronBlock;
+import net.kuro.recrafted.structure.block.custom.resistor.ResistorBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
@@ -212,6 +213,25 @@ public class ModBlocks {
             new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.DARK_AQUA).nonOpaque().requiresTool().strength(3.0f, 1200.0f).sounds(BlockSoundGroup.COPPER).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
     public static final Block WAXED_OXIDIZED_COPPER_ANVIL = registerBlock("waxed_oxidized_copper_anvil",
             new AnvilBlock(FabricBlockSettings.create().solid().mapColor(MapColor.TEAL).nonOpaque().requiresTool().strength(3.0f, 1200.0f).sounds(BlockSoundGroup.COPPER).pistonBehavior(PistonBehavior.BLOCK), "copper", 1));
+
+
+    public static final Block RESISTOR = registerBlock("resistor",
+            new OxidizableResistorBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.create().breakInstantly().sounds(BlockSoundGroup.STONE).pistonBehavior(PistonBehavior.DESTROY), 12));
+    public static final Block EXPOSED_RESISTOR = registerBlock("exposed_resistor",
+            new OxidizableResistorBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.create().breakInstantly().sounds(BlockSoundGroup.STONE).pistonBehavior(PistonBehavior.DESTROY), 9));
+    public static final Block WEATHERED_RESISTOR = registerBlock("weathered_resistor",
+            new OxidizableResistorBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.create().breakInstantly().sounds(BlockSoundGroup.STONE).pistonBehavior(PistonBehavior.DESTROY), 6));
+    public static final Block OXIDIZED_RESISTOR = registerBlock("oxidized_resistor",
+            new OxidizableResistorBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.create().breakInstantly().sounds(BlockSoundGroup.STONE).pistonBehavior(PistonBehavior.DESTROY), 3));
+
+    public static final Block WAXED_RESISTOR = registerBlock("waxed_resistor",
+            new ResistorBlock(FabricBlockSettings.create().breakInstantly().sounds(BlockSoundGroup.STONE).pistonBehavior(PistonBehavior.DESTROY), 12));
+    public static final Block WAXED_EXPOSED_RESISTOR = registerBlock("waxed_exposed_resistor",
+            new ResistorBlock(FabricBlockSettings.create().breakInstantly().sounds(BlockSoundGroup.STONE).pistonBehavior(PistonBehavior.DESTROY), 9));
+    public static final Block WAXED_WEATHERED_RESISTOR = registerBlock("waxed_weathered_resistor",
+            new ResistorBlock(FabricBlockSettings.create().breakInstantly().sounds(BlockSoundGroup.STONE).pistonBehavior(PistonBehavior.DESTROY), 6));
+    public static final Block WAXED_OXIDIZED_RESISTOR = registerBlock("waxed_oxidized_resistor",
+            new ResistorBlock(FabricBlockSettings.create().breakInstantly().sounds(BlockSoundGroup.STONE).pistonBehavior(PistonBehavior.DESTROY), 3));
 
 
     public static final Block PATINA_BLOCK = registerBlock("patina_block",

@@ -135,6 +135,15 @@ public class ModItemGroups {
                             entries.add(ModBlocks.WAXED_WEATHERED_COPPER_ANVIL);
                             entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_ANVIL);
 
+                            entries.add(ModBlocks.RESISTOR);
+                            entries.add(ModBlocks.EXPOSED_RESISTOR);
+                            entries.add(ModBlocks.WEATHERED_RESISTOR);
+                            entries.add(ModBlocks.OXIDIZED_RESISTOR);
+                            entries.add(ModBlocks.WAXED_RESISTOR);
+                            entries.add(ModBlocks.WAXED_EXPOSED_RESISTOR);
+                            entries.add(ModBlocks.WAXED_WEATHERED_RESISTOR);
+                            entries.add(ModBlocks.WAXED_OXIDIZED_RESISTOR);
+
                             entries.add(ModBlocks.PATINA_BLOCK);
 
                             entries.add(ModBlocks.NATIVE_COPPER_BLOCK);

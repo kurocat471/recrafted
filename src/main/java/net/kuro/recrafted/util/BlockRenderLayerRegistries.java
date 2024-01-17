@@ -30,7 +30,15 @@ public class BlockRenderLayerRegistries {
                 ModBlocks.WAXED_COPPER_TRAPDOOR,
                 ModBlocks.WAXED_EXPOSED_COPPER_TRAPDOOR,
                 ModBlocks.WAXED_WEATHERED_COPPER_TRAPDOOR,
-                ModBlocks.WAXED_OXIDIZED_COPPER_TRAPDOOR
+                ModBlocks.WAXED_OXIDIZED_COPPER_TRAPDOOR,
+                ModBlocks.RESISTOR,
+                ModBlocks.EXPOSED_RESISTOR,
+                ModBlocks.WEATHERED_RESISTOR,
+                ModBlocks.OXIDIZED_RESISTOR,
+                ModBlocks.WAXED_RESISTOR,
+                ModBlocks.WAXED_EXPOSED_RESISTOR,
+                ModBlocks.WAXED_WEATHERED_RESISTOR,
+                ModBlocks.WAXED_OXIDIZED_RESISTOR
         );
     }
 }

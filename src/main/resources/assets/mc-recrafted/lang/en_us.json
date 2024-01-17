@@ -118,6 +118,15 @@
   "block.mc-recrafted.waxed_weathered_copper_anvil": "Waxed Weathered Copper Anvil",
   "block.mc-recrafted.waxed_oxidized_copper_anvil": "Waxed Oxidized Copper Anvil",
 
+  "block.mc-recrafted.resistor": "Redstone Resistor",
+  "block.mc-recrafted.exposed_resistor": "Exposed Redstone Resistor",
+  "block.mc-recrafted.weathered_resistor": "Weathered Redstone Resistor",
+  "block.mc-recrafted.oxidized_resistor": "Oxidized Redstone Resistor",
+  "block.mc-recrafted.waxed_resistor": "Waxed Redstone Resistor",
+  "block.mc-recrafted.waxed_exposed_resistor": "Waxed Exposed Redstone Resistor",
+  "block.mc-recrafted.waxed_weathered_resistor": "Waxed Weathered Redstone Resistor",
+  "block.mc-recrafted.waxed_oxidized_resistor": "Waxed Oxidized Redstone Resistor",
+
   "block.mc-recrafted.patina_block": "Block of Patina",
 
   "block.mc-recrafted.native_copper_block": "Block of Native Copper",

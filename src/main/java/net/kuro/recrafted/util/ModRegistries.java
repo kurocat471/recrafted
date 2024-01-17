@@ -116,5 +116,14 @@ public class ModRegistries {
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_ANVIL, ModBlocks.WAXED_EXPOSED_COPPER_ANVIL);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_ANVIL, ModBlocks.WAXED_WEATHERED_COPPER_ANVIL);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_ANVIL, ModBlocks.WAXED_OXIDIZED_COPPER_ANVIL);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.RESISTOR, ModBlocks.EXPOSED_RESISTOR);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_RESISTOR, ModBlocks.WEATHERED_RESISTOR);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_RESISTOR, ModBlocks.OXIDIZED_RESISTOR);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.RESISTOR, ModBlocks.WAXED_RESISTOR);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_RESISTOR, ModBlocks.WAXED_EXPOSED_RESISTOR);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_RESISTOR, ModBlocks.WAXED_WEATHERED_RESISTOR);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_RESISTOR, ModBlocks.WAXED_OXIDIZED_RESISTOR);
     }
 }
