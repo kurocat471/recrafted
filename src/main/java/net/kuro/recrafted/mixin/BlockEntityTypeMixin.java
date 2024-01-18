@@ -1,6 +1,6 @@
 package net.kuro.recrafted.mixin;
 
-import net.kuro.recrafted.structure.block.ModBlocks;
+import net.kuro.recrafted.Recrafted;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntityType;
 import org.spongepowered.asm.mixin.Mixin;
@@ -18,7 +18,7 @@ public class BlockEntityTypeMixin {
             at = @At(value = "INVOKE", target = "Lnet/minecraft/block/entity/BlockEntityType$Builder;create(Lnet/minecraft/block/entity/BlockEntityType$BlockEntityFactory;[Lnet/minecraft/block/Block;)Lnet/minecraft/block/entity/BlockEntityType$Builder;", ordinal = 0)
     )
     private static Block[] addCampfireBlocks(Block[] original) {
-        Block[] campfireBlocks = new Block[]{ModBlocks.PATINA_CAMPFIRE};
+        Block[] campfireBlocks = new Block[]{Recrafted.PATINA_CAMPFIRE};
         Block[] newBlocks = Arrays.copyOf(original, original.length + campfireBlocks.length);
         for (int i = 0; i < campfireBlocks.length; i++) {
             newBlocks[i + original.length] = campfireBlocks[i];

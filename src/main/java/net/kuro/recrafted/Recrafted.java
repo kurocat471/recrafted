@@ -49,6 +49,7 @@ public class Recrafted implements ModInitializer {
 	public static final LightningRodBlock WAXED_WEATHERED_COPPER_LIGHTNING_ROD;
 	public static final LightningRodBlock WAXED_OXIDIZED_COPPER_LIGHTNING_ROD;
 	public static final Set<BlockState> LIGHTNING_RODS;
+	public static final CampfireBlock PATINA_CAMPFIRE;
 
 	public static final Identifier PARTICLES_CHANNEL = new Identifier(Recrafted.MOD_ID, "particles_channel");
 
@@ -68,11 +69,11 @@ public class Recrafted implements ModInitializer {
 		PotionCauldronBehavior.bootstrap();
 		ModSoundEvents.registerModSoundEvents();
 		ModRegistries.registerModRegistries();
-		registerLightningRodBlocks();
+		registerExtraBlocks();
 		ModParticleTypes.registerParticleTypes();
 	}
 
-	private static void registerLightningRodBlocks() {
+	private static void registerExtraBlocks() {
 		registerBlock("copper_lightning_rod", COPPER_LIGHTNING_ROD);
 		registerBlock("exposed_copper_lightning_rod", EXPOSED_COPPER_LIGHTNING_ROD);
 		registerBlock("weathered_copper_lightning_rod", WEATHERED_COPPER_LIGHTNING_ROD);
@@ -81,6 +82,7 @@ public class Recrafted implements ModInitializer {
 		registerBlock("waxed_exposed_copper_lightning_rod", WAXED_EXPOSED_COPPER_LIGHTNING_ROD);
 		registerBlock("waxed_weathered_copper_lightning_rod", WAXED_WEATHERED_COPPER_LIGHTNING_ROD);
 		registerBlock("waxed_oxidized_copper_lightning_rod", WAXED_OXIDIZED_COPPER_LIGHTNING_ROD);
+		registerBlock("patina_campfire", PATINA_CAMPFIRE);
 	}
 
 	static {
@@ -94,6 +96,8 @@ public class Recrafted implements ModInitializer {
 		WAXED_EXPOSED_COPPER_LIGHTNING_ROD = new LightningRodBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque());
 		WAXED_WEATHERED_COPPER_LIGHTNING_ROD = new LightningRodBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque());
 		WAXED_OXIDIZED_COPPER_LIGHTNING_ROD = new LightningRodBlock(FabricBlockSettings.create().solid().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque());
+
+		PATINA_CAMPFIRE = new CampfireBlock(false, 1, FabricBlockSettings.create().mapColor(MapColor.SPRUCE_BROWN).instrument(Instrument.BASS).strength(2.0f).sounds(BlockSoundGroup.WOOD).luminance(Blocks.createLightLevelFromLitBlockState(13)).nonOpaque().burnable());
 
 		LIGHTNING_RODS = ImmutableList.of(
 				Blocks.LIGHTNING_ROD,

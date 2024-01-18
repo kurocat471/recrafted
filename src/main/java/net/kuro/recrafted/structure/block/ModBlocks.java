@@ -248,8 +248,7 @@ public class ModBlocks {
             new WallTorchBlock(FabricBlockSettings.create().noCollision().breakInstantly().luminance(state -> 13).sounds(BlockSoundGroup.WOOD).dropsLike(PATINA_TORCH).pistonBehavior(PistonBehavior.DESTROY), ModParticleTypes.PATINA_FIRE_FLAME));
     public static final Block PATINA_LANTERN = registerBlock("patina_lantern",
             new LanternBlock(FabricBlockSettings.create().mapColor(MapColor.IRON_GRAY).solid().requiresTool().strength(3.5f).sounds(BlockSoundGroup.LANTERN).luminance(state -> 13).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
-    public static final Block PATINA_CAMPFIRE = registerBlock("patina_campfire",
-            new CampfireBlock(false, 1, FabricBlockSettings.create().mapColor(MapColor.SPRUCE_BROWN).instrument(Instrument.BASS).strength(2.0f).sounds(BlockSoundGroup.WOOD).luminance(Blocks.createLightLevelFromLitBlockState(13)).nonOpaque().burnable()));
+
 
     public static final Block NATIVE_COPPER_BLOCK = registerBlock("native_copper_block",
             new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.XYLOPHONE).requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.BASALT)));

@@ -1,6 +1,7 @@
 package net.kuro.recrafted.util;
 
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.kuro.recrafted.Recrafted;
 import net.kuro.recrafted.structure.block.ModBlocks;
 import net.minecraft.client.render.RenderLayer;
 
@@ -42,7 +43,7 @@ public class BlockRenderLayerRegistries {
                 ModBlocks.PATINA_FIRE,
                 ModBlocks.PATINA_TORCH,
                 ModBlocks.PATINA_WALL_TORCH,
-                ModBlocks.PATINA_CAMPFIRE,
+                Recrafted.PATINA_CAMPFIRE,
                 ModBlocks.PATINA_LANTERN
         );
     }

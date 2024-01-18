@@ -148,7 +148,7 @@ public class ModItemGroups {
 
                             entries.add(ModItems.PATINA_TORCH);
                             entries.add(ModBlocks.PATINA_LANTERN);
-                            entries.add(ModBlocks.PATINA_CAMPFIRE);
+                            entries.add(Recrafted.PATINA_CAMPFIRE);
 
                             entries.add(ModBlocks.NATIVE_COPPER_BLOCK);
                             entries.add(ModBlocks.MALACHITE_BLOCK);
