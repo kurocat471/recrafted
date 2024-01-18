@@ -117,14 +117,14 @@ public class ModItemGroups {
                             entries.add(ModBlocks.WAXED_WEATHERED_COPPER_BULB);
                             entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_BULB);
 
-                            entries.add(Recrafted.COPPER_LIGHTNING_ROD);
-                            entries.add(Recrafted.EXPOSED_COPPER_LIGHTNING_ROD);
-                            entries.add(Recrafted.WEATHERED_COPPER_LIGHTNING_ROD);
-                            entries.add(Recrafted.OXIDIZED_COPPER_LIGHTNING_ROD);
-                            entries.add(Recrafted.WAXED_COPPER_LIGHTNING_ROD);
-                            entries.add(Recrafted.WAXED_EXPOSED_COPPER_LIGHTNING_ROD);
-                            entries.add(Recrafted.WAXED_WEATHERED_COPPER_LIGHTNING_ROD);
-                            entries.add(Recrafted.WAXED_OXIDIZED_COPPER_LIGHTNING_ROD);
+                            entries.add(ModBlocks.COPPER_LIGHTNING_ROD);
+                            entries.add(ModBlocks.EXPOSED_COPPER_LIGHTNING_ROD);
+                            entries.add(ModBlocks.WEATHERED_COPPER_LIGHTNING_ROD);
+                            entries.add(ModBlocks.OXIDIZED_COPPER_LIGHTNING_ROD);
+                            entries.add(ModBlocks.WAXED_COPPER_LIGHTNING_ROD);
+                            entries.add(ModBlocks.WAXED_EXPOSED_COPPER_LIGHTNING_ROD);
+                            entries.add(ModBlocks.WAXED_WEATHERED_COPPER_LIGHTNING_ROD);
+                            entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_LIGHTNING_ROD);
 
                             entries.add(ModBlocks.COPPER_ANVIL);
                             entries.add(ModBlocks.EXPOSED_COPPER_ANVIL);
@@ -148,7 +148,7 @@ public class ModItemGroups {
 
                             entries.add(ModItems.PATINA_TORCH);
                             entries.add(ModBlocks.PATINA_LANTERN);
-                            entries.add(Recrafted.PATINA_CAMPFIRE);
+                            entries.add(ModBlocks.PATINA_CAMPFIRE);
 
                             entries.add(ModBlocks.NATIVE_COPPER_BLOCK);
                             entries.add(ModBlocks.MALACHITE_BLOCK);

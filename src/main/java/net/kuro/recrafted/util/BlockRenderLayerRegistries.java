@@ -43,7 +43,7 @@ public class BlockRenderLayerRegistries {
                 ModBlocks.PATINA_FIRE,
                 ModBlocks.PATINA_TORCH,
                 ModBlocks.PATINA_WALL_TORCH,
-                Recrafted.PATINA_CAMPFIRE,
+                ModBlocks.PATINA_CAMPFIRE,
                 ModBlocks.PATINA_LANTERN
         );
     }

@@ -35,6 +35,6 @@ public abstract class PointOfInterestTypesMixin {
             index = 2
     )
     private static Set<BlockState> addLightningRods(Set<BlockState> states) {
-        return Recrafted.LIGHTNING_RODS;
+        return ModBlocks.LIGHTNING_RODS;
     }
 }

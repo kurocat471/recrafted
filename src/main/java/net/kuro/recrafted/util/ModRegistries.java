@@ -99,14 +99,14 @@ public class ModRegistries {
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_BULB, ModBlocks.WAXED_WEATHERED_COPPER_BULB);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_BULB, ModBlocks.WAXED_OXIDIZED_COPPER_BULB);
 
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(Recrafted.COPPER_LIGHTNING_ROD, Recrafted.EXPOSED_COPPER_LIGHTNING_ROD);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(Recrafted.EXPOSED_COPPER_LIGHTNING_ROD, Recrafted.WEATHERED_COPPER_LIGHTNING_ROD);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(Recrafted.WEATHERED_COPPER_LIGHTNING_ROD, Recrafted.OXIDIZED_COPPER_LIGHTNING_ROD);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_LIGHTNING_ROD, ModBlocks.EXPOSED_COPPER_LIGHTNING_ROD);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_LIGHTNING_ROD, ModBlocks.WEATHERED_COPPER_LIGHTNING_ROD);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_COPPER_LIGHTNING_ROD, ModBlocks.OXIDIZED_COPPER_LIGHTNING_ROD);
 
-        OxidizableBlocksRegistry.registerWaxableBlockPair(Recrafted.COPPER_LIGHTNING_ROD, Recrafted.WAXED_COPPER_LIGHTNING_ROD);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(Recrafted.EXPOSED_COPPER_LIGHTNING_ROD, Recrafted.WAXED_EXPOSED_COPPER_LIGHTNING_ROD);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(Recrafted.WEATHERED_COPPER_LIGHTNING_ROD, Recrafted.WAXED_WEATHERED_COPPER_LIGHTNING_ROD);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(Recrafted.OXIDIZED_COPPER_LIGHTNING_ROD, Recrafted.WAXED_OXIDIZED_COPPER_LIGHTNING_ROD);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.COPPER_LIGHTNING_ROD, ModBlocks.WAXED_COPPER_LIGHTNING_ROD);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_LIGHTNING_ROD, ModBlocks.WAXED_EXPOSED_COPPER_LIGHTNING_ROD);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_LIGHTNING_ROD, ModBlocks.WAXED_WEATHERED_COPPER_LIGHTNING_ROD);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_LIGHTNING_ROD, ModBlocks.WAXED_OXIDIZED_COPPER_LIGHTNING_ROD);
 
         OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_ANVIL, ModBlocks.EXPOSED_COPPER_ANVIL);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_ANVIL, ModBlocks.WEATHERED_COPPER_ANVIL);
