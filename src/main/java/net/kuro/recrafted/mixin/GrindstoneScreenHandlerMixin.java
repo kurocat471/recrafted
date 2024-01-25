@@ -23,38 +23,6 @@ public abstract class GrindstoneScreenHandlerMixin extends ScreenHandler {
         super(type, syncId);
     }
 
-    /**
-     * @author kurocat471
-     * @reason allow quickMove with stackable items
-     */
-    @Override
-    public ItemStack quickMove(PlayerEntity player, int slot) {
-        ItemStack itemStack = ItemStack.EMPTY;
-        Slot slot2 = this.slots.get(slot);
-        if (slot2.hasStack()) {
-            ItemStack itemStack2 = slot2.getStack();
-            itemStack = itemStack2.copy();
-            if (slot == 2) {
-                if (!this.insertItem(itemStack2, 3, 39, true)) {
-                    return ItemStack.EMPTY;
-                }
-                slot2.onQuickTransfer(itemStack2, itemStack);
-            } else if (slot == 0 || slot == 1 ? !this.insertItem(itemStack2, 3, 39, false) : (!this.insertItem(itemStack2, 0, 2, false))) {
-                return ItemStack.EMPTY;
-            }
-            if (itemStack2.isEmpty()) {
-                slot2.setStack(ItemStack.EMPTY);
-            } else {
-                slot2.markDirty();
-            }
-            if (itemStack2.getCount() == itemStack.getCount()) {
-                return ItemStack.EMPTY;
-            }
-            slot2.onTakeItem(player, itemStack2);
-        }
-        return itemStack;
-    }
-
     @Inject(method = "grind", at = @At("TAIL"), cancellable = true)
     public void registerCustomGrindingRecipes(ItemStack item, int damage, int amount, CallbackInfoReturnable<ItemStack> cir) {
         ItemStack itemStack = item.copyWithCount(amount);
