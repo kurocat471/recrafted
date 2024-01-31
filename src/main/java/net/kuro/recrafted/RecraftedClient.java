@@ -24,12 +24,12 @@ public class RecraftedClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         HandledScreens.register(ModScreenHandlers.ANVIL_SCREEN_HANDLER, AnvilScreen::new);
-        ModMessages.registerS2CPackets();
         BlockEntityRendererFactories.register(ModBlockEntities.ANVIL_BE, AnvilBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(ModBlockEntities.POTION_CAULDRON_BE, PotionCauldronBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(ModBlockEntities.WATER_CAULDRON_BE, WaterCauldronBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(ModBlockEntities.WATER_BARREL_BE, WaterBarrelBlockEntityRenderer::new);
         BlockRenderLayerRegistries.registerBlockRenderLayers();
+        ModMessages.registerS2CPackets();
         ClientNetworking.registerEvents();
         ModParticleTypes.registerParticleTypesClientSide();
     }

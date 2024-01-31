@@ -51,8 +51,4 @@ public abstract class DoorBlockMixin extends Block {
             world.setBlockState(pos, (BlockState)((BlockState)state.with(POWERED, bl)).with(OPEN, bl), 2);
         }
     }
-
-    //private void playOpenCloseSound(@Nullable Entity entity, World world, BlockPos pos, boolean open) {
-    //    world.playSound(entity, pos, open ? this.blockSetType.doorOpen() : this.blockSetType.doorClose(), SoundCategory.BLOCKS, 1.0F, world.getRandom().nextFloat() * 0.1F + 0.9F);
-    //}
 }
