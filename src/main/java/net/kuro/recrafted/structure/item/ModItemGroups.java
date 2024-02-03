@@ -144,6 +144,8 @@ public class ModItemGroups {
                             entries.add(ModBlocks.WAXED_WEATHERED_RESISTOR);
                             entries.add(ModBlocks.WAXED_OXIDIZED_RESISTOR);
 
+                            entries.add(ModBlocks.COPPER_PANEL);
+
                             entries.add(ModBlocks.PATINA_BLOCK);
 
                             entries.add(ModItems.PATINA_TORCH);

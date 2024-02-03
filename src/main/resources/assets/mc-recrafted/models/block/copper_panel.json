@@ -1,0 +1,16 @@
+{
+  "type": "mc-recrafted:connecting",
+  "parent": "minecraft:block/cube_all",
+  "connections": {
+    "type": "mc-recrafted:or",
+    "predicates": [
+      {
+        "type": "mc-recrafted:is_same_block"
+      }
+    ]
+  },
+  "loader": "mc-recrafted:model",
+  "textures": {
+    "all": "mc-recrafted:block/copper_panel"
+  }
+}

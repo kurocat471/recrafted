@@ -143,6 +143,8 @@ public class ModBlocks {
     public static final ResistorBlock WAXED_WEATHERED_RESISTOR;
     public static final ResistorBlock WAXED_OXIDIZED_RESISTOR;
 
+    public static final Block COPPER_PANEL;
+
     public static final SandBlock PATINA_BLOCK;
 
     public static final PatinaFireBlock PATINA_FIRE;
@@ -331,6 +333,7 @@ public class ModBlocks {
         registerBlock("waxed_exposed_resistor", WAXED_EXPOSED_RESISTOR);
         registerBlock("waxed_weathered_resistor", WAXED_WEATHERED_RESISTOR);
         registerBlock("waxed_oxidized_resistor", WAXED_OXIDIZED_RESISTOR);
+        registerBlock("copper_panel", COPPER_PANEL);
         registerBlock("patina_block", PATINA_BLOCK);
         registerBlockNoItem("patina_fire", PATINA_FIRE);
         registerBlockNoItem("patina_torch", PATINA_TORCH);
@@ -518,6 +521,7 @@ public class ModBlocks {
         WAXED_WEATHERED_RESISTOR = new ResistorBlock(FabricBlockSettings.create().breakInstantly().sounds(BlockSoundGroup.STONE).pistonBehavior(PistonBehavior.DESTROY), 6);
         WAXED_OXIDIZED_RESISTOR = new ResistorBlock(FabricBlockSettings.create().breakInstantly().sounds(BlockSoundGroup.STONE).pistonBehavior(PistonBehavior.DESTROY), 3);
 
+        COPPER_PANEL = new Block(FabricBlockSettings.copyOf(ModBlocks.COPPER_BLOCK));
 
         PATINA_BLOCK = new SandBlock(6273934, FabricBlockSettings.create().mapColor(MapColor.TEAL).instrument(Instrument.SNARE).strength(0.5f).sounds(BlockSoundGroup.SAND));
 

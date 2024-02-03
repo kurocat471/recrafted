@@ -1,0 +1,48 @@
+accessWidener v2 named
+
+# ZipResourcePack
+accessible field net/minecraft/resource/ZipResourcePack LOGGER Lorg/slf4j/Logger;
+
+# ZipResourcePack$ZipFileWrapper
+accessible class net/minecraft/resource/ZipResourcePack$ZipFileWrapper
+accessible field net/minecraft/resource/ZipResourcePack$ZipFileWrapper file Ljava/io/File;
+accessible method net/minecraft/resource/ZipResourcePack$ZipFileWrapper open ()Ljava/util/zip/ZipFile;
+
+# SpriteLoader
+accessible field net/minecraft/client/texture/SpriteLoader METADATA_READERS Ljava/util/Set;
+mutable field net/minecraft/client/texture/SpriteLoader METADATA_READERS Ljava/util/Set;
+
+# SpriteContents
+accessible field net/minecraft/client/texture/SpriteContents image Lnet/minecraft/client/texture/NativeImage;
+accessible field net/minecraft/client/texture/SpriteContents mipmapLevelsImages [Lnet/minecraft/client/texture/NativeImage;
+accessible field net/minecraft/client/texture/SpriteContents animation Lnet/minecraft/client/texture/SpriteContents$Animation;
+accessible method net/minecraft/client/texture/SpriteContents upload (IIII[Lnet/minecraft/client/texture/NativeImage;)V
+mutable field net/minecraft/client/texture/SpriteContents animation Lnet/minecraft/client/texture/SpriteContents$Animation;
+
+# SpriteContents$Animation
+accessible class net/minecraft/client/texture/SpriteContents$Animation
+accessible method net/minecraft/client/texture/SpriteContents$Animation <init> (Lnet/minecraft/client/texture/SpriteContents;Ljava/util/List;IZ)V
+
+# DirectoryResourcePack
+accessible field net/minecraft/resource/DirectoryResourcePack LOGGER Lorg/slf4j/Logger;
+accessible method net/minecraft/resource/DirectoryResourcePack open (Ljava/nio/file/Path;)Lnet/minecraft/resource/InputSupplier;
+
+# JsonUnbakedModel
+accessible field net/minecraft/client/render/model/json/JsonUnbakedModel GSON Lcom/google/gson/Gson;
+accessible field net/minecraft/client/render/model/json/JsonUnbakedModel parent Lnet/minecraft/client/render/model/json/JsonUnbakedModel;
+accessible field net/minecraft/client/render/model/json/JsonUnbakedModel parentId Lnet/minecraft/util/Identifier;
+accessible field net/minecraft/client/render/model/json/JsonUnbakedModel textureMap Ljava/util/Map;
+accessible field net/minecraft/client/render/model/json/JsonUnbakedModel ambientOcclusion Ljava/lang/Boolean;
+accessible field net/minecraft/client/render/model/json/JsonUnbakedModel guiLight Lnet/minecraft/client/render/model/json/JsonUnbakedModel$GuiLight;
+accessible field net/minecraft/client/render/model/json/JsonUnbakedModel LOGGER Lorg/slf4j/Logger;
+
+# Sprite
+accessible field net/minecraft/client/texture/Sprite minU F
+accessible field net/minecraft/client/texture/Sprite maxU F
+accessible field net/minecraft/client/texture/Sprite minV F
+accessible field net/minecraft/client/texture/Sprite maxV F
+accessible method net/minecraft/client/texture/Sprite <init> (Lnet/minecraft/util/Identifier;Lnet/minecraft/client/texture/SpriteContents;IIII)V
+mutable field net/minecraft/client/texture/Sprite minU F
+mutable field net/minecraft/client/texture/Sprite maxU F
+mutable field net/minecraft/client/texture/Sprite minV F
+mutable field net/minecraft/client/texture/Sprite maxV F

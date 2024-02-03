@@ -13,7 +13,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PATINA_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COPPER_PANEL);
     }
 
     @Override

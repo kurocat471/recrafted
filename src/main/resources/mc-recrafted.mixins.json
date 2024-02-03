@@ -8,18 +8,28 @@
     "BlockEntityTypeMixin",
     "CauldronBehaviorMixin",
     "DoorBlockMixin",
+    "FabricDataGenHelperMixin",
+    "FilePackResourcesMixin",
     "GrindstoneScreenHandlerMixin",
     "GrindstoneScreenHandlerMixin$GrindstoneExperienceMixin",
     "GrindstoneScreenHandlerMixin$GrindstoneScreenHandlerSlot1Mixin",
     "GrindstoneScreenHandlerMixin$GrindstoneScreenHandlerSlot2Mixin",
     "LeveledCauldronBlockMixin",
     "LightningEntityMixin",
+    "ModNioResourcePackMixin",
+    "PackMixin",
+    "PathPackResourcesMixin",
     "PointedDripstoneBlockMixin",
     "PointOfInterestTypesMixin",
     "PotionMixin"
   ],
   "client": [
-    "BlockColorsMixin"
+    "BlockColorsMixin",
+    "BlockModelDeserializerMixin",
+    "BlockModelMixin",
+    "SpriteContentsMixin",
+    "SpriteLoaderMixin",
+    "TextureAtlasSpriteMixin"
   ],
   "injectors": {
     "defaultRequire": 1
